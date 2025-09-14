@@ -17,18 +17,20 @@ const HeroContent = () => {
       )}
     >
       {/* Social Proofs, Heading, Subheading & CTA */}
-      <div className="flex grow flex-col justify-center gap-6 lg:items-center">
+      <div className="flex grow flex-col justify-center lg:items-center">
         <SocialProofs
           proofs={socialPropfs}
           rate="4.5 / 5.0"
           players="145,000+"
         />
 
-        <h1 className="font-bebas-neue text-5xl md:text-7xl lg:text-center">
+        <h1 className="font-bebas-neue mt-14 text-5xl leading-28 md:text-8xl lg:text-center">
           Think You Can <br /> Crack The Case?
         </h1>
 
-        <p className="text-xl">Gather Friends, Solve Crimes, Become the Hero</p>
+        <p className="mt-6 mb-14 text-xl">
+          Gather Friends, Solve Crimes, Become the Hero
+        </p>
 
         <PrimaryLinkButton href="#">Shop Cases with 70% off</PrimaryLinkButton>
       </div>
