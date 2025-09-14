@@ -1,7 +1,7 @@
-import IconFolders from "../assets/images/icon-folders.png";
-import IconGift from "../assets/images/icon-gift.png";
-import IconPackage from "../assets/images/icon-package.png";
-import IconPeople from "../assets/images/icon-people.png";
+import IconFolders from "../assets/images/icon-folders.svg";
+import IconGift from "../assets/images/icon-gift.svg";
+import IconPackage from "../assets/images/icon-package.svg";
+import IconPeople from "../assets/images/icon-people.svg";
 
 interface HeroFeatureItemProps {
   title: string;
@@ -11,7 +11,13 @@ interface HeroFeatureItemProps {
 const HeroFeatureItem = ({ title, icon }: HeroFeatureItemProps) => {
   return (
     <div className="flex flex-col items-center justify-center gap-2 p-4 text-center">
-      <img src={icon} alt={title} className="size-16 object-contain" />
+      <img
+        src={icon}
+        alt={title}
+        height={40}
+        width={40}
+        className="size-[40px] object-contain"
+      />
       <h4 className="font-bebas-neue">{title}</h4>
     </div>
   );

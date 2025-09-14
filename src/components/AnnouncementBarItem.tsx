@@ -4,7 +4,7 @@ type AnnouncementBarItemProps = {
 };
 
 const AnnouncementBarItem = ({ icon, text }: AnnouncementBarItemProps) => (
-  <span className="mx-8 inline-flex items-center space-x-2 text-lg tracking-wider">
+  <span className="mx-8 inline-flex space-x-2 text-lg tracking-wider">
     <span>{icon}</span>
     <span>{text}</span>
   </span>

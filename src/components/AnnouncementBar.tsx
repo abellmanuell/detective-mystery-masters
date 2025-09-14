@@ -19,7 +19,7 @@ const AnnouncementBar = ({
   pauseOnHover = true,
 }: AnnouncementBarProps) => {
   return (
-    <div className="bg-dark-burgundy-500 font-bebas-neue flex h-10 items-center text-xs text-white">
+    <div className="bg-dark-burgundy-500 font-bebas-neue flex h-10 items-center pt-2 text-xs text-white">
       <Marquee
         gradient={gradient} // no fading edges
         speed={speed} // adjust scroll speed
