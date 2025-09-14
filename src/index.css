@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fonts Theme */
+  --font-nunito: "Nunito Variable", sans-serif;
+  --font-bebas-neue: "Bebas Neue", sans-serif;
+
+  /* Colors definitions */
+  --color-tequila: oklch(93.879% 0.04296 67.264);
+  --color-tequila-50: oklch(100% 0 none);
+  --color-tequila-100: oklch(100% 0 none);
+  --color-tequila-200: oklch(100% 0 none);
+  --color-tequila-300: oklch(100% 0 none);
+  --color-tequila-400: oklch(98.784% 0.00754 61.456);
+  --color-tequila-500: oklch(93.879% 0.04296 67.264);
+  --color-tequila-600: oklch(87.376% 0.09105 66.163);
+  --color-tequila-700: oklch(81.397% 0.1356 63.805);
+  --color-tequila-800: oklch(76.128% 0.17034 58.583);
+  --color-tequila-900: oklch(69.029% 0.17521 52.998);
+  --color-tequila-950: oklch(62.895% 0.15883 53.399);
+
+  --color-dark-burgundy: oklch(33.552% 0.12291 29.317);
+  --color-dark-burgundy-50: oklch(63.595% 0.20637 28.217);
+  --color-dark-burgundy-100: oklch(61.529% 0.22059 29.064);
+  --color-dark-burgundy-200: oklch(56.641% 0.21789 29.561);
+  --color-dark-burgundy-300: oklch(49.197% 0.18737 29.676);
+  --color-dark-burgundy-400: oklch(41.614% 0.15686 29.462);
+  --color-dark-burgundy-500: oklch(33.552% 0.12291 29.317);
+  --color-dark-burgundy-600: oklch(21.748% 0.07102 29.202);
+  --color-dark-burgundy-700: oklch(4.2201% 0.01732 29.234);
+  --color-dark-burgundy-800: oklch(0% 0 none);
+  --color-dark-burgundy-900: oklch(0% 0 none);
+  --color-dark-burgundy-950: oklch(0% 0 none);
+
+  --color-pumpkin: oklch(73.12% 0.18245 50.437);
+  --color-pumpkin-50: oklch(94.506% 0.03391 58.824);
+  --color-pumpkin-100: oklch(91.709% 0.05213 58.656);
+  --color-pumpkin-200: oklch(86.518% 0.08802 58.447);
+  --color-pumpkin-300: oklch(81.66% 0.12253 56.982);
+  --color-pumpkin-400: oklch(77.035% 0.15547 54.328);
+  --color-pumpkin-500: oklch(73.12% 0.18245 50.437);
+  --color-pumpkin-600: oklch(65.393% 0.18292 46.31);
+  --color-pumpkin-700: oklch(53.22% 0.14774 46.778);
+  --color-pumpkin-800: oklch(40.461% 0.1095 48.413);
+  --color-pumpkin-900: oklch(26.609% 0.06769 52.821);
+  --color-pumpkin-950: oklch(19.031% 0.04478 59.669);
+}
+
+@layer base {
+  html {
+    @apply font-nunito; /* Applies your custom 'Nunito' font family to the entire HTML document */
+  }
+}
+
+@layer utilities {
+  .bg-noise {
+    background-image: url("assets/images/noise-texture.png");
+    background-repeat: repeat;
+    background-size: 500px 500px;
+    pointer-events: none;
+    opacity: 0.09786;
+  }
+}
