@@ -20,7 +20,7 @@ const CartNotificationBadge = ({
           "bg-pumpkin-500",
           "inline-flex items-center justify-center",
           "absolute -top-2 left-4 min-h-6 min-w-6",
-          "rounded-full text-xs font-semibold shadow",
+          "rounded-full text-sm font-semibold shadow",
         )}
       >
         {cart}
