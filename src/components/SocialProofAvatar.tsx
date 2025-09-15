@@ -19,9 +19,9 @@ const SocialProofAvatar = ({
       height="51"
       width="51"
       className={cn(
-        "relative -ml-6 inline-block h-10 rounded-full object-cover",
+        "relative -ml-3 inline-block h-[34.71px] w-[34.71px] rounded-full object-cover md:h-[51px] md:w-[51px]",
         "transition-all duration-300 ease-in-out",
-        "first:ml-0 hover:z-10 hover:ml-0 hover:scale-110 md:-ml-4 md:h-12 md:w-12",
+        "first:ml-0 md:-ml-4 md:h-12 md:w-12",
       )}
       {...props}
     />

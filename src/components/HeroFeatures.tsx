@@ -10,7 +10,7 @@ interface HeroFeatureItemProps {
 
 const HeroFeatureItem = ({ title, icon }: HeroFeatureItemProps) => {
   return (
-    <div className="flex flex-col items-center justify-center gap-2 p-2 text-center">
+    <div className="flex flex-col items-center justify-center gap-6 text-center">
       <img
         src={icon}
         alt={title}
@@ -18,14 +18,14 @@ const HeroFeatureItem = ({ title, icon }: HeroFeatureItemProps) => {
         width={40}
         className="size-[40px] object-contain"
       />
-      <h4 className="font-bebas-neue text-xl">{title}</h4>
+      <h4 className="font-bebas-neue text-xl text-[#424242]">{title}</h4>
     </div>
   );
 };
 
 const HeroFeatures = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4">
+    <div className="grid grid-cols-2 gap-y-8 md:grid-cols-4 md:gap-0">
       <HeroFeatureItem title="Realistic materials" icon={IconFolders} />
       <HeroFeatureItem title="Free shipping" icon={IconPackage} />
       <HeroFeatureItem title="Perfect for 1-8 people" icon={IconPeople} />

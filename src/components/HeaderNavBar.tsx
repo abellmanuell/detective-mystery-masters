@@ -1,6 +1,7 @@
 import { HiOutlineX } from "react-icons/hi";
-import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
+
+import { cn } from "../lib/utils";
 
 import Container from "./Container";
 import { CartNotificationBadge } from "./CartNotificationBadge";
@@ -8,7 +9,8 @@ import { HeaderProductsList } from "./HeaderProductsList";
 import { Logo } from "./Logo";
 import { NavItem } from "./HeaderNavBarItem";
 import { SecondaryLinkButton } from "./SecondaryLinkButton";
-import { cn } from "../lib/utils";
+
+import MenuIcon from "../assets/images/menu.svg";
 
 const navList = [
   {
@@ -37,9 +39,12 @@ const navList = [
 const HeaderNavBar = () => {
   const [showProductsList, setShowProductsList] = useState(false);
   return (
-    <div className="relative z-10 mt-2 mb-3">
+    <div className="relative z-10">
       <Container
-        className={cn("flex justify-between py-0 lg:justify-start", "h-16")}
+        className={cn(
+          "flex justify-between !py-[10px] lg:justify-start",
+          "h-16",
+        )}
       >
         {/* Logo */}
         <div className="flex items-center">
@@ -55,6 +60,7 @@ const HeaderNavBar = () => {
           <SecondaryLinkButton href="#" className="hidden py-2 md:block">
             Shop All
           </SecondaryLinkButton>
+
           <CartNotificationBadge href="#" cart="3" />
 
           {/* Hamburger Menu for mobile */}
@@ -65,7 +71,8 @@ const HeaderNavBar = () => {
             {showProductsList ? (
               <HiOutlineX size={24} />
             ) : (
-              <RxHamburgerMenu size={24} />
+              <img src={MenuIcon} alt="" height={24} width={24} />
+              // <RxHamburgerMenu size={24} />
             )}
           </button>
         </div>

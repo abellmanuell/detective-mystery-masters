@@ -24,7 +24,7 @@ export default function App() {
 
         <Container
           className={cn(
-            "grid grid-cols-1 gap-8",
+            "grid grid-cols-1 gap-2 md:gap-8",
             "lg:h-dvh lg:grid-cols-2",
             "pt-0",
           )}

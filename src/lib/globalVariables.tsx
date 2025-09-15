@@ -4,8 +4,8 @@ import SocialProof3 from "../assets/images/social-proof-3.webp";
 import SocialProof4 from "../assets/images/social-proof-4.webp";
 import SocialProof5 from "../assets/images/social-proof-5.webp";
 
-import { MdOutlineLocalShipping } from "react-icons/md";
-import { TbCirclePercentage } from "react-icons/tb";
+import SaleIcon from "../assets/images/icon-sale.svg";
+import TruckIcon from "../assets/images/icon-truck.svg";
 
 export const socialPropfs = [
   {
@@ -37,27 +37,35 @@ export const socialPropfs = [
 
 export const announcements = [
   {
-    icon: <MdOutlineLocalShipping size={25} />,
+    icon: TruckIcon,
     text: "FREE SHIPPING OVER 100 USD",
   },
   {
-    icon: <TbCirclePercentage size={25} />,
+    icon: SaleIcon,
     text: "SAVE 75 USD WITH BUNDLES",
   },
   {
-    icon: <MdOutlineLocalShipping size={25} />,
+    icon: TruckIcon,
     text: "FREE SHIPPING OVER 100 USD",
   },
   {
-    icon: <TbCirclePercentage size={25} />,
+    icon: SaleIcon,
     text: "SAVE 75 USD WITH BUNDLES",
   },
   {
-    icon: <MdOutlineLocalShipping size={25} />,
+    icon: TruckIcon,
     text: "FREE SHIPPING OVER 100 USD",
   },
   {
-    icon: <TbCirclePercentage size={25} />,
+    icon: SaleIcon,
+    text: "SAVE 75 USD WITH BUNDLES",
+  },
+  {
+    icon: TruckIcon,
+    text: "FREE SHIPPING OVER 100 USD",
+  },
+  {
+    icon: SaleIcon,
     text: "SAVE 75 USD WITH BUNDLES",
   },
 ];
