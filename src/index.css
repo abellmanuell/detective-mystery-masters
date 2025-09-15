@@ -61,3 +61,10 @@
     opacity: 0.09786;
   }
 }
+
+@layer components {
+  .paper-mask {
+    mask: url("assets/images/mask-group.svg") no-repeat center / contain;
+    background: url("assets/images/paper-clip.svg") no-repeat center / contain;
+  }
+}

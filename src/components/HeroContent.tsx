@@ -24,7 +24,7 @@ const HeroContent = () => {
           players="145,000+"
         />
 
-        <h1 className="font-bebas-neue text-5xl md:mt-14 md:text-8xl md:leading-28 lg:text-center">
+        <h1 className="font-bebas-neue text-5xl md:mt-14 md:text-[100px] md:leading-28 lg:text-center">
           Think You Can <br /> Crack The Case?
         </h1>
 
