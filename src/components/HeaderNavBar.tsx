@@ -36,7 +36,7 @@ const navList = [
 const HeaderNavBar = () => {
   const [showProductsList, setShowProductsList] = useState(false);
   return (
-    <div className="relative z-10">
+    <div className="relative z-10 mt-2 mb-3">
       <Container
         className={cn("flex justify-between py-0 lg:justify-start", "h-16")}
       >
