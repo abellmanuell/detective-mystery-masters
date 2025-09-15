@@ -1,6 +1,6 @@
 import { HiPlay } from "react-icons/hi2";
 
-import HeroAsideImage from "../assets/images/hero-aside.png";
+import HeroAsideImage from "../assets/images/hero-aside.webp";
 import HeroAsideVideoPoster from "../assets/images/hero-aside-video-poster.png";
 import { cn } from "../lib/utils";
 
@@ -10,7 +10,7 @@ const HeroAsidePaperCard = (props: React.ComponentProps<"div">) => {
       {...props}
       className={cn(
         "bg-tequila-500 relative w-3xs rounded-lg p-4",
-        "flex flex-col gap-4",
+        "flex flex-col gap-2",
         "[clip-path:polygon(0_0,_75%_0,_100%_30%,_100%_100%,_0_100%)]",
         props.className,
       )}
@@ -68,6 +68,8 @@ const HeroAside = () => {
       {/* Background Image */}
       <img
         className="absolute top-0 left-0 size-full object-cover"
+        height="893"
+        width="664"
         src={HeroAsideImage}
         alt="Hero"
       />
