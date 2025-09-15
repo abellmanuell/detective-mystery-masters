@@ -28,7 +28,7 @@ const HeroContent = () => {
           Think You Can <br /> Crack The Case?
         </h1>
 
-        <p className="text-xl md:mt-6 md:mb-14">
+        <p className="md:mt-6 md:mb-14 md:text-xl">
           Gather Friends, Solve Crimes, Become the Hero
         </p>
 

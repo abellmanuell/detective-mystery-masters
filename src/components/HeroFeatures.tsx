@@ -18,7 +18,7 @@ const HeroFeatureItem = ({ title, icon }: HeroFeatureItemProps) => {
         width={40}
         className="size-[40px] object-contain"
       />
-      <h4 className="font-bebas-neue">{title}</h4>
+      <h4 className="font-bebas-neue text-xl">{title}</h4>
     </div>
   );
 };
