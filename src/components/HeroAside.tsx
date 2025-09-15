@@ -9,8 +9,8 @@ const HeroAsidePaperCard = (props: React.ComponentProps<"div">) => {
     <div
       {...props}
       className={cn(
-        "bg-tequila-500 relative w-3xs rounded-lg p-4",
-        "flex flex-col gap-2",
+        "bg-tequila-500 relative w-3xs rounded-lg px-4 py-3",
+        "flex flex-col gap-1",
         "[clip-path:polygon(0_0,_75%_0,_100%_30%,_100%_100%,_0_100%)]",
         props.className,
       )}
@@ -42,13 +42,15 @@ const HeroAsideVideo = () => {
     <div
       className={cn(
         "relative aspect-square",
-        "w-full max-w-2xl overflow-clip rounded-lg",
+        "h-[187.72px] w-full max-w-[221.42px] overflow-clip rounded-lg",
       )}
     >
       <img
         className="size-full object-cover"
         src={HeroAsideVideoPoster}
         alt="Hero Video"
+        width="221.42"
+        height="187.72"
       />
 
       <HeroAsideVideoPlayButton />
@@ -77,10 +79,7 @@ const HeroAside = () => {
       <HeroAsidePaperCard>
         {/* Heading */}
         <h3
-          className={cn(
-            "font-bebas-neue text-4xl font-bold uppercase",
-            "relative w-3/4",
-          )}
+          className={cn("font-bebas-neue text-4xl uppercase", "relative w-3/4")}
         >
           How it works?
         </h3>
