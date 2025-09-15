@@ -17,7 +17,7 @@ const HeroContent = () => {
       )}
     >
       {/* Social Proofs, Heading, Subheading & CTA */}
-      <div className="mb-8 flex grow flex-col justify-center gap-8 md:mb-0 md:gap-0 lg:items-center">
+      <div className="mb-8 flex grow flex-col justify-center gap-8 md:gap-0 lg:mb-0 lg:items-center">
         <SocialProofs
           proofs={socialPropfs}
           rate="4.5 / 5.0"
@@ -29,7 +29,8 @@ const HeroContent = () => {
         </h1>
 
         <p className="md:mt-6 md:mb-14 md:text-xl">
-          Gather Friends, Solve Crimes, Become the Hero
+          Gather Friends, Solve Crimes, <br className="md:hidden" /> Become the
+          Hero
         </p>
 
         <PrimaryLinkButton href="#">Shop Cases with 70% off</PrimaryLinkButton>

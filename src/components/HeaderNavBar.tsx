@@ -1,4 +1,5 @@
-import { HiMenu, HiOutlineX } from "react-icons/hi";
+import { HiOutlineX } from "react-icons/hi";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 
 import Container from "./Container";
@@ -61,7 +62,11 @@ const HeaderNavBar = () => {
             onClick={() => setShowProductsList((prev) => !prev)}
             className="inline-block cursor-pointer lg:hidden"
           >
-            {showProductsList ? <HiOutlineX size={30} /> : <HiMenu size={30} />}
+            {showProductsList ? (
+              <HiOutlineX size={24} />
+            ) : (
+              <RxHamburgerMenu size={24} />
+            )}
           </button>
         </div>
       </Container>

@@ -10,7 +10,7 @@ interface HeroFeatureItemProps {
 
 const HeroFeatureItem = ({ title, icon }: HeroFeatureItemProps) => {
   return (
-    <div className="flex flex-col items-center justify-center gap-2 p-4 text-center">
+    <div className="flex flex-col items-center justify-center gap-2 p-2 text-center">
       <img
         src={icon}
         alt={title}
