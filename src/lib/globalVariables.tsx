@@ -1,8 +1,8 @@
-import SocialProof1 from "../assets/images/social-proof-1.png";
-import SocialProof2 from "../assets/images/social-proof-2.png";
-import SocialProof3 from "../assets/images/social-proof-3.png";
-import SocialProof4 from "../assets/images/social-proof-4.png";
-import SocialProof5 from "../assets/images/social-proof-5.png";
+import SocialProof1 from "../assets/images/social-proof-1.webp";
+import SocialProof2 from "../assets/images/social-proof-2.webp";
+import SocialProof3 from "../assets/images/social-proof-3.webp";
+import SocialProof4 from "../assets/images/social-proof-4.webp";
+import SocialProof5 from "../assets/images/social-proof-5.webp";
 
 import { MdOutlineLocalShipping } from "react-icons/md";
 import { TbCirclePercentage } from "react-icons/tb";

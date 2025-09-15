@@ -1,7 +1,7 @@
 import { HiPlay } from "react-icons/hi2";
 
 import HeroAsideImage from "../assets/images/hero-aside.webp";
-import HeroAsideVideoPoster from "../assets/images/hero-aside-video-poster.png";
+import HeroAsideVideoPoster from "../assets/images/hero-aside-video-poster.webp";
 import { cn } from "../lib/utils";
 
 const HeroAsidePaperCard = (props: React.ComponentProps<"div">) => {
