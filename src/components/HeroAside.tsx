@@ -11,7 +11,7 @@ const HeroAsidePaperCard = (props: React.ComponentProps<"div">) => {
       className={cn(
         "bg-tequila-500 relative w-3xs rounded-lg px-4 py-3",
         "flex flex-col gap-1",
-        "paper-mask relative z-20",
+        "paper-mask relative z-5",
         props.className,
       )}
     >
@@ -77,7 +77,7 @@ const HeroAside = () => {
       />
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/45 to-transparent"></div>
+      <div className="absolute inset-0 z-5 bg-gradient-to-t from-black/45 to-transparent"></div>
 
       <HeroAsidePaperCard>
         {/* Heading */}
