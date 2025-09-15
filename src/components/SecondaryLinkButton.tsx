@@ -21,7 +21,7 @@ const SecondaryLinkButton = ({
         {...props}
         href={href}
         className={cn(
-          "bg-transparent outline-2",
+          "bg-transparent outline-1",
           "inline-flex items-center space-x-4",
           "rounded-full px-7 py-4 font-bold uppercase",
           "duration-150 ease-in",
