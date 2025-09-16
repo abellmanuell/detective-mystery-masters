@@ -1,9 +1,9 @@
-import HomePage from "./pages/HomePage";
+import HomePageRoute from "./pages/homepage/HomePageRoute";
 
 const App = () => {
   return (
     <>
-      <HomePage />
+      <HomePageRoute />
     </>
   );
 };

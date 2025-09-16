@@ -8,7 +8,7 @@ interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
 
 const Heading3 = ({ children, className, ...props }: HeadingProps) => {
   return (
-    <h2
+    <h3
       {...props}
       className={cn(
         "font-bebas-neue",
@@ -18,7 +18,7 @@ const Heading3 = ({ children, className, ...props }: HeadingProps) => {
       )}
     >
       {children}
-    </h2>
+    </h3>
   );
 };
 

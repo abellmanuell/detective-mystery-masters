@@ -13,7 +13,7 @@ const Heading2 = ({ children, className, ...props }: HeadingProps) => {
       className={cn(
         "font-bebas-neue tracking-[-1.38px]",
         "!leading-[44px] md:!leading-[70.4px]",
-        "text-[40px] md:text-[64px] lg:text-center",
+        "text-[40px] md:text-[64px]",
         className,
       )}
     >
