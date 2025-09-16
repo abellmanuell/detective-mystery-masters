@@ -17,7 +17,10 @@ const NavItem = ({
   <div className="ml-20 hidden grow lg:flex">
     {navs.map((nav, i) => {
       return (
-        <div key={i} className="group mx-6 flex items-center">
+        <div
+          key={i}
+          className={"group mx-6 flex items-center !py-[10px] md:!py-[14.4px]"}
+        >
           <a
             href={nav.href}
             key={i}
@@ -45,7 +48,7 @@ const NavItem = ({
             )}
           </a>
           {nav.isDropdown && (
-            <HeaderProductsList className="absolute inset-x-0 top-full hidden group-hover:block" />
+            <HeaderProductsList className="absolute inset-x-0 top-full hidden p-4 group-hover:block" />
           )}
         </div>
       );

@@ -10,7 +10,7 @@ function Container({
   return (
     <div
       className={cn(
-        "mx-auto max-w-7xl p-4 lg:max-w-[1400px] xl:max-w-[1500px]",
+        "mx-auto max-w-7xl px-4 lg:max-w-[1400px] xl:max-w-[1500px]",
         className,
       )}
     >

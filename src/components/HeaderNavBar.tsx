@@ -41,10 +41,7 @@ const HeaderNavBar = () => {
   return (
     <div className="relative z-10">
       <Container
-        className={cn(
-          "flex justify-between !py-[10px] md:mb-3 md:!py-[14.4px] lg:justify-start",
-          "h-16",
-        )}
+        className={cn("flex justify-between lg:justify-start", "h-16")}
       >
         {/* Logo */}
         <div className="flex items-center">
@@ -80,7 +77,7 @@ const HeaderNavBar = () => {
 
       {/* Mobile products list */}
       <HeaderProductsList
-        className={cn("fixed inset-x-0 top-26 bottom-0 lg:hidden", {
+        className={cn("fixed inset-x-0 top-26 bottom-0 pt-4 lg:hidden", {
           ["hidden"]: !showProductsList,
         })}
       />
