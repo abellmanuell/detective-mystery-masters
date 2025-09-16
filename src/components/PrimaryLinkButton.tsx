@@ -6,12 +6,14 @@ interface PrimaryLinkButtonProps {
   href: string;
   children: ReactNode;
   props?: React.Component<"a">;
+  className?: string;
 }
 
 const PrimaryLinkButton = ({
   href = "#",
   children,
   props,
+  className,
 }: PrimaryLinkButtonProps) => {
   return (
     <div>
@@ -20,9 +22,10 @@ const PrimaryLinkButton = ({
         href={href}
         className={cn(
           "bg-pumpkin-500 hover:bg-pumpkin-400",
-          "inline-flex items-center space-x-4",
+          "flex items-center space-x-4",
           "rounded-full px-7 py-4 font-bold uppercase",
           "duration-150 ease-in",
+          className,
         )}
       >
         <span>{children}</span>

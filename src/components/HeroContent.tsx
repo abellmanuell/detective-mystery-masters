@@ -38,7 +38,9 @@ const HeroContent = () => {
           </p>
         </div>
 
-        <PrimaryLinkButton href="#">Shop Cases with 70% off</PrimaryLinkButton>
+        <PrimaryLinkButton className="inline-flex" href="#">
+          Shop Cases with 70% off
+        </PrimaryLinkButton>
       </div>
 
       {/* Hero Features */}

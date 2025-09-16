@@ -4,8 +4,8 @@ import SocialProof3 from "../assets/images/social-proof-3.webp";
 import SocialProof4 from "../assets/images/social-proof-4.webp";
 import SocialProof5 from "../assets/images/social-proof-5.webp";
 
-import SaleIcon from "../assets/images/icon-sale.svg";
-import TruckIcon from "../assets/images/icon-truck.svg";
+import SaleIcon from "../assets/images/icons/icon-sale.svg";
+import TruckIcon from "../assets/images/icons/icon-truck.svg";
 
 export const socialPropfs = [
   {

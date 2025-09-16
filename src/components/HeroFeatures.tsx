@@ -1,7 +1,7 @@
-import IconFolders from "../assets/images/icon-folders.svg";
-import IconGift from "../assets/images/icon-gift.svg";
-import IconPackage from "../assets/images/icon-package.svg";
-import IconPeople from "../assets/images/icon-people.svg";
+import IconFolders from "../assets/images/icons/icon-folders.svg";
+import IconGift from "../assets/images/icons/icon-gift.svg";
+import IconPackage from "../assets/images/icons/icon-package.svg";
+import IconPeople from "../assets/images/icons/icon-people.svg";
 
 interface HeroFeatureItemProps {
   title: string;

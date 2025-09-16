@@ -10,7 +10,7 @@ import { Logo } from "./Logo";
 import { NavItem } from "./HeaderNavBarItem";
 import { SecondaryLinkButton } from "./SecondaryLinkButton";
 
-import MenuIcon from "../assets/images/menu.svg";
+import MenuIcon from "../assets/images/icons/icon-menu.svg";
 
 const navList = [
   {
@@ -69,7 +69,6 @@ const HeaderNavBar = () => {
               <HiOutlineX size={24} />
             ) : (
               <img src={MenuIcon} alt="" height={24} width={24} />
-              // <RxHamburgerMenu size={24} />
             )}
           </button>
         </div>

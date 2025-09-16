@@ -1,5 +1,5 @@
 import { cn } from "../lib/utils";
-import ShoppingCartIcon from "../assets/images/shopping-cart.svg";
+import ShoppingCartIcon from "../assets/images/icons/icon-shopping-cart.svg";
 
 interface CartNotificationBadgeProps {
   href: string;
