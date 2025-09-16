@@ -4,9 +4,15 @@ type AnnouncementBarItemProps = {
 };
 
 const AnnouncementBarItem = ({ icon, text }: AnnouncementBarItemProps) => (
-  <span className="mx-8 inline-flex space-x-2 text-lg tracking-wider">
-    <img src={icon} alt="Promo Banner" width={20} height={20} />
-    <span className="text-sm tracking-[1.5px]">{text}</span>
+  <span className="mx-8 flex justify-center space-x-2 text-lg tracking-wider">
+    <img
+      src={icon}
+      alt="Promo Banner"
+      width={20}
+      height={20}
+      className="inline-block"
+    />
+    <span className="mt-1 text-sm tracking-[1.5px]">{text}</span>
   </span>
 );
 
