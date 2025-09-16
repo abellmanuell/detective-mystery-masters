@@ -7,6 +7,7 @@ import { cn } from "../lib/utils";
 
 // Social Proofs Demo datas
 import { socialPropfs } from "../lib/globalVariables";
+import { Heading } from "./headings/Heading";
 
 const HeroContent = () => {
   return (
@@ -24,9 +25,12 @@ const HeroContent = () => {
           players="145,000+"
         />
         <div className="mt-4 mb-6 flex flex-col justify-center md:my-14 lg:items-center">
-          <h1 className="font-bebas-neue text-5xl leading-[52.8px] tracking-[-1.38px] md:text-[100px] md:leading-[110px] lg:text-center">
+          {/* <h1 className="font-bebas-neue text-5xl leading-[52.8px] tracking-[-1.38px] md:text-[100px] md:leading-[110px] lg:text-center">
             Think You Can <br /> Crack The Case?
-          </h1>
+          </h1> */}
+          <Heading>
+            Think You Can <br /> Crack The Case?
+          </Heading>
 
           <p className="mt-2 leading-[22.5px] text-[#3A3A3A] md:mt-6 md:text-xl">
             Gather Friends, Solve Crimes, <br className="md:hidden" /> Become
