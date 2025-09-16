@@ -9,7 +9,9 @@ const HeroAsidePaperCard = (props: React.ComponentProps<"div">) => {
     <div
       {...props}
       className={cn(
-        "bg-tequila-500 relative w-3xs rounded-lg px-4 py-3",
+        "bg-tequila-500 relative rounded-lg",
+        "px-[6.68px] pt-2 pb-[10.12px] md:px-[9.88px] md:pt-2 md:pb-[14.96px]",
+        "h-[196.44px] w-[163.32px] md:h-[290.44px] md:w-[241.48px]",
         "flex flex-col gap-1",
         "paper-mask relative z-5",
         props.className,
@@ -42,11 +44,15 @@ const HeroAsideVideo = () => {
     <div
       className={cn(
         "relative aspect-square",
-        "h-[187.72px] w-full max-w-[221.42px] overflow-clip rounded-lg",
+        "w-full overflow-clip rounded-lg",
+        "h-[122px] max-w-[149.76px] md:h-[179px] md:max-w-[221.42px]",
       )}
     >
       <img
-        className="size-full object-cover"
+        className={cn(
+          "size-full object-cover",
+          "h-[126.97px] w-[149.76px] md:h-[187.72px] md:w-[221.42px]",
+        )}
         src={HeroAsideVideoPoster}
         alt="Hero Video"
         width="221.42"
@@ -82,9 +88,13 @@ const HeroAside = () => {
       <HeroAsidePaperCard>
         {/* Heading */}
         <h3
-          className={cn("font-bebas-neue text-4xl uppercase", "relative w-3/4")}
+          className={cn(
+            "font-bebas-neue pt-[3.98px] pl-[9.7px] text-[21.64px] leading-[25.97px] uppercase md:pt-[10px] md:pl-[10px]",
+            "md:text-[32px] md:leading-[38.4px]",
+            "relative w-3/4",
+          )}
         >
-          How it works?
+          How it <br /> works?
         </h3>
 
         {/* Video */}

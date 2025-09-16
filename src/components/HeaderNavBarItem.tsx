@@ -39,7 +39,7 @@ const NavItem = ({
             )}
 
             {nav.isPercentage && (
-              <div className="inline-block rounded-full bg-red-500 px-2 py-1 text-xs text-white">
+              <div className="inline-flex h-[21px] w-[50px] items-center justify-center rounded-full bg-red-500 text-xs text-white">
                 {nav.percentage}
               </div>
             )}

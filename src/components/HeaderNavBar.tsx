@@ -42,7 +42,7 @@ const HeaderNavBar = () => {
     <div className="relative z-10">
       <Container
         className={cn(
-          "flex justify-between !py-[10px] lg:justify-start",
+          "flex justify-between !py-[10px] md:mb-3 md:!py-[14.4px] lg:justify-start",
           "h-16",
         )}
       >

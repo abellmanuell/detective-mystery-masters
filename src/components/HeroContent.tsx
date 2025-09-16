@@ -17,18 +17,18 @@ const HeroContent = () => {
       )}
     >
       {/* Social Proofs, Heading, Subheading & CTA */}
-      <div className="mb-10 flex grow flex-col justify-center md:mb-0 md:gap-0 lg:items-center lg:gap-8">
+      <div className="mb-10 flex grow flex-col justify-center md:mb-0 md:gap-0 lg:items-center">
         <SocialProofs
           proofs={socialPropfs}
           rate="4.5 / 5.0"
           players="145,000+"
         />
-        <div className="mt-4 mb-6 flex flex-col justify-center md:my-0 lg:items-center">
-          <h1 className="font-bebas-neue text-5xl leading-[52.8px] tracking-[-1.38px] md:mt-14 md:text-[100px] md:leading-[110px] lg:text-center">
+        <div className="mt-4 mb-6 flex flex-col justify-center md:my-14 lg:items-center">
+          <h1 className="font-bebas-neue text-5xl leading-[52.8px] tracking-[-1.38px] md:text-[100px] md:leading-[110px] lg:text-center">
             Think You Can <br /> Crack The Case?
           </h1>
 
-          <p className="mt-2 leading-[22.5px] text-[#3A3A3A] md:mt-6 md:mb-14 md:text-xl">
+          <p className="mt-2 leading-[22.5px] text-[#3A3A3A] md:mt-6 md:text-xl">
             Gather Friends, Solve Crimes, <br className="md:hidden" /> Become
             the Hero
           </p>

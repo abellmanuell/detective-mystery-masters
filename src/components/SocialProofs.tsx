@@ -33,10 +33,12 @@ const SocialProofs = ({ proofs, rate, players }: SocialProofsProps) => {
             <AiFillStar size={20} />
             <AiFillStar size={20} />
             <AiFillStar size={20} />
-            <p className="ml-1 text-black">{rate ?? "4.8 / 5.0"}</p>
+            <p className="ml-1 font-semibold text-black">
+              {rate ?? "4.8 / 5.0"}
+            </p>
           </div>
         </div>
-        <p>from {players} players</p>
+        <p className="font-semibold">from {players} players</p>
       </section>
     </div>
   );
