@@ -39,7 +39,7 @@ const StepsSummary = () => {
       </Heading2>
 
       {/* Steps 1-3 */}
-      <Steps className="grid min-w-[358px] md:grid-cols-3 md:gap-x-12">
+      <Steps className="grid md:grid-cols-3 md:gap-x-12">
         <StepItem
           className="flex flex-col items-center justify-center"
           imageUrl={HeroAsideImage}
