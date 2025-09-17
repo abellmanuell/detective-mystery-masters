@@ -18,7 +18,7 @@ const HeroContent = () => {
       )}
     >
       {/* Social Proofs, Heading, Subheading & CTA */}
-      <div className="mb-10 flex grow flex-col justify-center md:mb-0 md:gap-0 lg:items-center">
+      <div className="mb-10 flex grow flex-col justify-center md:gap-0 lg:mb-0 lg:items-center">
         <SocialProofs
           proofs={socialPropfs}
           rate="4.5 / 5.0"

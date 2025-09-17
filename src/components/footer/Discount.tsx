@@ -17,7 +17,7 @@ const Discount = ({ className }: { className?: string }) => {
       )}
     >
       <div className="space-y-3.5">
-        <Heading2 className="text-[32px] leading-[57.2px] md:text-[44px]">
+        <Heading2 className="text-[32px] md:text-4xl md:leading-[57.2px] lg:text-[44px] lg:leading-[57.2px]">
           Get your 10% discount
         </Heading2>
         <Paragraphing className="text-sm md:max-w-[532.97px] md:text-base">
@@ -48,7 +48,7 @@ const Discount = ({ className }: { className?: string }) => {
           </SecondaryLinkButton>
         </form>
 
-        <List className="md:flex md:space-y-0 md:space-x-3.5">
+        <List className="md:space-y-0 md:space-x-3.5 lg:flex">
           <ListItem icon={CheckIcon} label="Exclusive deals & discounts" />
           <ListItem icon={CheckIcon} label="Unsubscribe anytime" />
         </List>

@@ -45,7 +45,12 @@ const Services = () => {
             </div>
 
             {/* Display on Desktop */}
-            <div className={cn("hidden md:block", "md:h-[712px] md:w-[640px]")}>
+            <div
+              className={cn(
+                "hidden md:block",
+                "mb-0 sm:mb-10 md:h-[712px] md:w-[640px] lg:mb-0",
+              )}
+            >
               <img
                 src={ServicesAsideImage}
                 width={640}
