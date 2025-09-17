@@ -50,7 +50,7 @@ const ProductImage = ({
       <img
         src={imageUrl}
         alt="Game 10 Mega Bundle"
-        className={cn("rounded-2xl object-cover", "h-[167px]")}
+        className={cn("rounded-2xl object-cover", "min-h-[167px]")}
       />
     </div>
   );

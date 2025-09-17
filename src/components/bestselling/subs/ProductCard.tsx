@@ -23,7 +23,7 @@ const SubProductCard = ({
   isMegaBundle = false,
 }: ProductCardProps) => {
   return (
-    <div className="bg-tequila-500 rounded-lg">
+    <div className="bg-tequila-500 rounded-lg rounded-t-2xl">
       <ProductImage
         imageUrl={imageUrl}
         badges={badges}

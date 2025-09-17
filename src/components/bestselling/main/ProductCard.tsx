@@ -1,3 +1,4 @@
+import { cn } from "../../../lib/utils";
 import { ProductDetails } from "./ProductDetails";
 import { ProductImage } from "./ProductImage";
 
@@ -9,6 +10,8 @@ interface ProductCardProps {
   marketPrice: string;
   promo: string;
   badges?: Array<string>;
+  className?: string;
+  isMegaBundle?: boolean;
 }
 
 const ProductCard = ({
@@ -19,10 +22,16 @@ const ProductCard = ({
   marketPrice,
   promo,
   badges,
+  className,
+  isMegaBundle = false,
 }: ProductCardProps) => {
   return (
-    <div className="bg-tequila-500 w-[358px] rounded-lg">
-      <ProductImage imageUrl={imageUrl} badges={badges} />
+    <div className={cn("bg-tequila-500 w-[358px] rounded-lg", className)}>
+      <ProductImage
+        imageUrl={imageUrl}
+        badges={badges}
+        isMegaBundle={isMegaBundle}
+      />
 
       <ProductDetails
         name={name}

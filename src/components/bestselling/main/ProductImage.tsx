@@ -6,11 +6,13 @@ import { Game10PaperCard } from "./Game10PaperCard";
 interface ProductImageProps {
   imageUrl: string;
   badges?: Array<string>;
+  isMegaBundle: boolean;
 }
 
 const ProductImage = ({
   imageUrl,
   badges = ["Popular", "Gift Included"],
+  isMegaBundle,
 }: ProductImageProps) => {
   return (
     <div
@@ -25,29 +27,31 @@ const ProductImage = ({
         <Badge title={badges[1]} className="bg-[#59C254]" />
       </div>
 
-      <Game10PaperCard>
-        <div className="pt-[25px] pl-[9.7px]">
-          <div className="flex items-center text-white">
-            <AiFillStar size={10} />
-            <AiFillStar size={10} />
-            <AiFillStar size={10} />
-            <AiFillStar size={10} />
-            <AiFillStar size={10} />
+      {isMegaBundle && (
+        <Game10PaperCard>
+          <div className="pt-[25px] pl-[9.7px]">
+            <div className="flex items-center text-white">
+              <AiFillStar size={10} />
+              <AiFillStar size={10} />
+              <AiFillStar size={10} />
+              <AiFillStar size={10} />
+              <AiFillStar size={10} />
+            </div>
+
+            <h3
+              className={cn(
+                "font-bebas-neue text-lg uppercase md:pt-[10px] md:pl-[10px]",
+                "md:text-[32px] md:leading-[38.4px]",
+                "relative w-4/5",
+              )}
+            >
+              10-Games
+            </h3>
+
+            <p className="font-bebas-neue text-[12.5px]">Mega Bundle</p>
           </div>
-
-          <h3
-            className={cn(
-              "font-bebas-neue text-lg uppercase md:pt-[10px] md:pl-[10px]",
-              "md:text-[32px] md:leading-[38.4px]",
-              "relative w-4/5",
-            )}
-          >
-            10-Games
-          </h3>
-
-          <p className="font-bebas-neue text-[12.5px]">Mega Bundle</p>
-        </div>
-      </Game10PaperCard>
+        </Game10PaperCard>
+      )}
 
       <img
         src={imageUrl}
