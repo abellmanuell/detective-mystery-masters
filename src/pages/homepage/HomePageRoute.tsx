@@ -7,6 +7,7 @@ import { AnnouncementBarItem } from "../../components/AnnouncementBarItem";
 import { LandingPage } from "./views/LandingPage";
 import { StepsSummary } from "./views/StepsSummary";
 import { Services } from "./views/Services";
+import { BestSelling } from "./views/BestSelling";
 
 export default function HomePage() {
   return (
@@ -29,15 +30,17 @@ export default function HomePage() {
 
         {/* Steps Summary Section */}
         <StepsSummary />
-
-        {/* Services Section */}
       </div>
 
       <div className="bg-tequila-600/70 relative">
         <div className="bg-noise absolute inset-0 opacity-20 mix-blend-overlay" />
+        {/* Services Section */}
         <div className="bg-tequila-500 rounded-3xl">
           <Services />
         </div>
+
+        {/* Best Selling Section */}
+        <BestSelling />
       </div>
     </>
   );
