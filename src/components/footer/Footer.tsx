@@ -18,10 +18,15 @@ const Footer = () => {
   return (
     <Wrapper>
       <div className="] relative z-5 rounded-t-3xl bg-black text-white">
-        <Container className={cn("lg:min-h-dvh", "py-6")}>
-          <Discount />
+        <Container
+          className={cn(
+            "lg:min-h-dvh",
+            "md:!w[1280px] py-6 md:pt-[83px] md:pb-[63px]",
+          )}
+        >
+          <Discount className="md:px-20 md:py-[63px]" />
 
-          <div className="mx-auto w-[302px]">
+          <div className="mx-auto w-[302px] md:w-full">
             <FooterContainer>
               <FooterItem
                 title="Shop"
@@ -51,48 +56,51 @@ const Footer = () => {
                   { name: "Terms of Service" },
                 ]}
               />
+
+              <section className="pb-[46px]">
+                <a href="#">
+                  <img
+                    src={PaymentIcons}
+                    alt="Payment Icons"
+                    className="h-[86px] w-[295px] md:w-[302px]"
+                  />
+                </a>
+              </section>
             </FooterContainer>
 
-            <section className="pb-[46px]">
-              <a href="#">
-                <img
-                  src={PaymentIcons}
-                  alt="Payment Icons"
-                  width={295}
-                  height={86}
-                />
-              </a>
-            </section>
+            <div className="flex-row-reverse items-center justify-between md:flex">
+              <section>
+                <ul className="flex space-x-4">
+                  <li>
+                    <a href="#">
+                      <img src={InstagramIcon} alt="Instagram" width={20} />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src={FacebookIcon} alt="Facebook" width={20} />
+                    </a>
+                  </li>
+                </ul>
+              </section>
 
-            <section>
-              <ul className="flex space-x-4">
-                <li>
-                  <a href="#">
-                    <img src={InstagramIcon} alt="Instagram" width={20} />
+              <div className="items-end md:flex md:space-x-4">
+                <section className="py-6">
+                  <img
+                    src={WhiteLogo}
+                    alt="Detective Mystery Masters Logo"
+                    height={51}
+                  />
+                </section>
+
+                <section className="leading-6 text-white/60 md:flex md:space-x-2 md:pb-5 md:text-xs">
+                  <Paragraphing>©2025 Detective Mystery Masters</Paragraphing>
+                  <a href="mailto:support@detectivemysterymasters.com">
+                    support@detectivemysterymasters.com
                   </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src={FacebookIcon} alt="Facebook" width={20} />
-                  </a>
-                </li>
-              </ul>
-            </section>
-
-            <section className="py-6">
-              <img
-                src={WhiteLogo}
-                alt="Detective Mystery Masters Logo"
-                height={51}
-              />
-            </section>
-
-            <section className="leading-6 text-white/60">
-              <Paragraphing>©2025 Detective Mystery Masters</Paragraphing>
-              <a href="mailto:support@detectivemysterymasters.com">
-                support@detectivemysterymasters.com
-              </a>
-            </section>
+                </section>
+              </div>
+            </div>
           </div>
         </Container>
       </div>
@@ -111,7 +119,11 @@ const FooterContainer = ({
   return (
     <div
       {...props}
-      className={cn("grid gap-y-[43.5px] pt-[66px] pb-[36px]", className)}
+      className={cn(
+        "grid gap-y-[43.5px] pt-[66px] pb-[36px] lg:gap-y-[79px]",
+        "md:grid-cols-2 lg:grid-cols-4",
+        className,
+      )}
     >
       {children}
     </div>

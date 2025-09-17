@@ -6,42 +6,53 @@ import ForwardArrowIcon from "../../assets/images/icons/IconForwardArrow.svg";
 import CheckIcon from "../../assets/images/icons/icon-check.svg";
 import { List } from "../List";
 import { ListItem } from "../ListItem";
+import { cn } from "../../lib/utils";
 
-const Discount = () => {
+const Discount = ({ className }: { className?: string }) => {
   return (
-    <div className="bg-tequila-500 rounded-3xl p-4 pb-[30px] text-black">
+    <div
+      className={cn(
+        "bg-tequila-500 overflow-clip rounded-3xl p-4 pb-[30px] text-black md:flex md:gap-x-[114.3px]",
+        className,
+      )}
+    >
       <div className="space-y-3.5">
-        <Heading2 className="text-[32px]">Get your 10% discount</Heading2>
-        <Paragraphing className="text-sm">
+        <Heading2 className="text-[32px] leading-[57.2px] md:text-[44px]">
+          Get your 10% discount
+        </Heading2>
+        <Paragraphing className="text-sm md:max-w-[532.97px] md:text-base">
           Stay in the loop with the latest in detective mystery masters deals.
           Sign up and enjoy 10% off your first Detective order.
         </Paragraphing>
       </div>
 
-      <form className="flex justify-center space-x-1.5 pt-4 pb-6">
-        <input
-          type="text"
-          className="grow rounded-full p-4 outline-1 placeholder:text-base placeholder:text-black"
-          placeholder="Email Address"
-        />
-
-        <SecondaryLinkButton
-          href="#"
-          className="bg-pumpkin-500 rounded-full p-4 outline-none"
-        >
-          <img
-            src={ForwardArrowIcon}
-            alt="Forward Arrow Icon"
-            width={24}
-            height={24}
+      <div className="grow">
+        <form className="flex justify-center space-x-1.5 pt-4 pb-6">
+          <input
+            type="text"
+            className="grow rounded-full p-4 outline-1 placeholder:text-base placeholder:text-black"
+            placeholder="Email Address"
           />
-        </SecondaryLinkButton>
-      </form>
 
-      <List>
-        <ListItem icon={CheckIcon} label="Exclusive deals & discounts" />
-        <ListItem icon={CheckIcon} label="Unsubscribe anytime" />
-      </List>
+          <SecondaryLinkButton
+            href="#"
+            className="bg-pumpkin-500 rounded-full p-4 outline-none"
+          >
+            <img
+              src={ForwardArrowIcon}
+              alt="Forward Arrow Icon"
+              className="min-h-6 min-w-6"
+              width={24}
+              height={24}
+            />
+          </SecondaryLinkButton>
+        </form>
+
+        <List className="md:flex md:space-y-0 md:space-x-3.5">
+          <ListItem icon={CheckIcon} label="Exclusive deals & discounts" />
+          <ListItem icon={CheckIcon} label="Unsubscribe anytime" />
+        </List>
+      </div>
     </div>
   );
 };
