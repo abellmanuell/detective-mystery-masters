@@ -9,7 +9,7 @@ import GoodHouseKeeping from "../../../assets/images/featured-logo/good-housekee
 
 const Featured = () => {
   return (
-    <>
+    <div className="bg-dark-burgundy-500 relative h-[210px] w-full py-8">
       <Heading3 className="pb-6 text-center text-lg text-white">
         detective games featured in
       </Heading3>
@@ -26,7 +26,7 @@ const Featured = () => {
           />
         </Marquee>
       </div>
-    </>
+    </div>
   );
 };
 

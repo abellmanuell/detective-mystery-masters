@@ -1,5 +1,7 @@
 import { announcements } from "../../lib/globalVariables";
 
+import Wrapper from "../../components/Wrapper";
+
 import { HeaderNavBar } from "../../components/HeaderNavBar";
 import { AnnouncementBar } from "../../components/AnnouncementBar";
 import { AnnouncementBarItem } from "../../components/AnnouncementBarItem";
@@ -9,12 +11,12 @@ import { StepsSummary } from "./views/StepsSummary";
 import { Services } from "./views/Services";
 import { BestSelling } from "./views/BestSelling";
 import { Featured } from "./views/Featured";
+import { Footer } from "../../components/footer/Footer";
 
 export default function HomePage() {
   return (
     <>
-      <div className="bg-tequila-600/70 relative">
-        <div className="bg-noise absolute inset-0 opacity-20 mix-blend-overlay" />
+      <Wrapper>
         <div className="relative z-10">
           {/* Only use <AnnouncementBarItem> inside <AnnouncementBar> for consistency */}
           <AnnouncementBar>
@@ -31,28 +33,20 @@ export default function HomePage() {
 
         {/* Steps Summary Section */}
         <StepsSummary />
-      </div>
+      </Wrapper>
 
-      <div className="bg-tequila-600/70 relative">
-        <div className="bg-noise absolute inset-0 opacity-20 mix-blend-overlay" />
-        {/* Services Section */}
-        <div className="bg-tequila-500 rounded-3xl">
-          <Services />
-        </div>
+      {/* Services Section */}
+      <Services />
+      {/* Best Selling Section */}
+      <BestSelling />
 
-        {/* Best Selling Section */}
-        <BestSelling />
-      </div>
+      {/* Featured Logo Section */}
+      <Featured />
 
-      <div className="bg-dark-burgundy-500 relative h-[210px] w-full py-8">
-        <Featured />
-      </div>
+      {/* SOME SECTION WILL COME HERE BEFORE FOOTER */}
 
-      <div className="bg-tequila-600/70 relative">
-        <div className="bg-noise absolute inset-0 opacity-20 mix-blend-overlay" />
-        {/* Best Selling Section */}
-        {/* <BestSelling /> */}
-      </div>
+      {/* Footer Section */}
+      <Footer />
     </>
   );
 }
