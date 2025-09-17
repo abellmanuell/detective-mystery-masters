@@ -18,7 +18,7 @@ const Services = () => {
   return (
     <Container
       className={cn(
-        "grid grid-cols-1 gap-y-12 md:gap-8",
+        "grid grid-cols-1 place-items-center gap-y-12 md:gap-8",
         "lg:h-dvh lg:grid-cols-2",
         "py-20 md:px-10 md:!py-[112px]",
       )}
