@@ -26,12 +26,7 @@ const ProductCard = ({
   isMegaBundle = false,
 }: ProductCardProps) => {
   return (
-    <div
-      className={cn(
-        "bg-tequila-500 w-[358px] rounded-lg rounded-t-2xl",
-        className,
-      )}
-    >
+    <div className={cn("bg-tequila-500 rounded-lg rounded-t-2xl", className)}>
       <ProductImage
         imageUrl={imageUrl}
         badges={badges}

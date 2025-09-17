@@ -18,7 +18,7 @@ const BestSelling = () => {
       <Container className={cn("lg:min-h-dvh", "py-20 md:!py-[112px]")}>
         {/* Heading 2 <H2> Element */}
         <div className="flex justify-between">
-          <Heading2 className="min-w-[358px]">Best Selling</Heading2>
+          <Heading2 className="w-[358px]">Best Selling</Heading2>
 
           <SecondaryLinkButton href="#" className="hidden md:block">
             Shop All
@@ -66,7 +66,7 @@ const BestSelling = () => {
             className="hidden md:block"
           />
 
-          <div className="grid grid-cols-2 gap-x-6 gap-y-[32px] md:hidden">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-[32px] overflow-clip md:hidden">
             <SubProductCard
               isMegaBundle={true}
               imageUrl={Game10MegaBundle}

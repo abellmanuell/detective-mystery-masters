@@ -16,7 +16,7 @@ const StepsSummary = () => {
   return (
     <Container className={cn("lg:min-h-dvh", "py-20 md:!py-[112px]")}>
       {/* Heading 2 <H2> Element */}
-      <Heading2 className="relative min-w-[358px] lg:text-center">
+      <Heading2 className="relative lg:text-center">
         <img
           className={cn(
             "absolute -bottom-10 left-56",
@@ -26,7 +26,8 @@ const StepsSummary = () => {
           src={LeftHandDrawnArrowIcon}
           alt="Hand Drawn Arrow Icon"
         />
-        Here&apos;s how it makes your <br /> games night exciting
+        Here&apos;s how it makes your <br className="hidden sm:block" /> games
+        night exciting
         <img
           className={cn(
             "absolute right-8 -bottom-10",
