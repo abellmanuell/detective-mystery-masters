@@ -8,6 +8,7 @@ import { LandingPage } from "./views/LandingPage";
 import { StepsSummary } from "./views/StepsSummary";
 import { Services } from "./views/Services";
 import { BestSelling } from "./views/BestSelling";
+import { Featured } from "./views/Featured";
 
 export default function HomePage() {
   return (
@@ -41,6 +42,16 @@ export default function HomePage() {
 
         {/* Best Selling Section */}
         <BestSelling />
+      </div>
+
+      <div className="bg-dark-burgundy-500 relative h-[210px] w-full py-8">
+        <Featured />
+      </div>
+
+      <div className="bg-tequila-600/70 relative">
+        <div className="bg-noise absolute inset-0 opacity-20 mix-blend-overlay" />
+        {/* Best Selling Section */}
+        {/* <BestSelling /> */}
       </div>
     </>
   );
