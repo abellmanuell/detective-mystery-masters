@@ -18,11 +18,11 @@ import { SecondaryLinkButton } from "../../../components/SecondaryLinkButton";
 const Services = () => {
   return (
     // <Wrapper>
-    <div className="bg-tequila-500 mt-[19px] rounded-3xl">
+    <div className="bg-tequila-500 relative z-5 mt-[19px] rounded-3xl">
       <Container
         className={cn(
           "grid grid-cols-1 gap-y-12 md:gap-8",
-          "lg:min-h-dvh xl:grid-cols-2",
+          "xl:grid-cols-2",
           "py-20 md:px-10 md:!py-[112px]",
         )}
       >

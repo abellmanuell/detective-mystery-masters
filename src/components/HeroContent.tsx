@@ -14,7 +14,7 @@ const HeroContent = () => {
     <div
       className={cn(
         "bg-tequila-500 flex flex-col rounded-[16px] p-4 shadow-[0_4px_12px_rgba(120,120,120,0.1)]",
-        "max-lg:order-2",
+        "max-lg:order-2 lg:px-6 lg:py-[111.94px]",
       )}
     >
       {/* Social Proofs, Heading, Subheading & CTA */}

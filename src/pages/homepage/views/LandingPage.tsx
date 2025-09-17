@@ -9,7 +9,7 @@ const LandingPage = () => {
     <Container
       className={cn(
         "grid grid-cols-1 gap-2 md:gap-8",
-        "lg:h-dvh lg:grid-cols-2",
+        "lg:grid-cols-2",
         "pt-0 md:!p-4",
       )}
     >
