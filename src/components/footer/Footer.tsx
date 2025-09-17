@@ -26,7 +26,7 @@ const Footer = () => {
         >
           <Discount className="md:px-20 md:py-[63px]" />
 
-          <div className="overflow-clip md:w-full md:px-[34px] lg:px-0">
+          <div className="overflow-clip px-[34px] md:w-full md:px-0 lg:px-0">
             <FooterContainer>
               <FooterItem
                 title="Shop"
