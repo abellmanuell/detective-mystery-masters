@@ -16,27 +16,42 @@ const StepsSummary = () => {
   return (
     <Container className={cn("lg:min-h-dvh", "py-20 md:!py-[112px]")}>
       {/* Heading 2 <H2> Element */}
-      <Heading2 className="relative lg:text-center">
-        <img
-          className={cn(
-            "absolute -bottom-10 left-56",
-            "min-h-[130.93px] w-[230.85px]",
-            "hidden 2xl:inline-block",
-          )}
-          src={LeftHandDrawnArrowIcon}
-          alt="Hand Drawn Arrow Icon"
-        />
-        Here&apos;s how it makes your <br className="hidden sm:block" /> games
-        night exciting
-        <img
-          className={cn(
-            "absolute right-8 -bottom-10",
-            "min-h-[40.47px] min-w-[71.35px]",
-            "inline-block sm:hidden",
-          )}
-          src={HandDrawnArrowIcon}
-          alt="Hand Drawn Arrow Icon"
-        />
+      <Heading2 className="xs:text-center relative flex justify-center">
+        {/* large: >=1280px */}
+        <div className="relative">
+          <img
+            className="relative -bottom-10 hidden min-h-[130.93px] w-[230.85px] xl:inline-block"
+            src={LeftHandDrawnArrowIcon}
+            aria-hidden="true"
+          />
+        </div>
+
+        {/* medium: 640px - 1279px */}
+        <div className="relative">
+          <img
+            className={cn(
+              "xs:inline-block xs:-rotate-35 xs:left-3 relative -bottom-8 left-10 hidden min-h-[90px] w-[160px]",
+              "md:left-10 md:min-h-[130.93px] md:w-[230.85px] xl:hidden xl:rotate-0",
+            )}
+            src={LeftHandDrawnArrowIcon}
+            aria-hidden="true"
+          />
+        </div>
+
+        <span>
+          Here&apos;s how it makes your <br className="hidden lg:block" /> games
+          night exciting
+        </span>
+
+        {/* small: <640px */}
+        <div className="relative">
+          <img
+            className="xs:invisible xxs:-bottom-15 xs:-bottom-12 xxs:-left-16 relative right-8 -bottom-10 inline-block min-h-[40.47px] min-w-[71.35px]"
+            src={HandDrawnArrowIcon}
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
       </Heading2>
 
       {/* Steps 1-3 */}
@@ -78,3 +93,53 @@ const StepsSummary = () => {
 };
 
 export { StepsSummary };
+
+{
+  /* <Heading2 className="relative lg:text-center">
+        <img
+          className={cn(
+            "absolute -bottom-10 left-56",
+            "min-h-[130.93px] w-[230.85px]",
+            "hidden 2xl:inline-block",
+          )}
+          src={LeftHandDrawnArrowIcon}
+          alt="Hand Drawn Arrow Icon"
+        />
+        Here&apos;s how it makes your <br className="hidden sm:block" /> games
+        night exciting
+        <img
+          className={cn(
+            "absolute right-8 -bottom-10",
+            "min-h-[40.47px] min-w-[71.35px]",
+            "inline-block sm:hidden",
+          )}
+          src={HandDrawnArrowIcon}
+          alt="Hand Drawn Arrow Icon"
+        />
+      </Heading2> */
+}
+
+//  <Heading2 className="relative flex justify-center lg:text-center">
+//         <img
+//           className={cn(
+//             "relative",
+//             "min-h-[130.93px] w-[230.85px]",
+//             // "hidden 2xl:inline-block",
+//           )}
+//           src={LeftHandDrawnArrowIcon}
+//           alt="Hand Drawn Arrow Icon"
+//         />
+//         {/* </div> */}
+//         <span className="basis-4xl">
+//           Here&apos;s how it makes <br /> your games night exciting
+//         </span>
+//         <img
+//           className={cn(
+//             // "absolute right-8 -bottom-10",
+//             "min-h-[40.47px] min-w-[71.35px]",
+//             // "inline-block sm:hidden",
+//           )}
+//           src={HandDrawnArrowIcon}
+//           alt="Hand Drawn Arrow Icon"
+//         />
+//       </Heading2>
