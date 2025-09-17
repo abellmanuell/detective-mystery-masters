@@ -33,20 +33,20 @@ export default function HomePage() {
 
         {/* Steps Summary Section */}
         <StepsSummary />
+
+        {/* Services Section */}
+        <Services />
+        {/* Best Selling Section */}
+        <BestSelling />
+
+        {/* Featured Logo Section */}
+        <Featured />
+
+        {/* SOME SECTION WILL COME HERE BEFORE FOOTER */}
+
+        {/* Footer Section */}
+        <Footer />
       </Wrapper>
-
-      {/* Services Section */}
-      <Services />
-      {/* Best Selling Section */}
-      <BestSelling />
-
-      {/* Featured Logo Section */}
-      <Featured />
-
-      {/* SOME SECTION WILL COME HERE BEFORE FOOTER */}
-
-      {/* Footer Section */}
-      <Footer />
     </>
   );
 }

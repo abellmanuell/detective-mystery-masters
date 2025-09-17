@@ -6,6 +6,19 @@
   --font-bebas-neue: "Bebas Neue", sans-serif;
 
   /* Colors definitions */
+  --color-chamois: oklch(89.659% 0.04245 66.086);
+  --color-chamois-50: oklch(100% 0 none);
+  --color-chamois-100: oklch(100% 0 none);
+  --color-chamois-200: oklch(100% 0 none);
+  --color-chamois-300: oklch(100% 0 none);
+  --color-chamois-400: oklch(95.15% 0.01994 69.993);
+  --color-chamois-500: oklch(89.659% 0.04245 66.086);
+  --color-chamois-600: oklch(82.315% 0.07447 65.815);
+  --color-chamois-700: oklch(74.96% 0.10578 63.624);
+  --color-chamois-800: oklch(67.985% 0.13243 61.214);
+  --color-chamois-900: oklch(57.795% 0.11671 60.123);
+  --color-chamois-950: oklch(52.089% 0.10401 60.157);
+
   --color-tequila: oklch(93.879% 0.04296 67.264);
   --color-tequila-50: oklch(100% 0 none);
   --color-tequila-100: oklch(100% 0 none);
