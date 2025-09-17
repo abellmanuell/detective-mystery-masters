@@ -26,7 +26,7 @@ const Footer = () => {
         >
           <Discount className="md:px-20 md:py-[63px]" />
 
-          <div className="mx-auto w-[302px] md:w-full">
+          <div className="px-[34px] md:w-full md:px-0">
             <FooterContainer>
               <FooterItem
                 title="Shop"
