@@ -14,14 +14,14 @@ import { StepItem } from "../../../components/steps/StepItem";
 
 const StepsSummary = () => {
   return (
-    <Container className={cn("lg:h-dvh", "py-20 md:!py-[112px]")}>
+    <Container className={cn("lg:min-h-dvh", "py-20 md:!py-[112px]")}>
       {/* Heading 2 <H2> Element */}
       <Heading2 className="relative min-w-[358px] lg:text-center">
         <img
           className={cn(
             "absolute -bottom-10 left-56",
-            "min-h-[130.93px] min-w-[230.85px]",
-            "hidden sm:inline-block",
+            "min-h-[130.93px] w-[230.85px]",
+            "hidden 2xl:inline-block",
           )}
           src={LeftHandDrawnArrowIcon}
           alt="Hand Drawn Arrow Icon"

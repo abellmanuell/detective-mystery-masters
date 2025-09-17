@@ -25,6 +25,7 @@ const BestSelling = () => {
 
       <SellingContainer>
         <ProductCard
+          isMegaBundle={true}
           imageUrl={Game10MegaBundle}
           name="10-Game Detective Mega Bundle"
           review="1,500"
@@ -111,7 +112,7 @@ const BestSelling = () => {
 
       {/* Back and Forward Arrow Button */}
       <div className="hidden justify-end space-x-[15px] md:flex">
-        <SecondaryLinkButton href="#" className="rounded-full p-6">
+        <SecondaryLinkButton href="#" className="rounded-full p-4">
           <img
             src={BackArrowIcon}
             alt="Back Arrow Icon"
@@ -120,7 +121,7 @@ const BestSelling = () => {
           />
         </SecondaryLinkButton>
 
-        <SecondaryLinkButton href="#" className="rounded-full p-6">
+        <SecondaryLinkButton href="#" className="rounded-full p-4">
           <img
             src={ForwardArrowIcon}
             alt="Forward Arrow Icon"

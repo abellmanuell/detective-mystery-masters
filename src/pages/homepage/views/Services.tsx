@@ -19,7 +19,7 @@ const Services = () => {
     <Container
       className={cn(
         "grid grid-cols-1 place-items-center gap-y-12 md:gap-8",
-        "lg:h-dvh lg:grid-cols-2",
+        "lg:min-h-dvh xl:grid-cols-2",
         "py-20 md:px-10 md:!py-[112px]",
       )}
     >
@@ -45,6 +45,8 @@ const Services = () => {
         <div className={cn("hidden md:block", "md:h-[712px] md:w-[640px]")}>
           <img
             src={ServicesAsideImage}
+            width={640}
+            height={712}
             alt="Hero Aside Image"
             className={cn(
               "rounded-2xl object-cover",

@@ -23,8 +23,14 @@ const ProductImage = ({
       )}
     >
       <div className="absolute mt-[16.16px] ml-[13.26px] flex flex-col space-y-3 uppercase">
-        <Badge title={badges[0]} className="bg-[#FDA32E]" />
-        <Badge title={badges[1]} className="bg-[#59C254]" />
+        <Badge
+          title={badges[0]}
+          className={badges[0] ? "bg-[#FDA32E]" : "bg-transparent"}
+        />
+        <Badge
+          title={badges[1]}
+          className={badges[1] ? "bg-[#59C254]" : "bg-transparent"}
+        />
       </div>
 
       {isMegaBundle && (
@@ -40,8 +46,8 @@ const ProductImage = ({
 
             <h3
               className={cn(
-                "font-bebas-neue text-lg uppercase md:pt-[10px] md:pl-[10px]",
-                "md:text-[32px] md:leading-[38.4px]",
+                "font-bebas-neue text-lg uppercase md:pt-[2px] md:pl-[0.56px]",
+                "md:text-[17px]",
                 "relative w-4/5",
               )}
             >
