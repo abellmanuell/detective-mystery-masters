@@ -24,6 +24,14 @@ const Featured = () => {
             imageUrl={GoodHouseKeeping}
             alt="Good House Keeping Logo"
           />
+          <FeaturedItem imageUrl={MashableLogo} alt="Mashable Logo" />
+          <FeaturedItem imageUrl={BuzzFeed} alt="BuzzFeed Logo" />
+          <FeaturedItem imageUrl={Entertainment} alt="Entertainment Logo" />
+          <FeaturedItem imageUrl={TheGuardian} alt="The Guardian Logo" />
+          <FeaturedItem
+            imageUrl={GoodHouseKeeping}
+            alt="Good House Keeping Logo"
+          />
         </Marquee>
       </div>
     </div>
