@@ -18,12 +18,7 @@ const Footer = () => {
   return (
     // <Wrapper>
     <div className="relative z-5 rounded-t-3xl bg-black text-white">
-      <Container
-        className={cn(
-          "lg:min-h-dvh",
-          "md:!w[1280px] py-6 md:pt-[83px] md:pb-[63px]",
-        )}
-      >
+      <Container className={cn("md:!w[1280px] py-6 md:pt-[83px] md:pb-[63px]")}>
         <Discount className="md:px-20 md:py-[63px]" />
 
         <div className="overflow-clip px-[34px] md:w-full md:px-0 lg:px-0">
