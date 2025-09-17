@@ -17,10 +17,10 @@ const BestSelling = () => {
     // <Wrapper>
     <Container className={cn("py-20 md:!py-[112px]")}>
       {/* Heading 2 <H2> Element */}
-      <div className="flex justify-between">
+      <div className="flex items-end justify-between">
         <Heading2 className="w-[358px]">Best Selling</Heading2>
 
-        <SecondaryLinkButton href="#" className="hidden md:block">
+        <SecondaryLinkButton href="#" className="hidden self-end md:block">
           Shop All
         </SecondaryLinkButton>
       </div>
