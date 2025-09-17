@@ -14,7 +14,7 @@ import { StepItem } from "../../../components/steps/StepItem";
 
 const StepsSummary = () => {
   return (
-    <Container className={cn("lg:min-h-dvh", "py-20 md:!py-[112px]")}>
+    <Container className={cn("py-20 md:!py-[112px]")}>
       {/* Heading 2 <H2> Element */}
       <Heading2 className="xs:text-center relative flex justify-center">
         {/* large: >=1280px */}
@@ -38,7 +38,7 @@ const StepsSummary = () => {
           />
         </div>
 
-        <span>
+        <span className="z-5">
           Here&apos;s how it makes your <br className="hidden lg:block" /> games
           night exciting
         </span>

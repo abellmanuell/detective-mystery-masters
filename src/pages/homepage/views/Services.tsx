@@ -18,10 +18,10 @@ import { SecondaryLinkButton } from "../../../components/SecondaryLinkButton";
 const Services = () => {
   return (
     // <Wrapper>
-    <div className="bg-tequila-500 rounded-3xl">
+    <div className="bg-tequila-500 mt-[19px] rounded-3xl">
       <Container
         className={cn(
-          "grid grid-cols-1 place-items-center gap-y-12 md:gap-8",
+          "grid grid-cols-1 gap-y-12 md:gap-8",
           "lg:min-h-dvh xl:grid-cols-2",
           "py-20 md:px-10 md:!py-[112px]",
         )}
@@ -30,10 +30,12 @@ const Services = () => {
           {/* Display on Mobile */}
           <div
             className={cn(
-              "overflow-clip md:hidden",
+              "relative overflow-clip rounded-2xl md:hidden",
               "h-[358px] max-w-[358px] md:h-[213px] md:max-w-[421.33px]",
             )}
           >
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 z-5 bg-gradient-to-t from-black/45 to-transparent"></div>
             <img
               src={HeroAsideImage}
               alt="Hero Aside Image"
