@@ -31,8 +31,8 @@ const BestSelling = () => {
           imageUrl={Game10MegaBundle}
           name="10-Game Detective Mega Bundle"
           review="1,500"
-          currentPrice="325.00"
-          marketPrice="650.00"
+          currentPrice={325.0}
+          marketPrice={650.0}
           promo="Save 50%"
           bundle="10"
         />
@@ -41,8 +41,8 @@ const BestSelling = () => {
           imageUrl={Game10MegaBundle}
           name="10-Game Detective Mega Bundle"
           review="1,500"
-          currentPrice="325.00"
-          marketPrice="650.00"
+          currentPrice={325.0}
+          marketPrice={650.0}
           promo="Save 50%"
           className="hidden md:block"
         />
@@ -51,8 +51,8 @@ const BestSelling = () => {
           imageUrl={Game10MegaBundle}
           name="10-Game Detective Mega Bundle"
           review="1,500"
-          currentPrice="325.00"
-          marketPrice="650.00"
+          currentPrice={325.0}
+          marketPrice={650.0}
           promo="Save 50%"
           className="hidden md:block"
         />
@@ -61,8 +61,8 @@ const BestSelling = () => {
           imageUrl={Game10MegaBundle}
           name="10-Game Detective Mega Bundle"
           review="1,500"
-          currentPrice="325.00"
-          marketPrice="650.00"
+          currentPrice={325.0}
+          marketPrice={650.0}
           promo="Save 50%"
           className="hidden md:block"
         />
@@ -73,8 +73,8 @@ const BestSelling = () => {
             imageUrl={Game10MegaBundle}
             name="10-Game Detective Mega Bundle"
             review="1,500"
-            currentPrice="325.00"
-            marketPrice="650.00"
+            currentPrice={325.0}
+            marketPrice={650.0}
             promo="Save 50%"
             bundle="5"
           />
@@ -83,8 +83,8 @@ const BestSelling = () => {
             imageUrl={Game10MegaBundle}
             name="10-Game Detective Mega Bundle"
             review="1,500"
-            currentPrice="325.00"
-            marketPrice="650.00"
+            currentPrice={325.0}
+            marketPrice={650.0}
             promo="Save 50%"
           />
 
@@ -92,8 +92,8 @@ const BestSelling = () => {
             imageUrl={Game10MegaBundle}
             name="10-Game Detective Mega Bundle"
             review="1,500"
-            currentPrice="325.00"
-            marketPrice="650.00"
+            currentPrice={325.0}
+            marketPrice={650.0}
             promo="Save 50%"
           />
 
@@ -101,8 +101,8 @@ const BestSelling = () => {
             imageUrl={Game10MegaBundle}
             name="10-Game Detective Mega Bundle"
             review="1,500"
-            currentPrice="325.00"
-            marketPrice="650.00"
+            currentPrice={325.0}
+            marketPrice={650.0}
             promo="Save 50%"
           />
         </div>

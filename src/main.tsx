@@ -3,7 +3,6 @@ import { createRoot } from "react-dom/client";
 
 // Import CSS files
 import "./index.css";
-import "swiper/css";
 
 // Import Components
 import App from "./App.tsx";
