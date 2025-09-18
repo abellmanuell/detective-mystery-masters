@@ -27,7 +27,7 @@ const ProductImage = ({
       <img
         className={cn(
           "absolute top-0 left-0 size-full object-cover",
-          "h-[316px] w-full rounded-2xl md:w-[316px] lg:w-full",
+          "h-[316px] w-full rounded-2xl lg:w-full",
         )}
         src={imageUrl}
         alt="Game 10 Mega Bundle"

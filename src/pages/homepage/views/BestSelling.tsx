@@ -143,7 +143,7 @@ const SellingContainer = ({ children }: { children: React.ReactNode }) => (
   <section
     className={cn(
       "grid gap-y-[32px] lg:grid lg:grid-cols-4",
-      "justify-center md:flex md:flex-wrap md:gap-x-8 lg:flex-nowrap",
+      "md:grid-cols-2 md:gap-x-8 lg:flex-nowrap",
       "py-12 md:py-[58px]",
     )}
   >
