@@ -12,6 +12,7 @@ import { Heading2 } from "./headings/Heading2";
 import { SecondaryLinkButton } from "./SecondaryLinkButton";
 import { ProductCard } from "./bestselling/main/ProductCard";
 import { SubProductCard } from "./bestselling/subs/ProductCard";
+import { Pagination } from "swiper/modules";
 
 interface PackageProps {
   title: string;
@@ -65,10 +66,18 @@ const Package = ({
 
       <div className={cn("hidden lg:grid", "py-12 md:py-[58px]")}>
         <Swiper
+          modules={[Pagination]}
           spaceBetween={50}
           slidesPerView={4}
-          onSlideChange={() => console.log("slide change")}
+          //   onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
+          pagination={{
+            el: ".custom-pagination",
+            clickable: true,
+            renderBullet: (index, className) => {
+              return `<span class="${className}">${index + 1}</span>`;
+            },
+          }}
           className={cn(
             "grid gap-y-[32px] lg:grid lg:grid-cols-4",
             "md:grid-cols-2 md:gap-x-8 lg:flex-nowrap",

@@ -61,7 +61,7 @@ const Services = () => {
             Detective Mystery Masters <br /> Are Perfect For
           </Heading2>
 
-          <div className="space-y-8 md:py-12 xl:py-20">
+          <div className="space-y-8 py-12 xl:py-20">
             <ServiceItem
               imageUrl={DiceIcon}
               headline="Board game enthusiasts"
