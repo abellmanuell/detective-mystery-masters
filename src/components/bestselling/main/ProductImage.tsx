@@ -58,7 +58,7 @@ const ProductImage = ({
         alt="Game 10 Mega Bundle"
         className={cn(
           "rounded-2xl object-cover",
-          "h-[316px] w-full md:w-[316px]",
+          "h-[316px] w-full md:w-[316px] lg:w-full",
         )}
       />
     </div>

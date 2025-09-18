@@ -10,7 +10,7 @@ const Game10PaperCard = (props: React.ComponentProps<"div">) => {
         "px-2 pt-2 pb-[10.12px]",
         "h-[73px] w-[62.46px]",
         "flex flex-col gap-1",
-        "paper-mask z-5 shadow-2xl shadow-amber-500",
+        "paper-red-mask z-5 shadow-2xl shadow-amber-500",
         props.className,
       )}
     >
