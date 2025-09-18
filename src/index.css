@@ -71,8 +71,9 @@
   --color-red-orange-900: oklch(26.213% 0.10045 30.685);
   --color-red-orange-950: oklch(19.47% 0.07253 32.638);
 
-  --breakpoint-xs: 30rem;
+  --breakpoint-xxxs: 16.063rem;
   --breakpoint-xxs: 21.125rem;
+  --breakpoint-xs: 30rem;
 }
 
 @layer base {

@@ -66,7 +66,7 @@ const BestSelling = () => {
           className="hidden md:block"
         />
 
-        <div className="grid grid-cols-2 gap-x-6 gap-y-[32px] overflow-clip md:hidden">
+        <div className="xxs:grid-cols-2 grid gap-x-6 gap-y-[32px] overflow-clip md:hidden">
           <SubProductCard
             isMegaBundle={true}
             imageUrl={Game10MegaBundle}
