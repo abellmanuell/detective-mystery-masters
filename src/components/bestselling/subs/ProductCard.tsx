@@ -9,6 +9,7 @@ interface ProductCardProps {
   marketPrice: string;
   promo: string;
   badges?: Array<string>;
+  bundle?: string;
   isMegaBundle?: boolean;
 }
 
@@ -21,6 +22,7 @@ const SubProductCard = ({
   promo,
   badges,
   isMegaBundle = false,
+  bundle,
 }: ProductCardProps) => {
   return (
     <div className="bg-tequila-500 rounded-lg rounded-t-2xl">
@@ -28,6 +30,7 @@ const SubProductCard = ({
         imageUrl={imageUrl}
         badges={badges}
         isMegaBundle={isMegaBundle}
+        bundle={bundle}
       />
 
       <ProductDetails

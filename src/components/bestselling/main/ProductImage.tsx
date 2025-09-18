@@ -7,16 +7,33 @@ interface ProductImageProps {
   imageUrl: string;
   badges?: Array<string>;
   isMegaBundle: boolean;
+  bundle?: string;
 }
 
 const ProductImage = ({
   imageUrl,
   badges = ["Popular", "Gift Included"],
   isMegaBundle,
+  bundle,
 }: ProductImageProps) => {
   return (
-    <div className={cn("h-[316px] overflow-clip", "md:h-[316px]", "relative")}>
-      <div className="absolute mt-[16.16px] ml-[13.26px] flex flex-col space-y-3 uppercase">
+    <div
+      className={cn(
+        "h-[316px] overflow-clip md:h-[316px]",
+        "relative pt-[16.15px] pr-2 pb-2 pl-[11.7px]",
+        "flex flex-col justify-between",
+      )}
+    >
+      <img
+        className={cn(
+          "absolute top-0 left-0 size-full object-cover",
+          "h-[316px] w-full rounded-2xl md:w-[316px] lg:w-full",
+        )}
+        src={imageUrl}
+        alt="Game 10 Mega Bundle"
+      />
+
+      <div className="relative flex flex-col space-y-3 uppercase">
         <Badge
           title={badges[0]}
           className={badges[0] ? "bg-[#FDA32E]" : "bg-transparent"}
@@ -27,9 +44,9 @@ const ProductImage = ({
         />
       </div>
 
-      {isMegaBundle && (
+      {isMegaBundle && bundle && (
         <Game10PaperCard>
-          <div className="pt-[25px] pl-[9.7px]">
+          <div className="relative flex flex-col justify-center px-1.5 pt-[25px]">
             <div className="flex items-center text-white">
               <AiFillStar size={10} />
               <AiFillStar size={10} />
@@ -40,27 +57,19 @@ const ProductImage = ({
 
             <h3
               className={cn(
-                "font-bebas-neue text-lg uppercase md:pt-[2px] md:pl-[0.56px]",
-                "md:text-[17px]",
-                "relative w-4/5",
+                "font-bebas-neue text-white",
+                "text-2xl leading-[28.8px]",
               )}
             >
-              10-Games
+              {bundle}-Games
             </h3>
 
-            <p className="font-bebas-neue text-[12.5px]">Mega Bundle</p>
+            <p className="font-bebas-neue text-[12.5px] leading-3.5 text-white">
+              Mega Bundle
+            </p>
           </div>
         </Game10PaperCard>
       )}
-
-      <img
-        src={imageUrl}
-        alt="Game 10 Mega Bundle"
-        className={cn(
-          "rounded-2xl object-cover",
-          "h-[316px] w-full md:w-[316px] lg:w-full",
-        )}
-      />
     </div>
   );
 };

@@ -34,6 +34,7 @@ const BestSelling = () => {
           currentPrice="325.00"
           marketPrice="650.00"
           promo="Save 50%"
+          bundle="10"
         />
 
         <ProductCard
@@ -75,6 +76,7 @@ const BestSelling = () => {
             currentPrice="325.00"
             marketPrice="650.00"
             promo="Save 50%"
+            bundle="5"
           />
 
           <SubProductCard

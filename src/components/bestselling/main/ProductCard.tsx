@@ -12,6 +12,7 @@ interface ProductCardProps {
   badges?: Array<string>;
   className?: string;
   isMegaBundle?: boolean;
+  bundle?: string;
 }
 
 const ProductCard = ({
@@ -24,6 +25,7 @@ const ProductCard = ({
   badges,
   className,
   isMegaBundle = false,
+  bundle,
 }: ProductCardProps) => {
   return (
     <div className={cn("bg-tequila-500 rounded-lg rounded-t-2xl", className)}>
@@ -31,6 +33,7 @@ const ProductCard = ({
         imageUrl={imageUrl}
         badges={badges}
         isMegaBundle={isMegaBundle}
+        bundle={bundle}
       />
 
       <ProductDetails

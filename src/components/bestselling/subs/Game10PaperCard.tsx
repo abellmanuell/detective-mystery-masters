@@ -5,12 +5,11 @@ const Game10PaperCard = (props: React.ComponentProps<"div">) => {
     <div
       {...props}
       className={cn(
-        "bg-red-orange-500 rounded-lg text-white",
-        "absolute right-1.5 bottom-[10px]",
-        "px-2 pt-2 pb-[10.12px]",
+        "bg-red-orange-500 relative self-end rounded",
         "h-[73px] w-[62.46px]",
         "flex flex-col gap-1",
-        "paper-red-mask z-5 shadow-2xl shadow-amber-500",
+        "paper-red-mask relative z-5 drop-shadow-2xl",
+
         props.className,
       )}
     >
