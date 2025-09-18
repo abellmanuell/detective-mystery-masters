@@ -34,14 +34,13 @@ const ProductImage = ({
       />
 
       <div className="relative flex flex-col space-y-3 uppercase">
-        <Badge
-          title={badges[0]}
-          className={badges[0] ? "bg-[#FDA32E]" : "bg-transparent"}
-        />
-        <Badge
-          title={badges[1]}
-          className={badges[1] ? "bg-[#59C254]" : "bg-transparent"}
-        />
+        {badges.length > 0 &&
+          badges.map((badge, i) => (
+            <Badge
+              title={badge}
+              className={i == 0 ? "bg-[#FDA32E]" : "bg-[#59C254]"}
+            />
+          ))}
       </div>
 
       {isMegaBundle && bundle && (

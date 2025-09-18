@@ -1,3 +1,4 @@
+import { cn } from "../../../lib/utils";
 import { ProductDetails } from "./ProductDetails";
 import { ProductImage } from "./ProductImage";
 
@@ -5,12 +6,13 @@ interface ProductCardProps {
   imageUrl: string;
   name: string;
   review: string;
-  currentPrice: string;
-  marketPrice: string;
+  currentPrice: number;
+  marketPrice: number;
   promo: string;
   badges?: Array<string>;
   bundle?: string;
   isMegaBundle?: boolean;
+  className?: string;
 }
 
 const SubProductCard = ({
@@ -23,9 +25,10 @@ const SubProductCard = ({
   badges,
   isMegaBundle = false,
   bundle,
+  className,
 }: ProductCardProps) => {
   return (
-    <div className="bg-tequila-500 rounded-lg rounded-t-2xl">
+    <div className={cn("bg-tequila-500 rounded-lg rounded-t-2xl", className)}>
       <ProductImage
         imageUrl={imageUrl}
         badges={badges}

@@ -11,8 +11,8 @@ const ProductDetails = ({
 }: {
   name: string;
   review: string;
-  currentPrice: string;
-  marketPrice: string;
+  currentPrice: number;
+  marketPrice: number;
   promo: string;
 }) => (
   <div className="p-4">

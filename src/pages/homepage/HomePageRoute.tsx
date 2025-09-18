@@ -1,4 +1,4 @@
-import { announcements } from "../../lib/globalVariables";
+import { announcements, bestselling } from "../../lib/globalVariables";
 
 import Wrapper from "../../components/Wrapper";
 
@@ -9,9 +9,14 @@ import { AnnouncementBarItem } from "../../components/AnnouncementBarItem";
 import { LandingPage } from "./views/LandingPage";
 import { StepsSummary } from "./views/StepsSummary";
 import { Services } from "./views/Services";
-import { BestSelling } from "./views/BestSelling";
+
+/* import { BestSelling } from "./views/BestSelling";
+import { DetectiveCases } from "./views/DetectiveCases"; */
+
 import { Featured } from "./views/Featured";
 import { Footer } from "../../components/footer/Footer";
+import { detectiveCases } from "../../lib/globalVariables";
+import { Package } from "../../components/Package";
 
 export default function HomePage() {
   return (
@@ -37,11 +42,12 @@ export default function HomePage() {
         {/* Services Section */}
         <Services />
         {/* Best Selling Section */}
-        <BestSelling />
+        <Package title="Best Selling" items={bestselling} />
 
         {/* Featured Logo Section */}
         <Featured />
 
+        <Package title="Detective Cases" items={detectiveCases} />
         {/* SOME SECTION WILL COME HERE BEFORE FOOTER */}
 
         {/* Footer Section */}
