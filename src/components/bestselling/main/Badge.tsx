@@ -13,7 +13,7 @@ const Badge = ({
     className={cn(
       "bg-black",
       "inline-flex items-center justify-center self-baseline rounded-full",
-      "px-2 py-0.5 font-bold text-white",
+      "px-2 py-0.5 text-white",
       className,
     )}
   >

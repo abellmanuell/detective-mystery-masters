@@ -42,7 +42,7 @@ const ProductDetails = ({
         className={cn(
           "bg-red-orange-500",
           "flex items-center justify-center rounded-full",
-          "px-2 py-0.5 font-bold text-white",
+          "px-2 py-0.5 text-white",
         )}
       >
         <p>{promo}</p>

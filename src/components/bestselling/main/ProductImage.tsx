@@ -15,13 +15,7 @@ const ProductImage = ({
   isMegaBundle,
 }: ProductImageProps) => {
   return (
-    <div
-      className={cn(
-        "h-[316px] max-w-[358px] overflow-clip",
-        "md:h-[316px]",
-        "relative",
-      )}
-    >
+    <div className={cn("h-[316px] overflow-clip", "md:h-[316px]", "relative")}>
       <div className="absolute mt-[16.16px] ml-[13.26px] flex flex-col space-y-3 uppercase">
         <Badge
           title={badges[0]}
@@ -62,7 +56,7 @@ const ProductImage = ({
       <img
         src={imageUrl}
         alt="Game 10 Mega Bundle"
-        className={cn("rounded-2xl object-cover", "h-[316px] md:h-[316px]")}
+        className={cn("rounded-2xl object-cover", "min-h-[316px]")}
       />
     </div>
   );

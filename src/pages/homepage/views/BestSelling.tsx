@@ -140,7 +140,7 @@ const BestSelling = () => {
 const SellingContainer = ({ children }: { children: React.ReactNode }) => (
   <section
     className={cn(
-      "grid place-items-center gap-y-[32px] lg:grid-cols-4",
+      "grid gap-y-[32px] lg:grid-cols-4",
       "justify-center md:flex md:flex-wrap md:gap-x-8 lg:flex-nowrap",
       "py-12 md:py-[58px]",
     )}
