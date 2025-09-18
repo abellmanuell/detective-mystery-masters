@@ -27,7 +27,7 @@ const Discount = ({ className }: { className?: string }) => {
       </div>
 
       <div className="grow">
-        <form className="flex justify-center space-x-1.5 pt-4 pb-6">
+        <form className="xxs:space-y-0 xxs:flex justify-center space-y-2 space-x-1.5 pt-4 pb-6">
           <input
             type="text"
             className="grow rounded-full p-4 outline-1 placeholder:text-base placeholder:text-black"
@@ -36,7 +36,7 @@ const Discount = ({ className }: { className?: string }) => {
 
           <SecondaryLinkButton
             href="#"
-            className="bg-pumpkin-500 rounded-full p-4 outline-none"
+            className="bg-pumpkin-500 xxs:inline-block flex items-center justify-center rounded-full p-4 outline-none"
           >
             <img
               src={ForwardArrowIcon}
