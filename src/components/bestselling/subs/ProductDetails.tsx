@@ -27,7 +27,7 @@ const ProductDetails = ({
       <p className="ml-1 text-sm font-semibold text-black">{review} reviews</p>
     </div>
 
-    <Heading3 className="border-b-1 border-[#F3D4B5] py-2 text-2xl">
+    <Heading3 className="border-b-1 border-[#F3D4B5] py-2 text-[20px]">
       {name}
     </Heading3>
 
