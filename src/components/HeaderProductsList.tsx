@@ -19,7 +19,7 @@ const HeaderProductsList = (props: React.ComponentProps<"div">) => {
     <div
       {...props}
       className={cn(
-        "bg-tequila-500 md:bg-tequila-500/90 border-tequila-600",
+        "bg-chamois-500 md:bg-chamois-500 border-chamois-600",
         "relative overflow-clip border-t shadow",
         props.className,
       )}
