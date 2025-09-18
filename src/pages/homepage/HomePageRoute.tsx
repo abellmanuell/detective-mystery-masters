@@ -17,6 +17,7 @@ import { Featured } from "./views/Featured";
 import { Footer } from "../../components/footer/Footer";
 import { detectiveCases } from "../../lib/globalVariables";
 import { Package } from "../../components/Package";
+import { ShopByCategory } from "./views/ShopByCategory";
 
 export default function HomePage() {
   return (
@@ -48,7 +49,8 @@ export default function HomePage() {
         <Featured />
 
         <Package title="Detective Cases" items={detectiveCases} />
-        {/* SOME SECTION WILL COME HERE BEFORE FOOTER */}
+
+        <ShopByCategory />
 
         {/* Footer Section */}
         <Footer />

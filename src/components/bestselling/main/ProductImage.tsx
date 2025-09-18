@@ -37,6 +37,7 @@ const ProductImage = ({
         {badges.length > 0 &&
           badges.map((badge, i) => (
             <Badge
+              key={i}
               title={badge}
               className={i == 0 ? "bg-[#FDA32E]" : "bg-[#59C254]"}
             />

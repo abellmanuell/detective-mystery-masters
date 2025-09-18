@@ -113,6 +113,7 @@ const Package = ({
         >
           {items.map((item, i) => (
             <SubProductCard
+              key={i}
               isMegaBundle={item.isMegaBundle}
               imageUrl={item.imageUrl}
               name={item.name}
