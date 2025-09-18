@@ -21,8 +21,8 @@ const Services = () => {
     <div className="bg-tequila-500 relative z-5 mt-[19px] rounded-3xl">
       <Container
         className={cn(
-          "grid grid-cols-1 gap-y-12 md:gap-8",
-          "xl:grid-cols-2",
+          "grid grid-cols-1 place-items-center gap-y-12 sm:gap-20",
+          "lg:grid-cols-2",
           "py-20 md:px-10 md:!py-[112px]",
         )}
       >
@@ -47,21 +47,11 @@ const Services = () => {
           </div>
 
           {/* Display on Desktop */}
-          <div
-            className={cn(
-              "hidden md:block",
-              "mb-0 sm:mb-10 md:h-[712px] md:w-[640px] lg:mb-0",
-            )}
-          >
+          <div className={cn("hidden md:block", "mb-0 sm:mb-10 lg:mb-0")}>
             <img
               src={ServicesAsideImage}
-              width={640}
-              height={712}
               alt="Hero Aside Image"
-              className={cn(
-                "rounded-2xl object-cover",
-                "md:h-[712px] md:w-[640px]",
-              )}
+              className={cn("rounded-2xl object-cover", "h-[712px]")}
             />
           </div>
         </div>
@@ -71,7 +61,7 @@ const Services = () => {
             Detective Mystery Masters <br /> Are Perfect For
           </Heading2>
 
-          <div className="space-y-8 py-12 md:py-20">
+          <div className="space-y-8 md:py-12 xl:py-20">
             <ServiceItem
               imageUrl={DiceIcon}
               headline="Board game enthusiasts"

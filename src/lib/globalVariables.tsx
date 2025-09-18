@@ -68,4 +68,36 @@ export const announcements = [
     icon: SaleIcon,
     text: "SAVE 75 USD WITH BUNDLES",
   },
+  {
+    icon: TruckIcon,
+    text: "FREE SHIPPING OVER 100 USD",
+  },
+  {
+    icon: SaleIcon,
+    text: "SAVE 75 USD WITH BUNDLES",
+  },
+  {
+    icon: TruckIcon,
+    text: "FREE SHIPPING OVER 100 USD",
+  },
+  {
+    icon: SaleIcon,
+    text: "SAVE 75 USD WITH BUNDLES",
+  },
+  {
+    icon: TruckIcon,
+    text: "FREE SHIPPING OVER 100 USD",
+  },
+  {
+    icon: SaleIcon,
+    text: "SAVE 75 USD WITH BUNDLES",
+  },
+  {
+    icon: TruckIcon,
+    text: "FREE SHIPPING OVER 100 USD",
+  },
+  {
+    icon: SaleIcon,
+    text: "SAVE 75 USD WITH BUNDLES",
+  },
 ];

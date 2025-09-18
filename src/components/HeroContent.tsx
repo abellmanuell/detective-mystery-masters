@@ -14,11 +14,16 @@ const HeroContent = () => {
     <div
       className={cn(
         "bg-tequila-500 flex flex-col rounded-[16px] p-4 shadow-[0_4px_12px_rgba(120,120,120,0.1)]",
-        "max-lg:order-2 lg:px-6 lg:py-[111.94px]",
+        "max-lg:order-2 lg:px-6",
       )}
     >
       {/* Social Proofs, Heading, Subheading & CTA */}
-      <div className="mb-10 flex grow flex-col justify-center md:gap-0 lg:mb-0 lg:items-center">
+      <div
+        className={cn(
+          "flex grow flex-col justify-center pb-10 md:gap-0 lg:mb-0 lg:items-center",
+          "lg:pt-[111.94px] lg:pb-[160.94px]",
+        )}
+      >
         <SocialProofs
           proofs={socialPropfs}
           rate="4.5 / 5.0"

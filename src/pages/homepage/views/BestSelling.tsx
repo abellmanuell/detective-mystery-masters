@@ -15,7 +15,7 @@ import BackArrowIcon from "../../../assets/images//icons/IconBackArrow.svg";
 const BestSelling = () => {
   return (
     // <Wrapper>
-    <Container className={cn("py-20 md:!py-[112px]")}>
+    <Container className={cn("py-20 md:!py-[112px]", "relative z-5")}>
       {/* Heading 2 <H2> Element */}
       <div className="flex items-end justify-between">
         <Heading2 className="w-[358px]">Best Selling</Heading2>

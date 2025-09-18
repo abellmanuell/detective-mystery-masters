@@ -16,7 +16,7 @@ const ProductDetails = ({
   promo: string;
 }) => (
   <div className="p-4">
-    <div className="flex flex-wrap items-center">
+    <div className="flex flex-wrap items-center space-x-2">
       <div className="text-pumpkin-500 flex">
         <AiFillStar size={16} />
         <AiFillStar size={16} />

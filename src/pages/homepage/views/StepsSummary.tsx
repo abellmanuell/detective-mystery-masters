@@ -14,7 +14,7 @@ import { StepItem } from "../../../components/steps/StepItem";
 
 const StepsSummary = () => {
   return (
-    <Container className={cn("py-20 md:!py-[112px]")}>
+    <Container className={cn("relative z-5 py-20 md:!py-[112px]")}>
       {/* Heading 2 <H2> Element */}
       <Heading2 className="xs:text-center relative flex justify-center">
         {/* large: >=1280px */}
