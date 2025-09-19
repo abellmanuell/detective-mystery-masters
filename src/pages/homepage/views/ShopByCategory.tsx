@@ -11,25 +11,44 @@ const ShopByCategory = () => {
     // <Wrapper>
     <div className="bg-tequila-500 relative z-5 mt-[19px] rounded-3xl">
       <Container className={cn("py-20 md:px-10 md:!py-[112px]")}>
-        <Heading2>Shop By Category</Heading2>
+        <Heading2 className="lg:text-center">Shop By Category</Heading2>
 
-        <section className="grid gap-y-8 pt-12">
-          <Category
-            imageUrl={Interior}
-            button={{ text: "Detective cases", href: "#" }}
-          />
-          <Category
-            imageUrl={Interior}
-            button={{ text: "Escape rooms", href: "#" }}
-          />
-          <Category
-            imageUrl={Interior}
-            button={{ text: "Card games", href: "#" }}
-          />
-          <Category
-            imageUrl={Interior}
-            button={{ text: "Print & Play", href: "#" }}
-          />
+        <section className="sm grid gap-8 pt-12 sm:flex">
+          {/* <div className="flex flex-wrap"> */}
+          <div className="pl-0 sm:w-2/4">
+            <div>
+              <Category
+                imageUrl={Interior}
+                button={{ text: "Detective cases", href: "#" }}
+                className="h-[452px] w-full !py-4 first:pt-0 last:pb-0"
+              />
+            </div>
+            <div className="pt-[32px]">
+              <Category
+                imageUrl={Interior}
+                button={{ text: "Detective cases", href: "#" }}
+                className="h-[294px] w-full !py-4 first:pt-0 last:pb-0"
+              />
+            </div>
+          </div>
+
+          <div className="pr-0 sm:w-2/4">
+            <div>
+              <Category
+                imageUrl={Interior}
+                button={{ text: "Detective cases", href: "#" }}
+                className="h-[294px] w-full !py-4 first:pt-0 last:pb-0"
+              />
+            </div>
+            <div className="pt-[32px]">
+              <Category
+                imageUrl={Interior}
+                button={{ text: "Detective cases", href: "#" }}
+                className="h-[452px] w-full !py-4 first:pt-0 last:pb-0"
+              />
+            </div>
+          </div>
+          {/* </div> */}
         </section>
       </Container>
     </div>
@@ -40,9 +59,11 @@ const ShopByCategory = () => {
 const Category = ({
   imageUrl,
   button,
+  className,
 }: {
   imageUrl: string;
   button: { text: string; href: string };
+  className?: string;
 }) => {
   if (imageUrl) {
     const altArray = imageUrl.split("/");
@@ -54,6 +75,7 @@ const Category = ({
           "relative overflow-clip",
           "min-h-[358px] rounded-2xl p-4",
           "flex items-end",
+          className,
         )}
       >
         <img
@@ -61,7 +83,6 @@ const Category = ({
           alt={altName}
           className={cn(
             "absolute top-0 left-0 size-full object-cover",
-            "h-[358px] min-w-[358px]",
             "rounded-2xl",
           )}
         />
