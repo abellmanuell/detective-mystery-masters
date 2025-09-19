@@ -18,6 +18,7 @@ import { Footer } from "../../components/footer/Footer";
 import { detectiveCases } from "../../lib/globalVariables";
 import { Package } from "../../components/Package";
 import { ShopByCategory } from "./views/ShopByCategory";
+import { Testimonial } from "./views/Testimonial";
 
 export default function HomePage() {
   return (
@@ -51,6 +52,8 @@ export default function HomePage() {
         <Package title="Detective Cases" items={detectiveCases} />
 
         <ShopByCategory />
+
+        <Testimonial />
 
         {/* Footer Section */}
         <Footer />

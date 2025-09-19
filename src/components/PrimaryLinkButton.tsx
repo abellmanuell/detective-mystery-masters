@@ -22,8 +22,8 @@ const PrimaryLinkButton = ({
         href={href}
         className={cn(
           "bg-pumpkin-500 hover:bg-pumpkin-400",
-          "flex items-center space-x-4",
-          "rounded-full px-7 py-4 font-bold uppercase",
+          "xxs:flex-row flex flex-col items-center space-x-4",
+          "xxs:px-7 rounded-full py-4 font-bold uppercase",
           "duration-150 ease-in",
           className,
         )}

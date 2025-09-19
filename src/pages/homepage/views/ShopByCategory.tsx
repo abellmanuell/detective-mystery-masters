@@ -89,7 +89,7 @@ const Category = ({
 
         <PrimaryLinkButton
           href={button.href}
-          className="relative inline-flex capitalize"
+          className="relative inline-flex flex-col capitalize sm:flex-row"
         >
           {button.text}
         </PrimaryLinkButton>

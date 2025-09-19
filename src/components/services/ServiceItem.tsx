@@ -16,7 +16,7 @@ const ServiceItem = ({
   imageUrl,
 }: ServiceItemProps) => {
   return (
-    <section className={cn("flex items-start space-x-6", className)}>
+    <section className={cn("xxs:flex items-start space-x-6", className)}>
       <img src={imageUrl} alt={headline} className="w-[47px]" />
 
       <div className="space-y-4">

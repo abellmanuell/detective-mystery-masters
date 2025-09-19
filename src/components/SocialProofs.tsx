@@ -27,7 +27,7 @@ const SocialProofs = ({ proofs, rate, players }: SocialProofsProps) => {
 
       <section className="text-sm font-medium md:text-base lg:text-lg">
         <div className="flex">
-          <div className="text-pumpkin-500 flex items-center">
+          <div className="text-pumpkin-500 xxs:flex items-center">
             <AiFillStar size={20} />
             <AiFillStar size={20} />
             <AiFillStar size={20} />
