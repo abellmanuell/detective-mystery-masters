@@ -23,12 +23,12 @@ const PrimaryLinkButton = ({
         className={cn(
           "bg-pumpkin-500 hover:bg-pumpkin-400",
           "xxs:flex-row flex flex-col items-center space-x-4",
-          "xxs:px-7 rounded-full py-4 font-bold uppercase",
-          "duration-150 ease-in",
+          "xxs:px-7 rounded-full p-4 font-bold uppercase",
+          "xxs:w-auto w-full duration-150 ease-in",
           className,
         )}
       >
-        <span>{children}</span>
+        <span className="xxs:inline hidden">{children}</span>
         {/* 
             Right Arrow Icon SVG.
           */}

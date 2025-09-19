@@ -16,21 +16,19 @@ const SecondaryLinkButton = ({
   className,
 }: SecondaryLinkButtonProps) => {
   return (
-    <div>
-      <a
-        {...props}
-        href={href}
-        className={cn(
-          "outline-1",
-          "flex items-center space-x-4",
-          "rounded-full px-7 py-4 font-bold uppercase",
-          "duration-150 ease-in",
-          className,
-        )}
-      >
-        <span>{children}</span>
-      </a>
-    </div>
+    <a
+      {...props}
+      href={href}
+      className={cn(
+        "outline-1",
+        "flex items-center space-x-4",
+        "rounded-full px-7 py-4 font-bold uppercase",
+        "duration-150 ease-in",
+        className,
+      )}
+    >
+      <span>{children}</span>
+    </a>
   );
 };
 

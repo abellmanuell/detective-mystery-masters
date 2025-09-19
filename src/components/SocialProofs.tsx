@@ -14,7 +14,7 @@ interface SocialProofsProps {
 
 const SocialProofs = ({ proofs, rate, players }: SocialProofsProps) => {
   return (
-    <div className="flex space-x-4">
+    <div className="xs:flex xs:space-y-0 space-y-4 space-x-4">
       <section className="flex">
         {proofs.map((proof, i) => (
           <SocialProofAvatar
@@ -27,12 +27,14 @@ const SocialProofs = ({ proofs, rate, players }: SocialProofsProps) => {
 
       <section className="text-sm font-medium md:text-base lg:text-lg">
         <div className="flex">
-          <div className="text-pumpkin-500 xxs:flex items-center">
-            <AiFillStar size={20} />
-            <AiFillStar size={20} />
-            <AiFillStar size={20} />
-            <AiFillStar size={20} />
-            <AiFillStar size={20} />
+          <div className="flex">
+            <div className="text-pumpkin-500 flex items-center">
+              <AiFillStar size={20} />
+              <AiFillStar size={20} />
+              <AiFillStar size={20} />
+              <AiFillStar size={20} />
+              <AiFillStar size={20} />
+            </div>
             <p className="ml-1 font-semibold text-black">
               {rate ?? "4.8 / 5.0"}
             </p>

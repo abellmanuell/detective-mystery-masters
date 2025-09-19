@@ -85,7 +85,7 @@ const Testimony = ({
 
   return (
     <div
-      className={cn("bg-tequila-500 xxs:p-4 rounded-[10px] p-0.5", className)}
+      className={cn("bg-tequila-500 xxxs:p-4 rounded-[10px] p-0.5", className)}
     >
       <div className="text-pumpkin-500 flex items-center">
         {rateList.map(() => (
