@@ -9,12 +9,13 @@ import { Heading3 } from "../../../components/headings/Heading3";
 import AndreImage from "../../../assets/images/testimonials/andre.webp";
 import JoseImage from "../../../assets/images/testimonials/jose.webp";
 import GabrielImage from "../../../assets/images/testimonials/gabriella.webp";
+import { LiveTestimony } from "../../../components/testimonial/LiveTestimony";
 
 const Testimonial = () => {
   return (
     // <Wrapper>
     <div className="bg-dark-burgundy-500 relative -top-[22px] z-2">
-      <Container className={cn("py-20 md:px-10 md:!py-[112px]")}>
+      <Container className={cn("pt-20 md:px-10 md:!pt-[112px]")}>
         <div className="space-y-4 text-center text-white">
           <Paragraphing>
             120,000 customer testimonials about the product
@@ -24,9 +25,9 @@ const Testimonial = () => {
 
         <section
           className={cn(
-            "xs:grid-cols-2 grid gap-x-6 gap-y-10",
+            "xxs:grid-cols-2 grid gap-x-6 gap-y-10",
             "lg:grid-cols-4 lg:gap-x-10",
-            "pt-12 pb-20",
+            "pt-12 pb-20 lg:pt-16 lg:pb-32",
           )}
         >
           <Testimony
@@ -58,6 +59,8 @@ const Testimonial = () => {
           />
         </section>
       </Container>
+
+      <LiveTestimony />
     </div>
     // </Wrapper>
   );
