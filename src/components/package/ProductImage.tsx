@@ -5,6 +5,7 @@ import { Badge } from "./Badge";
 import { Game10PaperCard } from "./Game10PaperCard";
 
 export type ProductImageProps = {
+  index: number;
   imageUrl: string;
   tags: Array<string>;
   isMegaBundle: boolean;
@@ -12,6 +13,7 @@ export type ProductImageProps = {
 };
 
 const ProductImage = ({
+  index,
   imageUrl,
   tags = ["Popular", "Gift Included"],
   isMegaBundle,
@@ -20,15 +22,16 @@ const ProductImage = ({
   return (
     <div
       className={cn(
-        "h-[316px] overflow-clip md:h-[316px]",
+        "overflow-clip lg:h-[316px]",
         "relative pt-[16.15px] pr-2 pb-2 pl-[11.7px]",
         "flex flex-col justify-between",
+        index == 0 ? "h-[316px]" : "h-[167px] md:h-[316px]",
       )}
     >
       <img
         className={cn(
           "absolute top-0 left-0 size-full object-cover",
-          "h-[316px] w-full rounded-2xl lg:w-full",
+          "h-[167px] w-full rounded-2xl lg:h-[316px] lg:w-full",
         )}
         src={imageUrl}
         alt={imageUrl.split("/")[imageUrl.split("/").length - 1]}

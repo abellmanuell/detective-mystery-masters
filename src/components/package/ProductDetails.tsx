@@ -32,12 +32,12 @@ const ProductDetails = ({
     </div>
 
     <div className="flex grow items-center">
-      <Heading3 className="w-full border-b border-[#F3D4B5] py-4 text-left text-2xl">
+      <Heading3 className="w-full border-b border-[#F3D4B5] py-3 text-left text-xl lg:py-4 lg:text-2xl">
         {name}
       </Heading3>
     </div>
 
-    <div className="flex flex-wrap justify-between pt-4">
+    <div className="flex flex-col gap-2 pt-3 lg:flex-row lg:justify-between lg:pt-4">
       <div className="font-bebas-neue flex space-x-2">
         <p className="text-red-orange-500 text-2xl">€{currentPrice}</p>
         <p>
@@ -48,10 +48,10 @@ const ProductDetails = ({
         className={cn(
           "bg-red-orange-500",
           "flex items-center justify-center rounded-full",
-          "px-2 py-0.5 text-white",
+          "self-start px-2 py-0.5 text-white",
         )}
       >
-        <p>{promo}</p>
+        <p className="text-xs lg:text-base">{promo}</p>
       </div>
     </div>
   </div>

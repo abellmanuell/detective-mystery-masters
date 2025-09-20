@@ -3,6 +3,7 @@ import { ProductDetails, type ProductDetailsProps } from "./ProductDetails";
 import { ProductImage, type ProductImageProps } from "./ProductImage";
 
 interface ProductCardProps {
+  index: number;
   href: string;
   className?: string;
   productImage: ProductImageProps;
@@ -10,6 +11,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({
+  index,
   href,
   productImage,
   productDetails,
@@ -25,7 +27,7 @@ const ProductCard = ({
       )}
     >
       <div className="shrink-0">
-        <ProductImage {...productImage} />
+        <ProductImage {...productImage} index={index} />
       </div>
 
       <ProductDetails {...productDetails} />

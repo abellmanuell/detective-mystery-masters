@@ -84,7 +84,7 @@ const Package = ({
               key={i}
               className={i == 0 ? "col-span-2" : "col-span-1"}
             >
-              <ProductCard href="#" {...item} />
+              <ProductCard href="#" {...item} index={i} />
             </SwiperSlide>
           ))}
         </Swiper>
