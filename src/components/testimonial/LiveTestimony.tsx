@@ -10,6 +10,19 @@ import { Paragraphing } from "../Paragraphing";
 import LiveAction1 from "../../assets/images/testimonials/live-action-1.webp";
 import LiveAction2 from "../../assets/images/testimonials/live-action-2.webp";
 import InstagramIcon from "../../assets/images/icons/icon-instagram.svg";
+import { cn } from "../../lib/utils";
+import { HeroAsideVideoPlayButton } from "../HeroAside";
+
+const liveTestimonyVideoImages = [
+  LiveAction1,
+  LiveAction2,
+  LiveAction1,
+  LiveAction2,
+  LiveAction1,
+  LiveAction2,
+  LiveAction1,
+  LiveAction2,
+];
 
 const LiveTestimony = () => {
   return (
@@ -45,36 +58,19 @@ const LiveTestimony = () => {
             },
           }}
         >
-          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
-            <img src={LiveAction1} className="" />
-          </SwiperSlide>
-          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
-            <img src={LiveAction2} className="" />
-          </SwiperSlide>
-          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
-            <img src={LiveAction1} className="" />
-          </SwiperSlide>
-          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
-            <img src={LiveAction2} className="" />
-          </SwiperSlide>
-          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
-            <img src={LiveAction1} className="" />
-          </SwiperSlide>
-          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
-            <img src={LiveAction2} className="" />
-          </SwiperSlide>
-          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
-            <img src={LiveAction1} className="" />
-          </SwiperSlide>
-          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
-            <img src={LiveAction2} className="" />
-          </SwiperSlide>{" "}
-          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
-            <img src={LiveAction1} className="" />
-          </SwiperSlide>
-          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
-            <img src={LiveAction2} className="" />
-          </SwiperSlide>
+          {liveTestimonyVideoImages.length > 0 &&
+            liveTestimonyVideoImages.map((videoImage: string, i: number) => (
+              <SwiperSlide
+                key={i}
+                className={cn(
+                  "relative overflow-clip rounded-2xl",
+                  "!h-[496px] !w-[292px] lg:!h-[622px] lg:!w-[416px]",
+                )}
+              >
+                <img src={videoImage} />
+                <HeroAsideVideoPlayButton className="bg-white/80 hover:bg-white/90" />
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
 

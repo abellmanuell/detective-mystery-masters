@@ -22,7 +22,9 @@ const HeroAsidePaperCard = (props: React.ComponentProps<"div">) => {
   );
 };
 
-const HeroAsideVideoPlayButton = (props: React.ComponentProps<"button">) => {
+export const HeroAsideVideoPlayButton = (
+  props: React.ComponentProps<"button">,
+) => {
   return (
     <button
       {...props}
