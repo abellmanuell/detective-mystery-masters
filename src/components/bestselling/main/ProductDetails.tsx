@@ -15,21 +15,23 @@ const ProductDetails = ({
   marketPrice: number;
   promo: string;
 }) => (
-  <div className="p-4">
-    <div className="flex flex-wrap items-center space-x-2">
-      <div className="text-pumpkin-500 flex">
-        <AiFillStar size={16} />
-        <AiFillStar size={16} />
-        <AiFillStar size={16} />
-        <AiFillStar size={16} />
-        <AiFillStar size={16} />
+  <div className="flex grow flex-col p-4">
+    <div className="flex flex-wrap items-center space-y-2 lg:space-y-0 lg:space-x-2">
+      <div className="text-pumpkin-500 flex items-center space-x-[3.24px]">
+        <AiFillStar size={16.21} />
+        <AiFillStar size={16.21} />
+        <AiFillStar size={16.21} />
+        <AiFillStar size={16.21} />
+        <AiFillStar size={16.21} />
       </div>
-      <p className="ml-1 text-sm font-semibold text-black">{review} reviews</p>
+      <p className="text-sm font-semibold text-black">{review} reviews</p>
     </div>
 
-    <Heading3 className="border-b-1 border-[#F3D4B5] py-4 text-2xl">
-      {name}
-    </Heading3>
+    <div className="flex grow items-center">
+      <Heading3 className="w-full border-b border-[#F3D4B5] py-4 text-left text-2xl">
+        {name}
+      </Heading3>
+    </div>
 
     <div className="flex flex-wrap justify-between pt-4">
       <div className="font-bebas-neue flex space-x-2">

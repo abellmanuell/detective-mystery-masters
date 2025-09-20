@@ -44,7 +44,7 @@ const StepsSummary = () => {
         </span>
 
         {/* small: <640px */}
-        <div className="relative lg:w-[230.84px]">
+        <div className="xxxs:block relative hidden lg:w-[230.84px]">
           <img
             className="xs:invisible xxs:-bottom-15 xs:-bottom-12 xxs:-left-16 relative right-8 -bottom-10 inline-block min-h-[40.47px] min-w-[71.35px]"
             src={HandDrawnArrowIcon}

@@ -14,7 +14,7 @@ interface SocialProofsProps {
 
 const SocialProofs = ({ proofs, rate, players }: SocialProofsProps) => {
   return (
-    <div className="xs:flex xs:space-y-0 space-y-4 space-x-4">
+    <div className="xs:flex xs:space-y-0 space-y-4 space-x-4 overflow-clip">
       <section className="flex">
         {proofs.map((proof, i) => (
           <SocialProofAvatar
@@ -27,7 +27,7 @@ const SocialProofs = ({ proofs, rate, players }: SocialProofsProps) => {
 
       <section className="text-sm font-medium md:text-base lg:text-lg">
         <div className="flex">
-          <div className="flex">
+          <div className="xxxs:flex">
             <div className="text-pumpkin-500 flex items-center">
               <AiFillStar size={20} />
               <AiFillStar size={20} />

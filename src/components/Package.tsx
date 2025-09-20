@@ -11,7 +11,7 @@ import { cn } from "../lib/utils";
 import { Heading2 } from "./headings/Heading2";
 import { SecondaryLinkButton } from "./SecondaryLinkButton";
 import { ProductCard } from "./bestselling/main/ProductCard";
-import { SubProductCard } from "./bestselling/subs/ProductCard";
+// import { SubProductCard } from "./bestselling/subs/ProductCard";
 import { Pagination } from "swiper/modules";
 
 interface PackageProps {
@@ -80,7 +80,7 @@ const Package = ({
           }}
           className={cn(
             "grid gap-y-[32px] lg:grid lg:grid-cols-4",
-            "md:grid-cols-2 md:gap-x-8 lg:flex-nowrap",
+            "items-stretch md:grid-cols-2 md:gap-x-8 lg:flex-nowrap",
           )}
         >
           {items.map((item, i) => (
@@ -106,7 +106,7 @@ const Package = ({
           />
         )}
 
-        <div
+        {/*  <div
           className={cn(
             "xxs:grid-cols-2 grid gap-x-6 gap-y-[32px] overflow-clip lg:hidden",
           )}
@@ -125,7 +125,7 @@ const Package = ({
               className={cn(i === 0 ? "hidden" : "block")}
             />
           ))}
-        </div>
+        </div> */}
       </SellingContainer>
 
       <div className="flex justify-center lg:hidden">

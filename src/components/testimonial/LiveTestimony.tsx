@@ -88,7 +88,7 @@ const LiveTestimony = () => {
       </div>
 
       {/* <Container> */}
-      <section className="flex justify-center px-[86px] text-center sm:px-0">
+      <section className="xxxs:px-[86px] flex justify-center text-center sm:px-0">
         <a
           href="#"
           className="flex flex-col items-center justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-12"

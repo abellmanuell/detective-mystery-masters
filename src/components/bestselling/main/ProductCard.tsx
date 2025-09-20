@@ -28,13 +28,20 @@ const ProductCard = ({
   bundle,
 }: ProductCardProps) => {
   return (
-    <div className={cn("bg-tequila-500 rounded-lg rounded-t-2xl", className)}>
-      <ProductImage
-        imageUrl={imageUrl}
-        badges={tags}
-        isMegaBundle={isMegaBundle}
-        bundle={bundle}
-      />
+    <div
+      className={cn(
+        "bg-tequila-500 flex h-full flex-col overflow-hidden rounded-lg rounded-t-2xl",
+        className,
+      )}
+    >
+      <div className="shrink-0">
+        <ProductImage
+          imageUrl={imageUrl}
+          badges={tags}
+          isMegaBundle={isMegaBundle}
+          bundle={bundle}
+        />
+      </div>
 
       <ProductDetails
         name={name}

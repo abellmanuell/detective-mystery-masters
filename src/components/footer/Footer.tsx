@@ -20,12 +20,12 @@ const Footer = () => {
     <div className="relative z-5 rounded-t-3xl bg-black text-white">
       <Container
         className={cn(
-          "md:!w[1280px] relative z-5 py-6 md:pt-[83px] md:pb-[63px]",
+          "md:!w[1280px] relative z-5 py-6 md:pt-[83px] md:pb-[62px]",
         )}
       >
         <Discount className="md:px-20 md:py-[63px]" />
 
-        <div className="overflow-clip px-[34px] md:w-full md:px-0 lg:px-0">
+        <div className="xxs:px-[18px] md:w-full md:px-0 lg:px-0">
           <FooterContainer>
             <FooterItem
               title="Shop"
@@ -56,7 +56,7 @@ const Footer = () => {
               ]}
             />
 
-            <section className="pb-[46px]">
+            <section>
               <a href="#">
                 <img
                   src={PaymentIcons}
@@ -92,11 +92,15 @@ const Footer = () => {
                 />
               </section>
 
-              <section className="leading-6 text-white/60 md:flex md:space-x-2 md:pb-5 md:text-xs">
-                <Paragraphing>©2025 Detective Mystery Masters</Paragraphing>
-                <a href="mailto:support@detectivemysterymasters.com">
-                  support@detectivemysterymasters.com
-                </a>
+              <section className="text-xs leading-6 text-white/60 md:space-x-2 md:pb-5">
+                <Paragraphing>
+                  ©2025 Detective Mystery Masters <br className="lg:hidden" />
+                  <a href="mailto:support@detectivemysterymasters.com">
+                    support@detective
+                    <br className="xxxs:hidden" />
+                    mysterymasters.com
+                  </a>
+                </Paragraphing>
               </section>
             </div>
           </div>
@@ -119,8 +123,9 @@ const FooterContainer = ({
     <div
       {...props}
       className={cn(
-        "grid gap-y-[43.5px] pt-[66px] pb-[36px] lg:gap-y-[79px]",
-        "md:grid-cols-2 lg:grid-cols-4",
+        "pt-[66px] pb-[43px] lg:pt-[85px] lg:pb-[47px]",
+        "grid gap-x-4 gap-y-[43.5px]",
+        "sm:grid-cols-2 md:grid-cols-4",
         className,
       )}
     >
@@ -141,12 +146,14 @@ const FooterItem = ({
 }) => {
   return (
     <div {...props} className={cn("space-y-3.5", className)}>
-      <h3 className="text-lg leading-8 font-bold">{title}</h3>
+      <h3 className="text-lg leading-8 font-extrabold">{title}</h3>
 
       <ul>
         {list.map(({ href, name }) => (
-          <li className="h-[40px]" key={name}>
-            <a href={href || "#"}>{name}</a>
+          <li key={name} className="flex !h-10 items-center opacity-90">
+            <a href={href || "#"} className="!leading-6 tracking-[0.6px]">
+              {name}
+            </a>
           </li>
         ))}
       </ul>

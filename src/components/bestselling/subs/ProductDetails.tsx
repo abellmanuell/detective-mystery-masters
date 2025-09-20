@@ -17,21 +17,23 @@ const ProductDetails = ({
 }) => (
   <div className="p-4">
     <div className="flex flex-wrap items-center space-y-2">
-      <div className="text-pumpkin-500 flex">
+      <div className="text-pumpkin-500 flex items-center justify-center">
         <AiFillStar size={16} />
         <AiFillStar size={16} />
         <AiFillStar size={16} />
         <AiFillStar size={16} />
         <AiFillStar size={16} />
       </div>
-      <p className="ml-1 text-sm font-semibold text-black">{review} reviews</p>
+      <p className="text-sm font-semibold text-black lg:ml-1">
+        {review} reviews
+      </p>
     </div>
 
     <Heading3 className="border-b-1 border-[#F3D4B5] py-2 text-[20px]">
       {name}
     </Heading3>
 
-    <div className="flex flex-wrap justify-between gap-y-2 pt-3">
+    <div className="flex flex-wrap justify-between gap-2">
       <div className="font-bebas-neue flex space-x-2">
         <p className="text-red-orange-500 text-xl">€{currentPrice}</p>
         <p className="text-sm">

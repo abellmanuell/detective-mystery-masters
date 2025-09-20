@@ -22,7 +22,7 @@ const FAQ = ({ faqs }: FAQProps) => {
   return (
     <Container
       className={cn(
-        "relative z-5 grid pt-[54px] pb-20 md:!py-[128px] lg:mb-12 lg:grid-cols-2",
+        "relative z-5 grid overflow-clip pt-[54px] pb-20 md:!py-[128px] lg:mb-12 lg:grid-cols-2",
       )}
     >
       <div>
@@ -53,7 +53,7 @@ function FAQItem({ question, answer }: FAQItemProps) {
   return (
     <div className="space-y-2">
       <div
-        className="flex cursor-pointer items-center justify-between"
+        className="xxxs:flex cursor-pointer items-center justify-between"
         onClick={toggleOpen}
       >
         <Heading3 className="text-xl leading-5">{question}</Heading3>
