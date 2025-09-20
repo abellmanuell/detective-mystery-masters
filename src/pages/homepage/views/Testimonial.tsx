@@ -14,13 +14,15 @@ import { LiveTestimony } from "../../../components/testimonial/LiveTestimony";
 const Testimonial = () => {
   return (
     // <Wrapper>
-    <div className="bg-dark-burgundy-500 relative -top-[22px] z-2">
+    <div className="bg-dark-burgundy-500 relative -top-[26px] z-2">
       <Container className={cn("pt-20 md:px-10 md:!pt-[112px]")}>
         <div className="space-y-4 text-center text-white">
           <Paragraphing>
             120,000 customer testimonials about the product
           </Paragraphing>
-          <Heading2>Loads of happy case solvers</Heading2>
+          <Heading2 className="lg:!text-[56px] lg:!leading-[67.2px]">
+            Loads of happy case solvers
+          </Heading2>
         </div>
 
         <section

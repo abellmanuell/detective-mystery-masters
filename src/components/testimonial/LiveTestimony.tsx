@@ -32,9 +32,9 @@ const liveTestimonyVideoImages = [
 
 const LiveTestimony = () => {
   return (
-    <div className="pt-[26.89px] pb-[128px]">
+    <div className="pt-[26.89px] pb-20 lg:pb-[128px]">
       <Container>
-        <Heading2 className="heading-with-arrow text-center text-white">
+        <Heading2 className="heading-with-arrow text-center text-white lg:!text-[56px] lg:!leading-[67.2px]">
           And here's some of the live action
         </Heading2>
       </Container>
