@@ -5,7 +5,7 @@ import { Badge } from "./Badge";
 import { Game10PaperCard } from "./Game10PaperCard";
 
 export type ProductImageProps = {
-  index: number;
+  index?: number;
   imageUrl: string;
   tags: Array<string>;
   isMegaBundle: boolean;
