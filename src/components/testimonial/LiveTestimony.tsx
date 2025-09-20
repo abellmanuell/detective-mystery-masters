@@ -22,6 +22,12 @@ const liveTestimonyVideoImages = [
   LiveAction2,
   LiveAction1,
   LiveAction2,
+  LiveAction1,
+  LiveAction2,
+  LiveAction1,
+  LiveAction2,
+  LiveAction1,
+  LiveAction2,
 ];
 
 const LiveTestimony = () => {
@@ -39,18 +45,25 @@ const LiveTestimony = () => {
           loop={true}
           speed={5000}
           autoplay={{
-            delay: 1000,
+            delay: 0,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
           breakpoints={{
             340: {
-              slidesPerView: 1.2,
+              slidesPerView: "auto",
               centeredSlides: true,
               spaceBetween: 32,
+              freeMode: true,
+            },
+            768: {
+              slidesPerView: "auto",
+              centeredSlides: true,
+              spaceBetween: 32,
+              freeMode: true,
             },
             1024: {
-              slidesPerView: 4.1,
+              slidesPerView: "auto",
               spaceBetween: 32,
               centeredSlides: true,
               slidesOffsetBefore: 50,
