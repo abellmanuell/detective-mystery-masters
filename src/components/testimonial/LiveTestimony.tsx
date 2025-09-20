@@ -1,33 +1,44 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
-// import { cn } from "../../lib/utils";
+import { cn } from "../../lib/utils";
 
 import Container from "../Container";
 import { Heading2 } from "../headings/Heading2";
 import { Paragraphing } from "../Paragraphing";
+import { HeroAsideVideoPlayButton } from "../HeroAside";
 
+import InstagramIcon from "../../assets/images/icons/icon-instagram.svg";
 import LiveAction1 from "../../assets/images/testimonials/live-action-1.webp";
 import LiveAction2 from "../../assets/images/testimonials/live-action-2.webp";
-import InstagramIcon from "../../assets/images/icons/icon-instagram.svg";
-import { cn } from "../../lib/utils";
-import { HeroAsideVideoPlayButton } from "../HeroAside";
+import LiveAction3 from "../../assets/images/testimonials/live-action-3.webp";
+import LiveAction4 from "../../assets/images/testimonials/live-action-4.webp";
 
 const liveTestimonyVideoImages = [
   LiveAction1,
   LiveAction2,
+  LiveAction3,
+  LiveAction4,
   LiveAction1,
   LiveAction2,
+  LiveAction3,
+  LiveAction4,
   LiveAction1,
   LiveAction2,
+  LiveAction3,
+  LiveAction4,
   LiveAction1,
   LiveAction2,
+  LiveAction3,
+  LiveAction4,
   LiveAction1,
   LiveAction2,
+  LiveAction3,
+  LiveAction4,
   LiveAction1,
   LiveAction2,
-  LiveAction1,
-  LiveAction2,
+  LiveAction3,
+  LiveAction4,
 ];
 
 const LiveTestimony = () => {

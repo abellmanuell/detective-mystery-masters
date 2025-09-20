@@ -4,7 +4,10 @@ import { Heading2 } from "../../../components/headings/Heading2";
 import Container from "../../../components/Container";
 import { PrimaryLinkButton } from "../../../components/PrimaryLinkButton";
 
-import Interior from "../../../assets/images/products/interior.webp";
+import Product1 from "../../../assets/images/products/product-1.webp";
+import Product2 from "../../../assets/images/products/product-2.webp";
+import Product3 from "../../../assets/images/products/product-3.webp";
+import Product4 from "../../../assets/images/products/product-4.webp";
 
 const ShopByCategory = () => {
   return (
@@ -18,14 +21,14 @@ const ShopByCategory = () => {
           <div className="pl-0 sm:w-2/4">
             <div>
               <Category
-                imageUrl={Interior}
+                imageUrl={Product1}
                 button={{ text: "Detective cases", href: "#" }}
                 className="h-[452px] w-full !py-4 first:pt-0 last:pb-0"
               />
             </div>
             <div className="pt-[32px]">
               <Category
-                imageUrl={Interior}
+                imageUrl={Product2}
                 button={{ text: "Detective cases", href: "#" }}
                 className="h-[294px] w-full !py-4 first:pt-0 last:pb-0"
               />
@@ -35,14 +38,14 @@ const ShopByCategory = () => {
           <div className="pr-0 sm:w-2/4">
             <div>
               <Category
-                imageUrl={Interior}
+                imageUrl={Product3}
                 button={{ text: "Detective cases", href: "#" }}
                 className="h-[294px] w-full !py-4 first:pt-0 last:pb-0"
               />
             </div>
             <div className="pt-[32px]">
               <Category
-                imageUrl={Interior}
+                imageUrl={Product4}
                 button={{ text: "Detective cases", href: "#" }}
                 className="h-[452px] w-full !py-4 first:pt-0 last:pb-0"
               />

@@ -62,7 +62,16 @@ const Package = ({
           modules={[Pagination, Autoplay]}
           loop={true}
           autoplay={{ delay: 2000 }}
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+
+            const wrapper = swiper.wrapperEl;
+            wrapper.classList.add("swiper-wrapper-grid");
+
+            swiper.slides.forEach((slide) => {
+              slide.classList.add("swiper-slide-grid");
+            });
+          }}
           breakpoints={{
             0: {
               enabled: false,
