@@ -49,26 +49,38 @@ const ProductImage = ({
       </div>
 
       {isMegaBundle && bundle && (
-        <Game10PaperCard>
-          <div className="relative flex flex-col justify-center px-1.5 pt-[25px]">
+        <Game10PaperCard index={index}>
+          <div
+            className={cn(
+              "relative flex flex-col justify-center px-1.5 pt-[20px]",
+            )}
+          >
             <div className="flex items-center text-white">
-              <AiFillStar size={10} />
-              <AiFillStar size={10} />
-              <AiFillStar size={10} />
-              <AiFillStar size={10} />
-              <AiFillStar size={10} />
+              <AiFillStar className="w-[9.25px] md:w-[11.4px]" />
+              <AiFillStar className="w-[9.25px] md:w-[11.4px]" />
+              <AiFillStar className="w-[9.25px] md:w-[11.4px]" />
+              <AiFillStar className="w-[9.25px] md:w-[11.4px]" />
+              <AiFillStar className="w-[9.25px] md:w-[11.4px]" />
             </div>
 
             <h3
               className={cn(
-                "font-bebas-neue text-white",
-                "text-left text-2xl leading-[28.8px]",
+                "font-bebas-neue text-left text-white",
+                "text-2xl leading-[28.8px]",
+                index !== 0 ? "text-[12.98px] md:text-2xl" : "text-2xl",
               )}
             >
               {bundle}-Games
             </h3>
 
-            <p className="font-bebas-neue text-left text-[12.5px] leading-3.5 text-white">
+            <p
+              className={cn(
+                "font-bebas-neue text-left text-[12.5px] leading-3.5 text-white",
+                index !== 0
+                  ? "text-[10.14px] md:text-[12.5px]"
+                  : "text-[12.5px]",
+              )}
+            >
               Mega Bundle
             </p>
           </div>
