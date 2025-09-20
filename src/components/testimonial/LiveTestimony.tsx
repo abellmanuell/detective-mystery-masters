@@ -36,10 +36,6 @@ const LiveTestimony = () => {
               centeredSlides: true,
               spaceBetween: 32,
             },
-            /* 768: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          }, */
             1024: {
               slidesPerView: 4.1,
               spaceBetween: 32,
@@ -49,40 +45,41 @@ const LiveTestimony = () => {
             },
           }}
         >
-          <SwiperSlide className="h-[622px] max-w-[416px] overflow-clip rounded-2xl">
+          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
             <img src={LiveAction1} className="" />
           </SwiperSlide>
-          <SwiperSlide className="h-[622px] max-w-[416px] overflow-clip rounded-2xl">
-            <img src={LiveAction2} />
+          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
+            <img src={LiveAction2} className="" />
           </SwiperSlide>
-          <SwiperSlide className="h-[622px] max-w-[416px] overflow-clip rounded-2xl">
-            <img src={LiveAction1} />
+          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
+            <img src={LiveAction1} className="" />
           </SwiperSlide>
-          <SwiperSlide className="h-[622px] max-w-[416px] overflow-clip rounded-2xl">
-            <img src={LiveAction2} />
+          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
+            <img src={LiveAction2} className="" />
           </SwiperSlide>
-          <SwiperSlide className="h-[622px] max-w-[416px] overflow-clip rounded-2xl">
-            <img src={LiveAction1} />
+          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
+            <img src={LiveAction1} className="" />
           </SwiperSlide>
-          <SwiperSlide className="h-[622px] max-w-[416px] overflow-clip rounded-2xl">
-            <img src={LiveAction2} />
+          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
+            <img src={LiveAction2} className="" />
           </SwiperSlide>
-          <SwiperSlide className="h-[622px] max-w-[416px] overflow-clip rounded-2xl">
-            <img src={LiveAction1} />
+          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
+            <img src={LiveAction1} className="" />
           </SwiperSlide>
-          <SwiperSlide className="h-[622px] max-w-[416px] overflow-clip rounded-2xl">
-            <img src={LiveAction2} />
+          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
+            <img src={LiveAction2} className="" />
           </SwiperSlide>{" "}
-          <SwiperSlide className="h-[622px] max-w-[416px] overflow-clip rounded-2xl">
-            <img src={LiveAction1} />
+          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
+            <img src={LiveAction1} className="" />
           </SwiperSlide>
-          <SwiperSlide className="h-[622px] max-w-[416px] overflow-clip rounded-2xl">
-            <img src={LiveAction2} />
+          <SwiperSlide className="!h-[496px] !w-[292px] overflow-clip rounded-2xl lg:!h-[622px] lg:!w-[416px]">
+            <img src={LiveAction2} className="" />
           </SwiperSlide>
         </Swiper>
       </div>
 
-      <Container>
+      {/* <Container> */}
+      <section className="flex justify-center px-[86px] text-center sm:px-0">
         <a
           href="#"
           className="flex flex-col items-center justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-12"
@@ -92,7 +89,8 @@ const LiveTestimony = () => {
             Join our 20k people community on Instagram
           </Paragraphing>
         </a>
-      </Container>
+      </section>
+      {/* </Container> */}
     </div>
   );
 };
