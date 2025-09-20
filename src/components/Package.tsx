@@ -1,5 +1,5 @@
 // import Swiper JS
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 
@@ -41,6 +41,7 @@ const Package = ({
   items,
 }: PackageProps) => {
   const swiperRef = useRef<SwiperType>(null);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
     // <Wrapper>
@@ -57,11 +58,12 @@ const Package = ({
         </SecondaryLinkButton>
       </div>
 
-      <div className="py-12 md:block md:py-[58px]">
+      <div className="py-12 md:block md:pt-[58px] md:pb-[32px]">
         <Swiper
           modules={[Pagination, Autoplay]}
           loop={true}
           autoplay={{ delay: 2000 }}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
 
@@ -87,6 +89,12 @@ const Package = ({
               enabled: true,
             },
           }}
+          pagination={{
+            el: "#custom-pagination",
+            clickable: true,
+            bulletClass: "my-bullet",
+            bulletActiveClass: "my-bullet-active",
+          }}
         >
           {items.map((item, i) => (
             <SwiperSlide
@@ -105,44 +113,61 @@ const Package = ({
         </SecondaryLinkButton>
       </div>
 
-      {/* Back and Forward Arrow Button */}
-      <div className="hidden justify-end space-x-[15px] lg:flex">
-        <button
-          className={cn(
-            "outline-1",
-            "flex items-center space-x-4",
-            "rounded-full px-7 py-4 font-bold uppercase",
-            "duration-150 ease-in",
-            "cursor-pointer rounded-full p-4",
-          )}
-          onClick={() => swiperRef.current?.slidePrev()}
-        >
-          <img
-            src={BackArrowIcon}
-            alt="Back Arrow Icon"
-            width={24}
-            height={24}
-          />
-        </button>
+      {/* Swiper Dots Pagination and Back and Forward Button */}
+      <section className="hidden h-12 items-center justify-between lg:flex">
+        <div className="mt-4 flex space-x-2">
+          {items.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => swiperRef.current?.slideTo(i)}
+              className={`h-2 w-2 rounded-full transition ${
+                i === activeIndex ? "bg-pumpkin-500 scale-110" : "bg-black/20"
+              }`}
+            />
+          ))}
+        </div>
 
-        <button
-          className={cn(
-            "outline-1",
-            "flex items-center space-x-4",
-            "rounded-full px-7 py-4 font-bold uppercase",
-            "duration-150 ease-in",
-            "cursor-pointer rounded-full p-4",
-          )}
-          onClick={() => swiperRef.current?.slideNext()}
-        >
-          <img
-            src={ForwardArrowIcon}
-            alt="Forward Arrow Icon"
-            width={24}
-            height={24}
-          />
-        </button>
-      </div>
+        {/* Back and Forward Arrow Button */}
+        <div className="justify-end space-x-[15px] lg:flex">
+          <button
+            className={cn(
+              "outline-1",
+              "flex items-center space-x-4",
+              "rounded-full font-bold uppercase",
+              "duration-150 ease-in",
+              "cursor-pointer rounded-full p-4",
+              "h-12 w-12",
+            )}
+            onClick={() => swiperRef.current?.slidePrev()}
+          >
+            <img
+              src={BackArrowIcon}
+              alt="Back Arrow Icon"
+              width={24}
+              height={24}
+            />
+          </button>
+
+          <button
+            className={cn(
+              "outline-1",
+              "flex items-center space-x-4",
+              "rounded-full font-bold uppercase",
+              "duration-150 ease-in",
+              "cursor-pointer rounded-full p-4",
+              "h-12 w-12",
+            )}
+            onClick={() => swiperRef.current?.slideNext()}
+          >
+            <img
+              src={ForwardArrowIcon}
+              alt="Forward Arrow Icon"
+              width={24}
+              height={24}
+            />
+          </button>
+        </div>
+      </section>
     </Container>
     // </Wrapper>
   );
