@@ -10,9 +10,10 @@ import Container from "./Container";
 import { cn } from "../lib/utils";
 import { Heading2 } from "./headings/Heading2";
 import { SecondaryLinkButton } from "./SecondaryLinkButton";
-import { ProductCard } from "./bestselling/main/ProductCard";
-// import { SubProductCard } from "./bestselling/subs/ProductCard";
-import { Pagination } from "swiper/modules";
+import { ProductCard } from "./package/ProductCard";
+import { Autoplay, Pagination } from "swiper/modules";
+import type { ProductImageProps } from "./package/ProductImage";
+import type { ProductDetailsProps } from "./package/ProductDetails";
 
 interface PackageProps {
   title: string;
@@ -24,16 +25,8 @@ interface PackageProps {
     bottomText?: string;
   };
   items: {
-    // id?: string;
-    isMegaBundle: boolean;
-    imageUrl: string;
-    name: string;
-    review: string;
-    currentPrice: number;
-    marketPrice: number;
-    promo: string;
-    bundle?: string;
-    tags?: Array<string>;
+    productImage: ProductImageProps;
+    productDetails: ProductDetailsProps;
   }[];
 }
 
@@ -64,69 +57,38 @@ const Package = ({
         </SecondaryLinkButton>
       </div>
 
-      <div className={cn("hidden lg:grid", "py-12 md:py-[58px]")}>
+      <div className="py-12 md:block md:py-[58px]">
         <Swiper
-          modules={[Pagination]}
-          spaceBetween={50}
-          slidesPerView={4}
-          //   onSlideChange={() => console.log("slide change")}
+          modules={[Pagination, Autoplay]}
+          loop={true}
+          autoplay={{ delay: 2000 }}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
-          pagination={{
-            el: ".custom-pagination",
-            clickable: true,
-            renderBullet: (index, className) => {
-              return `<span class="${className}">${index + 1}</span>`;
+          breakpoints={{
+            0: {
+              enabled: false,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 32,
+              enabled: true,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 32,
+              enabled: true,
             },
           }}
-          className={cn(
-            "grid gap-y-[32px] lg:grid lg:grid-cols-4",
-            "items-stretch md:grid-cols-2 md:gap-x-8 lg:flex-nowrap",
-          )}
         >
           {items.map((item, i) => (
-            <SwiperSlide key={i}>
-              <ProductCard {...item} />
+            <SwiperSlide
+              key={i}
+              className={i == 0 ? "col-span-2" : "col-span-1"}
+            >
+              <ProductCard href="#" {...item} />
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-
-      <SellingContainer>
-        {items.length > 0 && (
-          <ProductCard
-            isMegaBundle={items[0].isMegaBundle}
-            imageUrl={items[0].imageUrl}
-            name={items[0].name}
-            review={items[0].review}
-            currentPrice={items[0].currentPrice}
-            marketPrice={items[0].marketPrice}
-            promo={items[0].promo}
-            bundle={items[0].bundle}
-            tags={items[0].tags}
-          />
-        )}
-
-        {/*  <div
-          className={cn(
-            "xxs:grid-cols-2 grid gap-x-6 gap-y-[32px] overflow-clip lg:hidden",
-          )}
-        >
-          {items.map((item, i) => (
-            <SubProductCard
-              key={i}
-              isMegaBundle={item.isMegaBundle}
-              imageUrl={item.imageUrl}
-              name={item.name}
-              review={item.review}
-              currentPrice={item.currentPrice}
-              marketPrice={item.marketPrice}
-              promo={item.promo}
-              bundle={item.bundle}
-              className={cn(i === 0 ? "hidden" : "block")}
-            />
-          ))}
-        </div> */}
-      </SellingContainer>
 
       <div className="flex justify-center lg:hidden">
         <SecondaryLinkButton href={button.bottomHref || "#"}>
@@ -176,17 +138,5 @@ const Package = ({
     // </Wrapper>
   );
 };
-
-const SellingContainer = ({ children }: { children: React.ReactNode }) => (
-  <section
-    className={cn(
-      "grid gap-y-[32px] lg:grid-cols-4",
-      "md:gap-x-8 lg:grid-cols-2 lg:flex-nowrap",
-      "py-12 md:py-[58px] lg:hidden",
-    )}
-  >
-    {children}
-  </section>
-);
 
 export { Package };

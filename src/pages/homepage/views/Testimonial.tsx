@@ -93,8 +93,8 @@ const Testimony = ({
       className={cn("bg-tequila-500 xxxs:p-4 rounded-[10px] p-0.5", className)}
     >
       <div className="text-pumpkin-500 flex items-center">
-        {rateList.map(() => (
-          <AiFillStar size={16} />
+        {rateList.map((i) => (
+          <AiFillStar key={i} size={16} />
         ))}
       </div>
 

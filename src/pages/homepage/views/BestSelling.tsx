@@ -2,8 +2,8 @@ import { cn } from "../../../lib/utils";
 
 import Container from "../../../components/Container";
 import { Heading2 } from "../../../components/headings/Heading2";
-import { ProductCard } from "../../../components/bestselling/main/ProductCard";
-import { SubProductCard } from "../../../components/bestselling/subs/ProductCard";
+import { ProductCard } from "../../../components/package/main/ProductCard";
+import { SubProductCard } from "../../../components/package/subs/ProductCard";
 import { SecondaryLinkButton } from "../../../components/SecondaryLinkButton";
 
 import Game10MegaBundle from "../../../assets/images/products/Game-10-Mega-Bundle.webp";

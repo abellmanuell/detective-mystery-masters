@@ -1,6 +1,14 @@
+import { cn } from "../../lib/utils";
 import { AiFillStar } from "react-icons/ai";
-import { Heading3 } from "../../headings/Heading3";
-import { cn } from "../../../lib/utils";
+import { Heading3 } from "../headings/Heading3";
+
+export type ProductDetailsProps = {
+  name: string;
+  review: string;
+  currentPrice: number;
+  marketPrice: number;
+  promo: string;
+};
 
 const ProductDetails = ({
   name,
@@ -8,23 +16,19 @@ const ProductDetails = ({
   currentPrice,
   marketPrice,
   promo,
-}: {
-  name: string;
-  review: string;
-  currentPrice: number;
-  marketPrice: number;
-  promo: string;
-}) => (
+}: ProductDetailsProps) => (
   <div className="flex grow flex-col p-4">
-    <div className="flex flex-wrap items-center space-y-2 lg:space-y-0 lg:space-x-2">
-      <div className="text-pumpkin-500 flex items-center space-x-[3.24px]">
+    <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
+      <div className="text-pumpkin-500 flex space-x-[3.24px]">
         <AiFillStar size={16.21} />
         <AiFillStar size={16.21} />
         <AiFillStar size={16.21} />
         <AiFillStar size={16.21} />
         <AiFillStar size={16.21} />
       </div>
-      <p className="text-sm font-semibold text-black">{review} reviews</p>
+      <p className="text-left text-sm font-semibold text-black">
+        {review} reviews
+      </p>
     </div>
 
     <div className="flex grow items-center">

@@ -1,4 +1,4 @@
-import { cn } from "../../../lib/utils";
+import { cn } from "../../lib/utils";
 
 const Badge = ({
   title,
@@ -17,7 +17,7 @@ const Badge = ({
       className,
     )}
   >
-    <p>{title}</p>
+    <p className="text-xs leading-[18px]">{title}</p>
   </div>
 );
 
