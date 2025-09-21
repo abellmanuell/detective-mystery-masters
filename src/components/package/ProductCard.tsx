@@ -30,7 +30,7 @@ const ProductCard = ({
         <ProductImage {...productImage} index={index} />
       </div>
 
-      <ProductDetails {...productDetails} />
+      <ProductDetails {...productDetails} index={index} />
     </a>
   );
 };

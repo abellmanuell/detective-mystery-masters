@@ -3,6 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 import { Heading3 } from "../headings/Heading3";
 
 export type ProductDetailsProps = {
+  index: number;
   name: string;
   review: string;
   currentPrice: number;
@@ -11,6 +12,7 @@ export type ProductDetailsProps = {
 };
 
 const ProductDetails = ({
+  index,
   name,
   review,
   currentPrice,
@@ -32,7 +34,12 @@ const ProductDetails = ({
     </div>
 
     <div className="flex grow items-center">
-      <Heading3 className="w-full border-b border-[#F3D4B5] py-3 text-left text-xl lg:py-4 lg:text-2xl">
+      <Heading3
+        className={cn(
+          "w-full border-b border-[#F3D4B5] py-3 text-left text-2xl lg:py-4",
+          index !== 0 ? "text-xl lg:text-2xl" : "text-2xl",
+        )}
+      >
         {name}
       </Heading3>
     </div>
