@@ -36,7 +36,7 @@ const TitleCard = ({ titleAndSub, breadCrumbs }: TitleCardProps) => {
   );
 };
 
-const BreadCrumb = ({ rootHref = ".", name, leaf }: BreadCrumbProps) => (
+export const BreadCrumb = ({ rootHref = ".", name, leaf }: BreadCrumbProps) => (
   <section>
     <ul className="flex items-center gap-2">
       <li>
