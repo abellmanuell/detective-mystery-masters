@@ -3,7 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 import { Heading3 } from "../headings/Heading3";
 
 export type ProductDetailsProps = {
-  index: number;
+  index?: number;
   name: string;
   review: string;
   currentPrice: number;
