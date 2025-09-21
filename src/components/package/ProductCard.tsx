@@ -3,7 +3,7 @@ import { ProductDetails, type ProductDetailsProps } from "./ProductDetails";
 import { ProductImage, type ProductImageProps } from "./ProductImage";
 
 interface ProductCardProps {
-  index: number;
+  index?: number;
   href: string;
   className?: string;
   productImage: ProductImageProps;

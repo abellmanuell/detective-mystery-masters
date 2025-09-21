@@ -41,12 +41,20 @@ const liveTestimonyVideoImages = [
   LiveAction4,
 ];
 
-const LiveTestimony = () => {
+const LiveTestimony = ({
+  title,
+  isSocialCount = false,
+  className,
+}: {
+  title: string;
+  isSocialCount?: boolean;
+  className?: string;
+}) => {
   return (
-    <div className="pt-[26.89px] pb-20 lg:pb-[128px]">
+    <div className={cn("pt-[26.89px] pb-20 lg:pb-[128px]", className)}>
       <Container>
         <Heading2 className="heading-with-arrow text-center text-white lg:!text-[56px] lg:!leading-[67.2px]">
-          And here's some of the live action
+          {title}
         </Heading2>
       </Container>
 
@@ -99,18 +107,19 @@ const LiveTestimony = () => {
       </div>
 
       {/* <Container> */}
-      <section className="xxxs:px-[86px] flex justify-center text-center sm:px-0">
-        <a
-          href="#"
-          className="flex flex-col items-center justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-12"
-        >
-          <img src={InstagramIcon} alt="Instagram" width={24} height={24} />
-          <Paragraphing className="text-lg leading-[27px] font-semibold text-white">
-            Join our 20k people community on Instagram
-          </Paragraphing>
-        </a>
-      </section>
-      {/* </Container> */}
+      {isSocialCount && (
+        <section className="xxxs:px-[86px] flex justify-center text-center sm:px-0">
+          <a
+            href="#"
+            className="flex flex-col items-center justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-12"
+          >
+            <img src={InstagramIcon} alt="Instagram" width={24} height={24} />
+            <Paragraphing className="text-lg leading-[27px] font-semibold text-white">
+              Join our 20k people community on Instagram
+            </Paragraphing>
+          </a>
+        </section>
+      )}
     </div>
   );
 };

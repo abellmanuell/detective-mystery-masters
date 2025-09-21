@@ -1,19 +1,19 @@
-import { cn } from "../../../lib/utils";
+import { cn } from "../../lib/utils";
 
-// import Wrapper from "../../../components/Wrapper";
-import Container from "../../../components/Container";
+// import Wrapper from "../../components/Wrapper";
+import Container from "../../components/Container";
 
-import HeroAsideImage from "../../../assets/images/hero-aside.webp";
-import ServicesAsideImage from "../../../assets/images/services-aside.webp";
+import HeroAsideImage from "../../assets/images/hero-aside.webp";
+import ServicesAsideImage from "../../assets/images/services-aside.webp";
 
-import GiftIcon from "../../../assets/images/icons/icon-gift.svg";
-import DiceIcon from "../../../assets/images/icons/icon-dice.svg";
-import HeartIcon from "../../../assets/images/icons/icon-heart.svg";
+import GiftIcon from "../../assets/images/icons/icon-gift.svg";
+import DiceIcon from "../../assets/images/icons/icon-dice.svg";
+import HeartIcon from "../../assets/images/icons/icon-heart.svg";
 
-import { Heading2 } from "../../../components/headings/Heading2";
-import { ServiceItem } from "../../../components/services/ServiceItem";
-import { PrimaryLinkButton } from "../../../components/PrimaryLinkButton";
-import { SecondaryLinkButton } from "../../../components/SecondaryLinkButton";
+import { Heading2 } from "../../components/headings/Heading2";
+import { ServiceItem } from "../../components/services/ServiceItem";
+import { PrimaryLinkButton } from "../../components/PrimaryLinkButton";
+import { SecondaryLinkButton } from "../../components/SecondaryLinkButton";
 
 const Services = () => {
   return (
