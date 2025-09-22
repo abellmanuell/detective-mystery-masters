@@ -51,7 +51,7 @@ export default function ShopAll() {
             <TitleImage imageUrl={TitleAsideImage} />
           </article>
 
-          <article className="xxs:grid-cols-2 grid gap-6 md:grid-cols-3 lg:grid-cols-5">
+          <article className="xxs:grid-cols-2 grid gap-6 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
             <ShopCategory href="#" imageUrl={Product1} name="Bundles" />
             <ShopCategory href="#" imageUrl={Product2} name="Case Games" />
             <ShopCategory href="#" imageUrl={Product3} name="Escape Rooms" />
