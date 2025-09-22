@@ -3,10 +3,10 @@ import type { ReactNode } from "react";
 import { cn } from "../../lib/utils";
 
 // import Wrapper from "../Wrapper";
-import Container from "../Container";
-import { Paragraphing } from "../Paragraphing";
+import Container from "../../components/Container";
+import { Paragraphing } from "../../components/Paragraphing";
 
-import { Discount } from "./Discount";
+import { Discount } from "../../components/footer/Discount";
 
 import PaymentIcons from "../../assets/images/icons/icon-payment.svg";
 import FacebookIcon from "../../assets/images/icons/icon-facebook.svg";

@@ -1,16 +1,16 @@
-import { cn } from "../../../lib/utils";
+import { cn } from "../../lib/utils";
 
-import HeroAsideImage from "../../../assets/images/hero-aside.webp";
-import HandDrawnArrowIcon from "../../../assets/images/icons/icon-hand-drawn-arrow.svg";
-import LeftHandDrawnArrowIcon from "../../../assets/images/icons/icon-left-hand-drawn-arrow.svg";
+import HeroAsideImage from "../../assets/images/hero-aside.webp";
+import HandDrawnArrowIcon from "../../assets/images/icons/icon-hand-drawn-arrow.svg";
+import LeftHandDrawnArrowIcon from "../../assets/images/icons/icon-left-hand-drawn-arrow.svg";
 
-import Container from "../../../components/Container";
-import { Heading2 } from "../../../components/headings/Heading2";
-import { PrimaryLinkButton } from "../../../components/PrimaryLinkButton";
-import { SecondaryLinkButton } from "../../../components/SecondaryLinkButton";
+import Container from "../../components/Container";
+import { Heading2 } from "../../components/headings/Heading2";
+import { PrimaryLinkButton } from "../../components/PrimaryLinkButton";
+import { SecondaryLinkButton } from "../../components/SecondaryLinkButton";
 
-import { Steps } from "../../../components/steps/Steps";
-import { StepItem } from "../../../components/steps/StepItem";
+import { Steps } from "../../components/steps/Steps";
+import { StepItem } from "../../components/steps/StepItem";
 
 const StepsSummary = () => {
   return (

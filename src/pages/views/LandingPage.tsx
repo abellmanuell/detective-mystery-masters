@@ -1,8 +1,8 @@
-import { cn } from "../../../lib/utils";
+import { cn } from "../../lib/utils";
 
-import Container from "../../../components/Container";
-import { HeroContent } from "../../../components/HeroContent";
-import { HeroAside } from "../../../components/HeroAside";
+import Container from "../../components/Container";
+import { HeroContent } from "../../components/HeroContent";
+import { HeroAside } from "../../components/HeroAside";
 
 const LandingPage = () => {
   return (

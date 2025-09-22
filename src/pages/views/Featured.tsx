@@ -1,11 +1,11 @@
 import Marquee from "react-fast-marquee";
-import { Heading3 } from "../../../components/headings/Heading3";
+import { Heading3 } from "../../components/headings/Heading3";
 
-import MashableLogo from "../../../assets/images/featured-logo/mashable.svg";
-import BuzzFeed from "../../../assets/images/featured-logo/buzzfeed.svg";
-import Entertainment from "../../../assets/images/featured-logo/entertainment.svg";
-import TheGuardian from "../../../assets/images/featured-logo/the-guardian.svg";
-import GoodHouseKeeping from "../../../assets/images/featured-logo/good-housekeeping.svg";
+import MashableLogo from "../../assets/images/featured-logo/mashable.svg";
+import BuzzFeed from "../../assets/images/featured-logo/buzzfeed.svg";
+import Entertainment from "../../assets/images/featured-logo/entertainment.svg";
+import TheGuardian from "../../assets/images/featured-logo/the-guardian.svg";
+import GoodHouseKeeping from "../../assets/images/featured-logo/good-housekeeping.svg";
 
 const Featured = () => {
   return (

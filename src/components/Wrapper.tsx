@@ -11,7 +11,7 @@ const Wrapper = ({
   return (
     <div className={cn("bg-chamois-500 relative", className)}>
       <div className="bg-noise absolute inset-0 opacity-20 mix-blend-overlay" />
-      {children}
+      <div className="relative z-5">{children}</div>
     </div>
   );
 };

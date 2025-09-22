@@ -1,13 +1,14 @@
-import { cn } from "../../../lib/utils";
-
-import Container from "../../../components/Container";
-import { Heading2 } from "../../../components/headings/Heading2";
-import { Paragraphing } from "../../../components/Paragraphing";
 import { useState } from "react";
-import { Heading3 } from "../../../components/headings/Heading3";
 
-import MinusCircleIcon from "../../../assets/images/icons/icon-minus-circle.svg";
-import AddCircleIcon from "../../../assets/images/icons/icon-add-circle.svg";
+import { cn } from "../../lib/utils";
+
+import MinusCircleIcon from "../../assets/images/icons/icon-minus-circle.svg";
+import AddCircleIcon from "../../assets/images/icons/icon-add-circle.svg";
+
+import Container from "../../components/Container";
+import { Heading2 } from "../../components/headings/Heading2";
+import { Heading3 } from "../../components/headings/Heading3";
+import { Paragraphing } from "../../components/Paragraphing";
 
 type FAQItemProps = {
   question: string;

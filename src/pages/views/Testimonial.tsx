@@ -1,15 +1,15 @@
-import { cn } from "../../../lib/utils";
+import { cn } from "../../lib/utils";
 
-import { Heading2 } from "../../../components/headings/Heading2";
-import Container from "../../../components/Container";
-import { Paragraphing } from "../../../components/Paragraphing";
+import { Heading2 } from "../../components/headings/Heading2";
+import Container from "../../components/Container";
+import { Paragraphing } from "../../components/Paragraphing";
 import { AiFillStar } from "react-icons/ai";
-import { Heading3 } from "../../../components/headings/Heading3";
+import { Heading3 } from "../../components/headings/Heading3";
 
-import AndreImage from "../../../assets/images/testimonials/andre.webp";
-import JoseImage from "../../../assets/images/testimonials/jose.webp";
-import GabrielImage from "../../../assets/images/testimonials/gabriella.webp";
-import { LiveTestimony } from "../../../components/testimonial/LiveTestimony";
+import AndreImage from "../../assets/images/testimonials/andre.webp";
+import JoseImage from "../../assets/images/testimonials/jose.webp";
+import GabrielImage from "../../assets/images/testimonials/gabriella.webp";
+import { LiveTestimony } from "../../components/testimonial/LiveTestimony";
 
 const Testimonial = () => {
   return (
@@ -62,7 +62,10 @@ const Testimonial = () => {
         </section>
       </Container>
 
-      <LiveTestimony />
+      <LiveTestimony
+        title="And here's some of the live action"
+        isSocialCount={true}
+      />
     </div>
     // </Wrapper>
   );
