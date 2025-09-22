@@ -5,16 +5,17 @@ import GreaterThanIcon from "../assets/images/icons/icon-greater-than.svg";
 import React from "react";
 import { cn } from "../lib/utils";
 
-type TitleProps = {
+export type TitleProps = {
   title: string;
   subTitle: string;
 };
 
-type BreadCrumbProps = {
+export type BreadCrumbProps = {
   rootHref?: string;
   name: string;
   leaf: Array<{ href: string; name: string }>;
 };
+
 interface TitleCardProps {
   titleAndSub: TitleProps;
   breadCrumbs: BreadCrumbProps;

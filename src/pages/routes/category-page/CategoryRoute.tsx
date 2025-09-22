@@ -6,22 +6,31 @@ import Container from "../../../components/Container";
 import { HeaderNavBar } from "../../../components/HeaderNavBar";
 import { AnnouncementBar } from "../../../components/AnnouncementBar";
 import { AnnouncementBarItem } from "../../../components/AnnouncementBarItem";
-import { TitleCard } from "../../../components/TitleCard";
+import { TitleCard, type BreadCrumbProps } from "../../../components/TitleCard";
 import { Heading3 } from "../../../components/headings/Heading3";
 import { TitleImage } from "../../../components/TitleImage";
 
 import TitleAsideImage from "../../../assets/images/hero-aside.webp";
-import Product1 from "../../../assets/images/products/product-1.webp";
-import Product2 from "../../../assets/images/products/product-2.webp";
-import Product3 from "../../../assets/images/products/product-3.webp";
-import Product4 from "../../../assets/images/products/product-4.webp";
+
 import { Paragraphing } from "../../../components/Paragraphing";
 import { ProductCard } from "../../../components/package/ProductCard";
 import { LiveTestimony } from "../../../components/testimonial/LiveTestimony";
 import { FAQ } from "../../views/FAQ";
 import { Footer } from "../../views/Footer";
 
-export default function ShopAll() {
+interface CategoryPageProps {
+  title: string;
+  subTitle: string;
+  breadCrumbs: BreadCrumbProps;
+  category: Array<CategoryItemProps>;
+}
+
+export default function CategoryPage({
+  title,
+  subTitle,
+  breadCrumbs,
+  category,
+}: CategoryPageProps) {
   return (
     <>
       <Wrapper>
@@ -38,40 +47,26 @@ export default function ShopAll() {
           <article className="grid gap-8 pt-[18px] pb-8 md:pt-[24.2px] md:pb-[94px] lg:grid-cols-2">
             <TitleCard
               titleAndSub={{
-                title: "Shop all",
-                subTitle:
-                  "Some SEO and general information would be cool to have here",
+                title,
+                subTitle,
               }}
-              breadCrumbs={{
-                name: "Home page",
-                leaf: [{ name: "Shop all", href: "shop-all" }],
-              }}
+              breadCrumbs={breadCrumbs}
             />
 
             <TitleImage imageUrl={TitleAsideImage} />
           </article>
 
-          <article className="xxs:grid-cols-2 grid gap-6 md:grid-cols-3 lg:grid-cols-5">
-            <ShopCategoryItem href="#" imageUrl={Product1} name="Bundles" />
-            <ShopCategoryItem href="#" imageUrl={Product2} name="Case Games" />
-            <ShopCategoryItem
-              href="#"
-              imageUrl={Product3}
-              name="Escape Rooms"
-            />
-            <ShopCategoryItem
-              href="#"
-              imageUrl={Product4}
-              name="Print & Plays"
-            />
-            <ShopCategoryItem href="#" imageUrl={Product2} name="Card Games" />
+          <article className="xxs:grid-cols-2 grid gap-6 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
+            {category.map((c, i) => (
+              <CategoryItem key={i} {...c} />
+            ))}
           </article>
         </Container>
 
         <hr className="text-[#D5B08B]" />
 
         <Container className="py-12">
-          <div className="xxs:flex-row flex flex-col justify-between text-lg">
+          <div className="flex justify-between text-lg">
             <Paragraphing>Showing 20 results</Paragraphing>
 
             <Paragraphing>
@@ -134,22 +129,20 @@ export default function ShopAll() {
   );
 }
 
-const ShopCategoryItem = ({
-  href,
-  imageUrl,
-  name,
-}: {
+type CategoryItemProps = {
   href: string;
   imageUrl: string;
   name: string;
-}) => (
+};
+
+const CategoryItem = ({ href, imageUrl, name }: CategoryItemProps) => (
   <>
     <div className="space-y-4">
-      <div className="xs:w-[167px] h-[167px] w-full lg:h-[187px] lg:w-full xl:w-[240px]">
+      <div className="xxs:w-[167px] h-[167px] w-full overflow-clip rounded-2xl md:h-[187px] md:w-[240px]">
         <a href={href}>
           <img
             src={imageUrl}
-            className="xs:w-[167px] h-[167px] w-full rounded-2xl object-cover lg:h-[187px] lg:w-full xl:w-[240px]"
+            className="xxs:w-[167px] h-[167px] w-full object-cover md:h-[187px] md:w-[240px]"
           />
         </a>
       </div>

@@ -1,11 +1,12 @@
-import HomePageRoute from "./pages/routes/homepage/HomePageRoute";
-// import ShopAllRoute from "./pages/routes/shop-all/ShopAllRoute";
+// import HomePageRoute from "./pages/routes/homepage/HomePageRoute";
+import CategoryRoute from "./pages/routes/category-page/CategoryRoute";
+import { shopAllCategory } from "./lib/globalVariables";
 
 const App = () => {
   return (
     <>
-      <HomePageRoute />
-      {/* <ShopAllRoute /> */}
+      {/* <HomePageRoute /> */}
+      <CategoryRoute {...shopAllCategory} />
     </>
   );
 };

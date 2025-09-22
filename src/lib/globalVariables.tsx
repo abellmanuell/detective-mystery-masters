@@ -9,6 +9,12 @@ import TruckIcon from "../assets/images/icons/icon-truck.svg";
 
 import Game10MegaBundle from "../assets/images/products/Game-10-Mega-Bundle.webp";
 
+// Category Images
+import Product1 from "../assets/images/products/product-1.webp";
+import Product2 from "../assets/images/products/product-2.webp";
+import Product3 from "../assets/images/products/product-3.webp";
+import Product4 from "../assets/images/products/product-4.webp";
+
 export const socialPropfs = [
   {
     id: 1,
@@ -416,3 +422,20 @@ export const bestselling = [
     },
   },
 ];
+
+export const shopAllCategory = {
+  title: "Shop All",
+  subTitle: "Some SEO and general information would be cool to have here",
+  breadCrumbs: {
+    name: "Home page",
+    leaf: [{ name: "Shop all", href: "shop-all" }],
+  },
+
+  category: [
+    { href: "#", imageUrl: Product1, name: "Bundles" },
+    { href: "#", imageUrl: Product2, name: "Case Games" },
+    { href: "#", imageUrl: Product3, name: "Escape Rooms" },
+    { href: "#", imageUrl: Product1, name: "Print & Plays" },
+    { href: "#", imageUrl: Product4, name: "Card Games" },
+  ],
+};
