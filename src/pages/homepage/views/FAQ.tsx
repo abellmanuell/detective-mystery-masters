@@ -22,7 +22,7 @@ const FAQ = ({ faqs }: FAQProps) => {
   return (
     <Container
       className={cn(
-        "relative z-5 grid overflow-clip pt-[54px] pb-20 md:!py-[128px] lg:mb-12 lg:grid-cols-2",
+        "relative z-5 grid gap-12 overflow-clip py-20 md:!py-[128px] lg:grid-cols-2",
       )}
     >
       <div>
@@ -34,7 +34,7 @@ const FAQ = ({ faqs }: FAQProps) => {
         </Paragraphing>
       </div>
 
-      <section className="grid gap-8 pt-12">
+      <section className="grid gap-8">
         {faqs.map((faq, index) => (
           <FAQItem key={index} question={faq.question} answer={faq.answer} />
         ))}
@@ -56,7 +56,7 @@ function FAQItem({ question, answer }: FAQItemProps) {
         className="xxxs:flex cursor-pointer items-center justify-between"
         onClick={toggleOpen}
       >
-        <Heading3 className="text-xl leading-5">{question}</Heading3>
+        <Heading3 className="text-xl leading-7">{question}</Heading3>
         <span>
           {isOpen ? (
             <img src={MinusCircleIcon} className="h-6 w-6" />

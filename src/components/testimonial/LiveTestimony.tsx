@@ -43,14 +43,14 @@ const liveTestimonyVideoImages = [
 
 const LiveTestimony = () => {
   return (
-    <div className="pt-[26.89px] pb-20 lg:pb-[128px]">
+    <div className="lg:pt[26.89px] pt-[24px] pb-20 lg:pb-[128px]">
       <Container>
         <Heading2 className="heading-with-arrow text-center text-white lg:!text-[56px] lg:!leading-[67.2px]">
           And here's some of the live action
         </Heading2>
       </Container>
 
-      <div className="pt-[17.13px] pb-16">
+      <div className="py-12 lg:pt-3 lg:pb-[64px]">
         <Swiper
           modules={[Autoplay]}
           loop={true}
@@ -61,6 +61,9 @@ const LiveTestimony = () => {
             pauseOnMouseEnter: true,
           }}
           breakpoints={{
+            0: {
+              spaceBetween: 32,
+            },
             340: {
               slidesPerView: "auto",
               centeredSlides: true,
@@ -99,13 +102,13 @@ const LiveTestimony = () => {
       </div>
 
       {/* <Container> */}
-      <section className="xxxs:px-[86px] flex justify-center text-center sm:px-0">
+      <section className="xs:px-[86px] flex justify-center px-4 text-center sm:px-0">
         <a
           href="#"
-          className="flex flex-col items-center justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-12"
+          className="flex flex-col items-center justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-6"
         >
           <img src={InstagramIcon} alt="Instagram" width={24} height={24} />
-          <Paragraphing className="text-lg leading-[27px] font-semibold text-white">
+          <Paragraphing className="text-lg leading-[27px] text-white">
             Join our 20k people community on Instagram
           </Paragraphing>
         </a>

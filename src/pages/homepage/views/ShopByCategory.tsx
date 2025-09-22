@@ -8,54 +8,55 @@ import Product1 from "../../../assets/images/products/product-1.webp";
 import Product2 from "../../../assets/images/products/product-2.webp";
 import Product3 from "../../../assets/images/products/product-3.webp";
 import Product4 from "../../../assets/images/products/product-4.webp";
+import Wrapper from "../../../components/Wrapper";
 
 const ShopByCategory = () => {
   return (
-    // <Wrapper>
-    <div className="bg-tequila-500 relative z-5 mt-[19px] rounded-3xl">
-      <Container className={cn("py-20 md:px-10")}>
-        <Heading2 className="lg:text-center">Shop By Category</Heading2>
+    <Wrapper className="bg-dark-burgundy-500 rounded-t-4xl">
+      <div className="bg-tequila-500 relative z-5 mt-[19px] rounded-3xl">
+        <Container className={cn("py-20 md:px-10")}>
+          <Heading2 className="lg:text-center">Shop By Category</Heading2>
 
-        <section className="sm grid gap-8 pt-12 sm:flex lg:pt-14">
-          {/* <div className="flex flex-wrap"> */}
-          <div className="pl-0 sm:w-2/4">
-            <div>
-              <Category
-                imageUrl={Product1}
-                button={{ text: "Detective cases", href: "#" }}
-                className="h-[452px] w-full !py-4 first:pt-0 last:pb-0"
-              />
+          <section className="sm grid gap-8 pt-12 sm:flex lg:pt-14">
+            {/* <div className="flex flex-wrap"> */}
+            <div className="pl-0 sm:w-2/4">
+              <div>
+                <Category
+                  imageUrl={Product1}
+                  button={{ text: "Detective cases", href: "#" }}
+                  className="h-[452px] w-full !py-4 first:pt-0 last:pb-0"
+                />
+              </div>
+              <div className="pt-[32px]">
+                <Category
+                  imageUrl={Product2}
+                  button={{ text: "Escape rooms", href: "#" }}
+                  className="h-[294px] w-full !py-4 first:pt-0 last:pb-0"
+                />
+              </div>
             </div>
-            <div className="pt-[32px]">
-              <Category
-                imageUrl={Product2}
-                button={{ text: "Escape rooms", href: "#" }}
-                className="h-[294px] w-full !py-4 first:pt-0 last:pb-0"
-              />
-            </div>
-          </div>
 
-          <div className="pr-0 sm:w-2/4">
-            <div>
-              <Category
-                imageUrl={Product3}
-                button={{ text: "Card games", href: "#" }}
-                className="h-[294px] w-full !py-4 first:pt-0 last:pb-0"
-              />
+            <div className="pr-0 sm:w-2/4">
+              <div>
+                <Category
+                  imageUrl={Product3}
+                  button={{ text: "Card games", href: "#" }}
+                  className="h-[294px] w-full !py-4 first:pt-0 last:pb-0"
+                />
+              </div>
+              <div className="pt-[32px]">
+                <Category
+                  imageUrl={Product4}
+                  button={{ text: "Print & Play", href: "#" }}
+                  className="h-[452px] w-full !py-4 first:pt-0 last:pb-0"
+                />
+              </div>
             </div>
-            <div className="pt-[32px]">
-              <Category
-                imageUrl={Product4}
-                button={{ text: "Print & Play", href: "#" }}
-                className="h-[452px] w-full !py-4 first:pt-0 last:pb-0"
-              />
-            </div>
-          </div>
-          {/* </div> */}
-        </section>
-      </Container>
-    </div>
-    // </Wrapper>
+            {/* </div> */}
+          </section>
+        </Container>
+      </div>
+    </Wrapper>
   );
 };
 

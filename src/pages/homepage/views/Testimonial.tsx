@@ -14,10 +14,10 @@ import { LiveTestimony } from "../../../components/testimonial/LiveTestimony";
 const Testimonial = () => {
   return (
     // <Wrapper>
-    <div className="bg-dark-burgundy-500 relative -top-[26px] z-2">
-      <Container className={cn("pt-20 md:px-10 md:!pt-[112px]")}>
+    <div className="bg-dark-burgundy-500 relative z-2">
+      <Container className={cn("py-20 md:px-10 md:!py-[128px]")}>
         <div className="space-y-4 text-center text-white">
-          <Paragraphing>
+          <Paragraphing className="font-light">
             120,000 customer testimonials about the product
           </Paragraphing>
           <Heading2 className="lg:!text-[56px] lg:!leading-[67.2px]">
@@ -29,7 +29,7 @@ const Testimonial = () => {
           className={cn(
             "xxs:grid-cols-2 grid gap-x-6 gap-y-10",
             "lg:grid-cols-4 lg:gap-x-10",
-            "pt-12 pb-20 lg:pt-16 lg:pb-32",
+            "pt-12 lg:pt-16 lg:pb-0",
           )}
         >
           <Testimony
@@ -90,15 +90,18 @@ const Testimony = ({
 
   return (
     <div
-      className={cn("bg-tequila-500 xxxs:p-4 rounded-[10px] p-0.5", className)}
+      className={cn(
+        "bg-tequila-500 xxxs:p-4 flex flex-col rounded-[10px] p-0.5 md:p-6",
+        className,
+      )}
     >
-      <div className="text-pumpkin-500 flex items-center">
+      <div className="text-pumpkin-500 flex items-center gap-1">
         {rateList.map((i) => (
-          <AiFillStar key={i} size={16} />
+          <AiFillStar key={i} className="h-[15.11px] w-[16px]" />
         ))}
       </div>
 
-      <Paragraphing className="pt-[39.11px] pb-6 text-lg leading-[27px]">
+      <Paragraphing className="grow py-6 text-lg leading-[27px]">
         {testimony}
       </Paragraphing>
 
@@ -110,7 +113,9 @@ const Testimony = ({
             className="h-10 w-10 rounded-full object-cover"
           />
         </div>
-        <Heading3 className="text-base capitalize">{name}</Heading3>
+        <Heading3 className="text-base !leading-[24px] capitalize">
+          {name}
+        </Heading3>
       </div>
     </div>
   );
