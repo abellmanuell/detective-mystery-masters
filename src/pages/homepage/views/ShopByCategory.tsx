@@ -13,10 +13,10 @@ const ShopByCategory = () => {
   return (
     // <Wrapper>
     <div className="bg-tequila-500 relative z-5 mt-[19px] rounded-3xl">
-      <Container className={cn("py-20 md:px-10 md:!py-[112px]")}>
+      <Container className={cn("py-20 md:px-10")}>
         <Heading2 className="lg:text-center">Shop By Category</Heading2>
 
-        <section className="sm grid gap-8 pt-12 sm:flex">
+        <section className="sm grid gap-8 pt-12 sm:flex lg:pt-14">
           {/* <div className="flex flex-wrap"> */}
           <div className="pl-0 sm:w-2/4">
             <div>
@@ -29,7 +29,7 @@ const ShopByCategory = () => {
             <div className="pt-[32px]">
               <Category
                 imageUrl={Product2}
-                button={{ text: "Detective cases", href: "#" }}
+                button={{ text: "Escape rooms", href: "#" }}
                 className="h-[294px] w-full !py-4 first:pt-0 last:pb-0"
               />
             </div>
@@ -39,14 +39,14 @@ const ShopByCategory = () => {
             <div>
               <Category
                 imageUrl={Product3}
-                button={{ text: "Detective cases", href: "#" }}
+                button={{ text: "Card games", href: "#" }}
                 className="h-[294px] w-full !py-4 first:pt-0 last:pb-0"
               />
             </div>
             <div className="pt-[32px]">
               <Category
                 imageUrl={Product4}
-                button={{ text: "Detective cases", href: "#" }}
+                button={{ text: "Print & Play", href: "#" }}
                 className="h-[452px] w-full !py-4 first:pt-0 last:pb-0"
               />
             </div>
@@ -92,7 +92,7 @@ const Category = ({
 
         <PrimaryLinkButton
           href={button.href}
-          className="relative inline-flex capitalize"
+          className="relative inline-flex px-4 py-3 capitalize"
         >
           {button.text}
         </PrimaryLinkButton>
