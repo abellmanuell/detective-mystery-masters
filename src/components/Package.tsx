@@ -14,6 +14,7 @@ import { ProductCard } from "./package/ProductCard";
 import { Autoplay, Pagination } from "swiper/modules";
 import type { ProductImageProps } from "./package/ProductImage";
 import type { ProductDetailsProps } from "./package/ProductDetails";
+import { useMediaQuery } from "react-responsive";
 
 interface PackageProps {
   title: string;
@@ -43,6 +44,8 @@ const Package = ({
   const swiperRef = useRef<SwiperType>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+
   return (
     // <Wrapper>
     <Container className={cn("py-20 md:!py-[112px]", "relative z-5")}>
@@ -59,52 +62,55 @@ const Package = ({
       </div>
 
       <div className="py-12 md:block md:pt-[58px] md:pb-[32px]">
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          loop={true}
-          autoplay={{ delay: 2000 }}
-          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper;
-
-            const wrapper = swiper.wrapperEl;
-            wrapper.classList.add("swiper-wrapper-grid");
-
-            swiper.slides.forEach((slide) => {
-              slide.classList.add("swiper-slide-grid");
-            });
-          }}
-          breakpoints={{
-            0: {
-              enabled: false,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 32,
-              enabled: true,
-            },
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 32,
-              enabled: true,
-            },
-          }}
-          pagination={{
-            el: "#custom-pagination",
-            clickable: true,
-            bulletClass: "my-bullet",
-            bulletActiveClass: "my-bullet-active",
-          }}
-        >
-          {items.map((item, i) => (
-            <SwiperSlide
-              key={i}
-              className={i == 0 ? "col-span-2" : "col-span-1"}
-            >
-              <ProductCard href="#" {...item} index={i} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        {isMobile ? (
+          <div className="grid grid-cols-2 gap-6">
+            {items.map((item, i) => (
+              <div className={i == 0 ? "col-span-2" : "col-span-1"}>
+                <ProductCard key={i} href="#" {...item} index={i} />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            loop={true}
+            autoplay={{ delay: 2000 }}
+            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            breakpoints={{
+              0: {
+                enabled: false,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 32,
+                enabled: true,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 32,
+                enabled: true,
+              },
+            }}
+            pagination={{
+              el: "#custom-pagination",
+              clickable: true,
+              bulletClass: "my-bullet",
+              bulletActiveClass: "my-bullet-active",
+            }}
+          >
+            {items.map((item, i) => (
+              <SwiperSlide
+                key={i}
+                className={i == 0 ? "col-span-2" : "col-span-1"}
+              >
+                <ProductCard href="#" {...item} index={i} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
       </div>
 
       <div className="flex justify-center lg:hidden">

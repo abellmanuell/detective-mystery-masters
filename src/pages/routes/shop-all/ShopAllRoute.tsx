@@ -51,19 +51,27 @@ export default function ShopAll() {
             <TitleImage imageUrl={TitleAsideImage} />
           </article>
 
-          <article className="xxs:grid-cols-2 grid gap-6 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
-            <ShopCategory href="#" imageUrl={Product1} name="Bundles" />
-            <ShopCategory href="#" imageUrl={Product2} name="Case Games" />
-            <ShopCategory href="#" imageUrl={Product3} name="Escape Rooms" />
-            <ShopCategory href="#" imageUrl={Product4} name="Print & Plays" />
-            <ShopCategory href="#" imageUrl={Product2} name="Card Games" />
+          <article className="xxs:grid-cols-2 grid gap-6 md:grid-cols-3 lg:grid-cols-5">
+            <ShopCategoryItem href="#" imageUrl={Product1} name="Bundles" />
+            <ShopCategoryItem href="#" imageUrl={Product2} name="Case Games" />
+            <ShopCategoryItem
+              href="#"
+              imageUrl={Product3}
+              name="Escape Rooms"
+            />
+            <ShopCategoryItem
+              href="#"
+              imageUrl={Product4}
+              name="Print & Plays"
+            />
+            <ShopCategoryItem href="#" imageUrl={Product2} name="Card Games" />
           </article>
         </Container>
 
         <hr className="text-[#D5B08B]" />
 
         <Container className="py-12">
-          <div className="flex justify-between text-lg">
+          <div className="xxs:flex-row flex flex-col justify-between text-lg">
             <Paragraphing>Showing 20 results</Paragraphing>
 
             <Paragraphing>
@@ -126,7 +134,7 @@ export default function ShopAll() {
   );
 }
 
-const ShopCategory = ({
+const ShopCategoryItem = ({
   href,
   imageUrl,
   name,
@@ -137,11 +145,11 @@ const ShopCategory = ({
 }) => (
   <>
     <div className="space-y-4">
-      <div className="xxs:w-[167px] h-[167px] w-full overflow-clip rounded-2xl md:h-[187px] md:w-[240px]">
+      <div className="xs:w-[167px] h-[167px] w-full lg:h-[187px] lg:w-full xl:w-[240px]">
         <a href={href}>
           <img
             src={imageUrl}
-            className="xxs:w-[167px] h-[167px] w-full object-cover md:h-[187px] md:w-[240px]"
+            className="xs:w-[167px] h-[167px] w-full rounded-2xl object-cover lg:h-[187px] lg:w-full xl:w-[240px]"
           />
         </a>
       </div>
