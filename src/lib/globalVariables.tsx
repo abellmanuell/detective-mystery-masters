@@ -17,6 +17,10 @@ import Product4 from "../assets/images/products/product-4.webp";
 
 // Product Images
 import ShippingIconWhite from "../assets/images/icons/icon-shipping-white.svg";
+import GiftIconWhite from "../assets/images/icons/icon-gift-white.svg";
+import FoldersIconWhite from "../assets/images/icons/icon-folders-white.svg";
+import UsersIconWhite from "../assets/images/icons/icon-users-white.svg";
+
 import Image1 from "../assets/images/products/Game-10-Mega-Bundle.webp";
 
 export const socialPropfs = [
@@ -448,10 +452,10 @@ export const products = [
     imageUrl: Image1,
     tags: ["Popular", "Gift Included"],
     packages: [
-      { imageUrl: ShippingIconWhite, packageName: "Realistic Materials" },
+      { imageUrl: FoldersIconWhite, packageName: "Realistic Materials" },
       { imageUrl: ShippingIconWhite, packageName: "Free worldwide shipping" },
-      { imageUrl: ShippingIconWhite, packageName: "Perfect for 1-8 People" },
-      { imageUrl: ShippingIconWhite, packageName: "Gift-Ready" },
+      { imageUrl: UsersIconWhite, packageName: "Perfect for 1-8 People" },
+      { imageUrl: GiftIconWhite, packageName: "Gift-Ready" },
     ],
   },
 
@@ -459,10 +463,10 @@ export const products = [
     imageUrl: Image1,
     tags: ["Gift Included"],
     packages: [
-      { imageUrl: ShippingIconWhite, packageName: "Realistic Materials" },
+      { imageUrl: FoldersIconWhite, packageName: "Realistic Materials" },
       { imageUrl: ShippingIconWhite, packageName: "Free worldwide shipping" },
-      { imageUrl: ShippingIconWhite, packageName: "Perfect for 1-8 People" },
-      { imageUrl: ShippingIconWhite, packageName: "Gift-Ready" },
+      { imageUrl: UsersIconWhite, packageName: "Perfect for 1-8 People" },
+      { imageUrl: GiftIconWhite, packageName: "Gift-Ready" },
     ],
   },
 
@@ -470,10 +474,10 @@ export const products = [
     imageUrl: Image1,
     tags: ["Popular", "Gift Included"],
     packages: [
-      { imageUrl: ShippingIconWhite, packageName: "Realistic Materials" },
+      { imageUrl: FoldersIconWhite, packageName: "Realistic Materials" },
       { imageUrl: ShippingIconWhite, packageName: "Free worldwide shipping" },
-      { imageUrl: ShippingIconWhite, packageName: "Perfect for 1-8 People" },
-      { imageUrl: ShippingIconWhite, packageName: "Gift-Ready" },
+      { imageUrl: UsersIconWhite, packageName: "Perfect for 1-8 People" },
+      { imageUrl: GiftIconWhite, packageName: "Gift-Ready" },
     ],
   },
 
@@ -481,20 +485,20 @@ export const products = [
     imageUrl: Image1,
     tags: ["Gift Included"],
     packages: [
-      { imageUrl: ShippingIconWhite, packageName: "Realistic Materials" },
+      { imageUrl: FoldersIconWhite, packageName: "Realistic Materials" },
       { imageUrl: ShippingIconWhite, packageName: "Free worldwide shipping" },
-      { imageUrl: ShippingIconWhite, packageName: "Perfect for 1-8 People" },
-      { imageUrl: ShippingIconWhite, packageName: "Gift-Ready" },
+      { imageUrl: UsersIconWhite, packageName: "Perfect for 1-8 People" },
+      { imageUrl: GiftIconWhite, packageName: "Gift-Ready" },
     ],
   },
   {
     imageUrl: Image1,
     tags: ["Popular", "Gift Included"],
     packages: [
-      { imageUrl: ShippingIconWhite, packageName: "Realistic Materials" },
+      { imageUrl: FoldersIconWhite, packageName: "Realistic Materials" },
       { imageUrl: ShippingIconWhite, packageName: "Free worldwide shipping" },
-      { imageUrl: ShippingIconWhite, packageName: "Perfect for 1-8 People" },
-      { imageUrl: ShippingIconWhite, packageName: "Gift-Ready" },
+      { imageUrl: UsersIconWhite, packageName: "Perfect for 1-8 People" },
+      { imageUrl: GiftIconWhite, packageName: "Gift-Ready" },
     ],
   },
 ];
