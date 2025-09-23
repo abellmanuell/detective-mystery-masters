@@ -19,6 +19,7 @@ type FAQItemProps = {
 interface FAQProps {
   icon?: string;
   faqs: Array<FAQItemProps>;
+  className?: string;
 }
 
 const FAQ = ({ faqs, icon }: FAQProps) => {
@@ -44,9 +45,9 @@ const FAQ = ({ faqs, icon }: FAQProps) => {
   );
 };
 
-export const FAQSelf = ({ faqs, icon }: FAQProps) => {
+export const FAQSelf = ({ faqs, icon, className }: FAQProps) => {
   return (
-    <section className="grid gap-8">
+    <section className={cn("grid gap-8", className)}>
       {faqs.map((faq, index) => (
         <FAQItem
           key={index}

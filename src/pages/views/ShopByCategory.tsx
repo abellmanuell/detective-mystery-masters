@@ -10,9 +10,9 @@ import Product3 from "../../assets/images/products/product-3.webp";
 import Product4 from "../../assets/images/products/product-4.webp";
 import Wrapper from "../../components/Wrapper";
 
-const ShopByCategory = () => {
+const ShopByCategory = ({ className }: { className: string }) => {
   return (
-    <Wrapper className="bg-dark-burgundy-500 rounded-t-4xl">
+    <Wrapper className={cn("bg-dark-burgundy-500 rounded-t-4xl", className)}>
       <div className="bg-tequila-500 relative z-5 mt-[19px] rounded-3xl">
         <Container className={cn("py-20 md:px-10")}>
           <Heading2 className="lg:text-center">Shop By Category</Heading2>
