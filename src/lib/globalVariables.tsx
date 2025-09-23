@@ -15,6 +15,10 @@ import Product2 from "../assets/images/products/product-2.webp";
 import Product3 from "../assets/images/products/product-3.webp";
 import Product4 from "../assets/images/products/product-4.webp";
 
+// Product Images
+import ShippingIconWhite from "../assets/images/icons/icon-shipping-white.svg";
+import Image1 from "../assets/images/products/Game-10-Mega-Bundle.webp";
+
 export const socialPropfs = [
   {
     id: 1,
@@ -439,3 +443,58 @@ export const shopAllCategory = {
     { href: "#", imageUrl: Product4, name: "Card Games" },
   ],
 };
+export const products = [
+  {
+    imageUrl: Image1,
+    tags: ["Popular", "Gift Included"],
+    packages: [
+      { imageUrl: ShippingIconWhite, packageName: "Realistic Materials" },
+      { imageUrl: ShippingIconWhite, packageName: "Free worldwide shipping" },
+      { imageUrl: ShippingIconWhite, packageName: "Perfect for 1-8 People" },
+      { imageUrl: ShippingIconWhite, packageName: "Gift-Ready" },
+    ],
+  },
+
+  {
+    imageUrl: Image1,
+    tags: ["Gift Included"],
+    packages: [
+      { imageUrl: ShippingIconWhite, packageName: "Realistic Materials" },
+      { imageUrl: ShippingIconWhite, packageName: "Free worldwide shipping" },
+      { imageUrl: ShippingIconWhite, packageName: "Perfect for 1-8 People" },
+      { imageUrl: ShippingIconWhite, packageName: "Gift-Ready" },
+    ],
+  },
+
+  {
+    imageUrl: Image1,
+    tags: ["Popular", "Gift Included"],
+    packages: [
+      { imageUrl: ShippingIconWhite, packageName: "Realistic Materials" },
+      { imageUrl: ShippingIconWhite, packageName: "Free worldwide shipping" },
+      { imageUrl: ShippingIconWhite, packageName: "Perfect for 1-8 People" },
+      { imageUrl: ShippingIconWhite, packageName: "Gift-Ready" },
+    ],
+  },
+
+  {
+    imageUrl: Image1,
+    tags: ["Gift Included"],
+    packages: [
+      { imageUrl: ShippingIconWhite, packageName: "Realistic Materials" },
+      { imageUrl: ShippingIconWhite, packageName: "Free worldwide shipping" },
+      { imageUrl: ShippingIconWhite, packageName: "Perfect for 1-8 People" },
+      { imageUrl: ShippingIconWhite, packageName: "Gift-Ready" },
+    ],
+  },
+  {
+    imageUrl: Image1,
+    tags: ["Popular", "Gift Included"],
+    packages: [
+      { imageUrl: ShippingIconWhite, packageName: "Realistic Materials" },
+      { imageUrl: ShippingIconWhite, packageName: "Free worldwide shipping" },
+      { imageUrl: ShippingIconWhite, packageName: "Perfect for 1-8 People" },
+      { imageUrl: ShippingIconWhite, packageName: "Gift-Ready" },
+    ],
+  },
+];

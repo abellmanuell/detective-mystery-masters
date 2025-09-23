@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactElement, type ReactNode } from "react";
 
 import { cn } from "../../lib/utils";
 
@@ -12,14 +12,16 @@ import { Paragraphing } from "../../components/Paragraphing";
 
 type FAQItemProps = {
   question: string;
-  answer: string;
+  answer: string | ReactNode | ReactElement;
+  icon?: string;
 };
 
 interface FAQProps {
+  icon?: string;
   faqs: Array<FAQItemProps>;
 }
 
-const FAQ = ({ faqs }: FAQProps) => {
+const FAQ = ({ faqs, icon }: FAQProps) => {
   return (
     <Container
       className={cn(
@@ -35,16 +37,29 @@ const FAQ = ({ faqs }: FAQProps) => {
         </Paragraphing>
       </div>
 
-      <section className="grid gap-8">
-        {faqs.map((faq, index) => (
-          <FAQItem key={index} question={faq.question} answer={faq.answer} />
-        ))}
-      </section>
+      <div className="pt-12">
+        <FAQSelf faqs={faqs} icon={icon} />
+      </div>
     </Container>
   );
 };
 
-function FAQItem({ question, answer }: FAQItemProps) {
+export const FAQSelf = ({ faqs, icon }: FAQProps) => {
+  return (
+    <section className="grid gap-8">
+      {faqs.map((faq, index) => (
+        <FAQItem
+          key={index}
+          question={faq.question}
+          answer={faq.answer}
+          icon={icon}
+        />
+      ))}
+    </section>
+  );
+};
+
+function FAQItem({ question, answer, icon }: FAQItemProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => {
@@ -60,9 +75,12 @@ function FAQItem({ question, answer }: FAQItemProps) {
         <Heading3 className="text-xl leading-7">{question}</Heading3>
         <span>
           {isOpen ? (
-            <img src={MinusCircleIcon} className="h-6 w-6" />
+            <img
+              src={icon ?? MinusCircleIcon}
+              className={cn("h-6 w-6", icon && "rotate-90")}
+            />
           ) : (
-            <img src={AddCircleIcon} className="h-6 w-6" />
+            <img src={icon ?? AddCircleIcon} className={cn("h-6 w-6")} />
           )}
         </span>
       </div>

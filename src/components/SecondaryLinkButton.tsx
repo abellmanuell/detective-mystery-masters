@@ -1,10 +1,10 @@
-import type { ReactNode } from "react";
+import type { ReactElement, ReactNode } from "react";
 import type React from "react";
 import { cn } from "../lib/utils";
 
 interface SecondaryLinkButtonProps {
   href: string;
-  children: ReactNode;
+  children: ReactNode | ReactElement;
   props?: React.Component<"a">;
   className?: string;
 }
