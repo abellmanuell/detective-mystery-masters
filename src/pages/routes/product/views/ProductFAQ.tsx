@@ -1,4 +1,4 @@
-import { Paragraphing } from "../../../../components/Paragraphing";
+// import { Paragraphing } from "../../../../components/Paragraphing";
 import { FAQSelf } from "../../../views/FAQ";
 
 import ArrowIcon from "../../../../assets/images/icons/icon-greater-than.svg";
@@ -12,29 +12,29 @@ const ProductFAQ = () => {
           {
             question: "Bundle includes",
             answer: (
-              <div className="space-y-5">
-                <Paragraphing className="!leading-[24px]">
+              <span className="block space-y-5">
+                <span className="block !leading-[24px]">
                   🧩 12 Captivating Puzzles offering hours of thrilling
                   gameplay.
-                </Paragraphing>
+                </span>
 
-                <Paragraphing className="!leading-[24px]">
+                <span className="block !leading-[24px]">
                   ⏱️ 2-4 Hours of Immersive Fun for solo or group enjoyment.
-                </Paragraphing>
+                </span>
 
-                <Paragraphing className="!leading-[24px]">
+                <span className="block !leading-[24px]">
                   👥 Play Solo or with Friends (1-8 players) for the ultimate
                   adventure.
-                </Paragraphing>
+                </span>
 
-                <Paragraphing className="!leading-[24px]">
+                <span className="block !leading-[24px]">
                   🖨️ Print & Play - Easy setup for all chapters at once.
-                </Paragraphing>
+                </span>
 
-                <Paragraphing className="!leading-[24px]">
+                <span className="block !leading-[24px]">
                   💡 Innovative Mirror-Revealed Hints throughout your journey.
-                </Paragraphing>
-              </div>
+                </span>
+              </span>
             ),
           },
 

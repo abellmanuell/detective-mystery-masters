@@ -1,30 +1,35 @@
-import type { Swiper as SwiperType } from "swiper";
+// import type { Swiper as SwiperType } from "swiper";
 
 import { cn } from "../../../../lib/utils";
 
 import { Badge } from "../../../../components/package/Badge";
 import { Heading3 } from "../../../../components/headings/Heading3";
 
-import ArrowIcon from "../../../../assets/images/icons/icon-greater-than.svg";
 import ZoomIn from "../../../../assets/images/icons/zoom-in.svg";
 
 type PackageProps = { imageUrl: string; packageName: string };
 
 type ProductImageProps = {
-  swiperRef: React.RefObject<SwiperType | null>;
+  // swiperRef: React.RefObject<SwiperType | null>;
   imageUrl: string;
-  tags: Array<string>;
-  packages: Array<PackageProps>;
+  tags?: Array<string>;
+  packages?: Array<PackageProps>;
   className?: string;
-  height?: number;
-  width?: number;
+  isZoom?: boolean;
+  // width?: number;
 };
 
 const ProductPackage = ({ imageUrl, packageName }: PackageProps) => {
   return (
-    <div className="bg-dark-burgundy-500 relative inline-flex gap-2 rounded-full px-3 py-[6px]">
-      <img src={imageUrl} alt={packageName} className="h-[16px] max-w-[16px]" />
-      <Heading3 className="text-sm text-white">{packageName}</Heading3>
+    <div className="bg-dark-burgundy-500 relative inline-flex items-center gap-2 rounded-full px-3 py-[6px]">
+      <img
+        src={imageUrl}
+        alt={packageName}
+        className="h-[16px] max-w-[16px] md:h-[18px] md:max-w-[17px]"
+      />
+      <Heading3 className="text-sm text-white md:text-lg">
+        {packageName}
+      </Heading3>
     </div>
   );
 };
@@ -33,33 +38,25 @@ const ProductImage = ({
   imageUrl,
   tags,
   packages,
-  swiperRef,
-  height = 358,
-  width,
+  isZoom = false,
   className,
 }: ProductImageProps) => {
-  console.log(className);
   return (
     <section>
-      <div
-        className={cn("relative h-[358px] p-4", `h-[${height}px]`, className)}
-      >
+      <div className={cn("relative h-[358px] p-4", className)}>
         <img
           src={imageUrl}
           className={cn(
             "absolute top-0 left-0 size-full object-cover",
-            "rounded-2xl",
-            `h-[${height}px]`,
+            "h-[358px] rounded-2xl",
             className,
           )}
         />
-        <article
-          className={cn("flex flex-col justify-between", `h-[640px]`, width)}
-        >
+        <article className={cn("flex flex-col justify-between")}>
           <section className="space-y-[30px]">
             <div className="relative flex justify-between">
               <div className="flex flex-col space-y-3 uppercase">
-                {tags.map((tag, i) => {
+                {tags?.map((tag, i) => {
                   return (
                     <Badge
                       key={i}
@@ -71,7 +68,7 @@ const ProductImage = ({
               </div>
 
               <section className="flex flex-col items-end space-y-2">
-                {packages.map((p, i) => {
+                {packages?.map((p, i) => {
                   return (
                     <ProductPackage
                       key={i}
@@ -82,34 +79,13 @@ const ProductImage = ({
                 })}
               </section>
             </div>
-
-            <div className="relative flex justify-between">
-              <button
-                className="flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full bg-white/60"
-                onClick={() => swiperRef.current?.slidePrev()}
-              >
-                <img
-                  src={ArrowIcon}
-                  alt=""
-                  className="max-h-[18px] max-w-[18px] rotate-180"
-                />
-              </button>
-              <button
-                className="flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full bg-white/60"
-                onClick={() => swiperRef.current?.slideNext()}
-              >
-                <img
-                  src={ArrowIcon}
-                  alt=""
-                  className="max-h-[18px] max-w-[18px]"
-                />
-              </button>
-            </div>
           </section>
 
-          <div className="relative self-end">
-            <img src={ZoomIn} className="h-[24px] max-w-[24px]" />
-          </div>
+          {isZoom && (
+            <div className="absolute right-4 bottom-4">
+              <img src={ZoomIn} className="h-[24px] max-w-[24px]" />
+            </div>
+          )}
         </article>
       </div>
     </section>

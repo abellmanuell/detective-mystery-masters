@@ -45,7 +45,7 @@ const paymentGateWay = [
 ];
 const ProductDetailCard = () => {
   return (
-    <section className="bg-tequila-500 rounded-2xl p-4">
+    <section className="bg-tequila-500 rounded-2xl p-4 md:p-6">
       <div className="xxs:flex-row xxs:items-center flex flex-col gap-2">
         <div className="text-pumpkin-500 flex space-x-[3.24px]">
           <AiFillStar size={20} />
@@ -59,7 +59,7 @@ const ProductDetailCard = () => {
         </p>
       </div>
 
-      <Heading3 className="py-4 text-[32px] !leading-[38.4px] lg:text-5xl lg:!leading-[57.6px]">
+      <Heading3 className="py-4 text-[32px] !leading-[38.4px] md:py-6 lg:text-5xl lg:!leading-[57.6px]">
         10-Game Detective Mega Bundle
       </Heading3>
 
@@ -78,7 +78,7 @@ const ProductDetailCard = () => {
         </Heading3>
       </section>
 
-      <div className="flex flex-wrap gap-6 py-4">
+      <div className="flex flex-wrap gap-6 py-4 md:py-6">
         <div className="font-bebas-neue flex space-x-2">
           <p className="text-red-orange-500 text-2xl lg:text-[32px]">
             €{325.0}
@@ -106,7 +106,7 @@ const ProductDetailCard = () => {
         </Paragraphing>
       </div>
 
-      <Paragraphing className="py-4 !leading-[24px]">
+      <Paragraphing className="py-4 !leading-[24px] md:py-6">
         Short product description about product. Other content, short product
         description about product. Short product description about product.
         Other content.
@@ -114,7 +114,7 @@ const ProductDetailCard = () => {
 
       <hr className="text-[#F3D4B5]" />
 
-      <section className="flex flex-wrap gap-2.5 py-4">
+      <section className="flex flex-wrap gap-2.5 py-4 md:py-8">
         <div className="bg-dark-burgundy-500 xxxs:flex-row inline-flex w-fit flex-col items-center gap-3 rounded-full px-3 py-2">
           <img
             src={ShippingIconWhite}
@@ -150,7 +150,7 @@ const ProductDetailCard = () => {
 
       <section
         className={cn(
-          "bg-dark-burgundy-500 my-4 p-4",
+          "bg-dark-burgundy-500 my-4 p-4 md:my-8",
           "flex flex-col md:flex-row md:items-center",
           "rounded-[8px] text-white md:space-x-8",
         )}
@@ -175,30 +175,32 @@ const ProductDetailCard = () => {
 
       <hr className="text-[#F3D4B5]" />
 
-      <section className="my-4 flex h-[213px] items-center justify-center rounded-[8px] bg-[#F1D8C0] p-4">
+      <section className="my-4 flex h-[213px] items-center justify-center rounded-[8px] bg-[#F1D8C0] p-4 md:my-8">
         <Heading3>KACHING BUNDLES</Heading3>
       </section>
 
       <hr className="text-[#F3D4B5]" />
 
       {/* Add to cart & Checkout buttons */}
-      <section className="flex flex-col gap-4 pt-4">
-        <button
-          className={cn(
-            "outline-1",
-            "xxxs:flex-row flex flex-col items-center justify-center space-x-4",
-            "cursor-pointer rounded-full px-7 py-4 font-bold",
-            "duration-150 ease-in",
-          )}
-        >
-          <span>Add bundle to cart</span>
-          <FaCircle size={4} className="text-pumpkin-500" />
-          <span>€325.00</span>
-        </button>
+      <section className="flex flex-col gap-4 pt-4 md:pt-8 lg:gap-8">
+        <div className="flex flex-col gap-4">
+          <button
+            className={cn(
+              "outline-1",
+              "xxxs:flex-row flex flex-col items-center justify-center space-x-4",
+              "cursor-pointer rounded-full px-7 py-4 font-bold",
+              "duration-150 ease-in",
+            )}
+          >
+            <span>Add bundle to cart</span>
+            <FaCircle size={4} className="text-pumpkin-500" />
+            <span>€325.00</span>
+          </button>
 
-        <PrimaryLinkButton className="justify-center capitalize" href="#">
-          Checkout now
-        </PrimaryLinkButton>
+          <PrimaryLinkButton className="justify-center capitalize" href="#">
+            Checkout now
+          </PrimaryLinkButton>
+        </div>
 
         <div className="grid grid-cols-5 place-items-center gap-[21.4px] px-[8.7px] md:grid-cols-10 md:gap-[7.6px]">
           {paymentGateWay.map((p, i) =>
