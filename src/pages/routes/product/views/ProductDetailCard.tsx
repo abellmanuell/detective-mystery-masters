@@ -203,15 +203,15 @@ const ProductDetailCard = () => {
         <div className="grid grid-cols-5 place-items-center gap-[21.4px] px-[8.7px] md:grid-cols-10 md:gap-[7.6px]">
           {paymentGateWay.map((p, i) =>
             i === 8 ? (
-              <PaymentGateWay {...p} isBorder={true} />
+              <PaymentGateWay key={i} {...p} isBorder={true} />
             ) : (
-              <PaymentGateWay {...p} />
+              <PaymentGateWay key={i} {...p} />
             ),
           )}
         </div>
 
         <section className="space-y-4">
-          <ul className="border-pumpkin-500 bg-pumpkin-200 grid h-[72.17] grid-cols-3 place-items-center gap-4 rounded-2xl border-2 p-4">
+          <ul className="border-pumpkin-500 bg-pumpkin-200 grid grid-cols-3 place-items-center gap-4 rounded-2xl border-2 p-4">
             <li className="flex flex-col gap-1">
               <div className="flex gap-1">
                 <img

@@ -13,10 +13,13 @@ import { AnnouncementBarItem } from "../../../components/AnnouncementBarItem";
 import { ProductFAQ } from "./views/ProductFAQ";
 import { ProductDetailCard } from "./views/ProductDetailCard";
 import { ProductImage } from "./views/ProductImage";
+import { useMediaQuery } from "react-responsive";
 
 const ProductRoute = () => {
   const swiperRef = useRef<SwiperType>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
+
+  const isMobile = useMediaQuery({ maxWidth: 767 });
 
   return (
     <>
@@ -30,54 +33,67 @@ const ProductRoute = () => {
 
         <HeaderNavBar />
 
-        <Container className="mt-8 mb-6">
-          <Swiper
-            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-            onSwiper={(swiper) => {
-              swiperRef.current = swiper;
-            }}
-          >
-            {products.map((product, i) => (
-              <SwiperSlide key={i}>
-                <ProductImage swiperRef={swiperRef} {...product} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+        {isMobile && (
+          <Container className="mt-8 mb-6">
+            <Swiper
+              onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+            >
+              {products.map((product, i) => (
+                <SwiperSlide key={i}>
+                  <ProductImage swiperRef={swiperRef} {...product} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
-          <div className="mt-4 flex items-center justify-center space-x-2">
-            {products.map((product, i) => (
-              <button
-                key={i}
-                onClick={() => swiperRef.current?.slideTo(i)}
-                className={`max-h-[80px] max-w-[80.5px] cursor-pointer transition ${
-                  i === activeIndex ? "opacity-100" : "opacity-75"
-                }`}
-              >
-                <Swiper>
-                  {i === activeIndex ? (
-                    <SwiperSlide>
-                      <img
-                        src={product.imageUrl}
-                        className="max-h-[80px] max-w-[80.5px] rounded-2xl"
-                      />
-                    </SwiperSlide>
-                  ) : (
-                    <SwiperSlide>
-                      <img
-                        src={product.imageUrl}
-                        className="max-h-[80px] max-w-[80.5px] rounded-2xl"
-                      />
-                    </SwiperSlide>
-                  )}
-                </Swiper>
-              </button>
-            ))}
+            <div className="mt-4 flex items-center justify-center space-x-2">
+              {products.map((product, i) => (
+                <button
+                  key={i}
+                  onClick={() => swiperRef.current?.slideTo(i)}
+                  className={`max-h-[80px] max-w-[80.5px] cursor-pointer transition ${
+                    i === activeIndex ? "opacity-100" : "opacity-75"
+                  }`}
+                >
+                  <Swiper>
+                    {i === activeIndex ? (
+                      <SwiperSlide>
+                        <img
+                          src={product.imageUrl}
+                          className="max-h-[80px] max-w-[80.5px] rounded-2xl"
+                        />
+                      </SwiperSlide>
+                    ) : (
+                      <SwiperSlide>
+                        <img
+                          src={product.imageUrl}
+                          className="max-h-[80px] max-w-[80.5px] rounded-2xl"
+                        />
+                      </SwiperSlide>
+                    )}
+                  </Swiper>
+                </button>
+              ))}
+            </div>
+          </Container>
+        )}
+
+        <Container className="grid gap-8 overflow-clip lg:grid-cols-2">
+          {!isMobile && (
+            <div>
+              <ProductImage
+                swiperRef={swiperRef}
+                {...products[0]}
+                height={640}
+              />
+            </div>
+          )}
+          <div>
+            <ProductDetailCard />
+            <ProductFAQ />
           </div>
-        </Container>
-
-        <Container className="grid gap-8 overflow-clip">
-          <ProductDetailCard />
-          <ProductFAQ />
         </Container>
       </Wrapper>
     </>

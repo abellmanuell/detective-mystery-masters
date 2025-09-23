@@ -15,6 +15,9 @@ type ProductImageProps = {
   imageUrl: string;
   tags: Array<string>;
   packages: Array<PackageProps>;
+  className?: string;
+  height?: number;
+  width?: number;
 };
 
 const ProductPackage = ({ imageUrl, packageName }: PackageProps) => {
@@ -31,18 +34,28 @@ const ProductImage = ({
   tags,
   packages,
   swiperRef,
+  height = 358,
+  width,
+  className,
 }: ProductImageProps) => {
+  console.log(className);
   return (
     <section>
-      <div className="relative h-[358px] p-4">
+      <div
+        className={cn("relative h-[358px] p-4", `h-[${height}px]`, className)}
+      >
         <img
           src={imageUrl}
           className={cn(
             "absolute top-0 left-0 size-full object-cover",
-            "h-[358px] rounded-2xl",
+            "rounded-2xl",
+            `h-[${height}px]`,
+            className,
           )}
         />
-        <article className="flex h-[320px] flex-col justify-between">
+        <article
+          className={cn("flex flex-col justify-between", `h-[640px]`, width)}
+        >
           <section className="space-y-[30px]">
             <div className="relative flex justify-between">
               <div className="flex flex-col space-y-3 uppercase">
