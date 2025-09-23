@@ -2,7 +2,11 @@ import { useRef, useState } from "react";
 import type { Swiper as SwiperType } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { announcements, products } from "../../../lib/globalVariables";
+import {
+  announcements,
+  detectiveCases,
+  products,
+} from "../../../lib/globalVariables";
 
 import Wrapper from "../../../components/Wrapper";
 import Container from "../../../components/Container";
@@ -21,6 +25,10 @@ import Product2 from "../../../assets/images/products/product-2.webp";
 import Product3 from "../../../assets/images/products/product-3.webp";
 import Product4 from "../../../assets/images/products/product-4.webp";
 import { BreadCrumb } from "../../../components/TitleCard";
+import { Footer } from "../../views/Footer";
+import { Package } from "../../../components/Package";
+import { Testimonial } from "../../views/Testimonial";
+import { StepsSummary } from "../../views/StepsSummary";
 
 const ProductRoute = () => {
   const swiperRef = useRef<SwiperType>(null);
@@ -168,6 +176,10 @@ const ProductRoute = () => {
             <ProductFAQ />
           </div>
         </Container>
+        <StepsSummary />
+        <Testimonial />
+        <Package title="Customers Also Buy" items={detectiveCases} />
+        <Footer />
       </Wrapper>
     </>
   );
