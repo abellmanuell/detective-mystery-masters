@@ -7,6 +7,7 @@ import Wrapper from "../../../components/Wrapper";
 import { TitleCard } from "../../../components/TitleCard";
 
 import FAQImage from "../../../assets/images/testimonials/live-action-3.webp";
+
 import { TitleImage } from "../../../components/TitleImage";
 import Container from "../../../components/Container";
 import { FAQSelf } from "../../views/FAQ";
