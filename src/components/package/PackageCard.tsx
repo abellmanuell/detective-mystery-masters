@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { cn } from "../../lib/utils";
 import { PackageDetails, type PackageDetailsProps } from "./PackageDetails";
 import { PackageImage, type PackageImageProps } from "./PackageImage";
@@ -18,8 +19,9 @@ const PackageCard = ({
   className,
 }: PackageCardProps) => {
   return (
-    <a
-      href={href}
+    <Link
+      to={href || "/productId"}
+      reloadDocument
       className={cn(
         "bg-tequila-500 flex h-full flex-col",
         "overflow-hidden rounded-lg rounded-t-2xl",
@@ -31,7 +33,7 @@ const PackageCard = ({
       </div>
 
       <PackageDetails {...packageDetails} index={index} />
-    </a>
+    </Link>
   );
 };
 

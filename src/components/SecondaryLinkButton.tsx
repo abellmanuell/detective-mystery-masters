@@ -1,6 +1,7 @@
 import type { ReactElement, ReactNode } from "react";
 import type React from "react";
 import { cn } from "../lib/utils";
+import { Link } from "react-router";
 
 interface SecondaryLinkButtonProps {
   href: string;
@@ -16,9 +17,9 @@ const SecondaryLinkButton = ({
   className,
 }: SecondaryLinkButtonProps) => {
   return (
-    <a
+    <Link
       {...props}
-      href={href}
+      to={href}
       className={cn(
         "outline-1",
         "flex items-center space-x-4",
@@ -28,7 +29,7 @@ const SecondaryLinkButton = ({
       )}
     >
       <span>{children}</span>
-    </a>
+    </Link>
   );
 };
 

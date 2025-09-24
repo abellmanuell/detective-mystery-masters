@@ -1,4 +1,4 @@
-import { announcements, bestselling } from "../../../lib/globalVariables";
+import { announcements } from "../../../lib/globalVariables";
 
 import Wrapper from "../../../components/Wrapper";
 import Container from "../../../components/Container";
@@ -7,29 +7,24 @@ import { HeaderNavBar } from "../../../components/HeaderNavBar";
 import { AnnouncementBar } from "../../../components/AnnouncementBar";
 import { AnnouncementBarItem } from "../../../components/AnnouncementBarItem";
 import { TitleCard, type BreadCrumbProps } from "../../../components/TitleCard";
-import { Heading3 } from "../../../components/headings/Heading3";
 import { TitleImage } from "../../../components/TitleImage";
 
 import TitleAsideImage from "../../../assets/images/hero-aside.webp";
 
-import { Paragraphing } from "../../../components/Paragraphing";
-import { PackageCard } from "../../../components/package/PackageCard";
-import { LiveTestimony } from "../../../components/testimonial/LiveTestimony";
 import { FAQ } from "../../views/FAQ";
 import { Footer } from "../../views/Footer";
+import { Outlet } from "react-router";
 
 interface CategoryPageProps {
   title: string;
   subTitle: string;
   breadCrumbs: BreadCrumbProps;
-  category: Array<CategoryItemProps>;
 }
 
 export default function CategoryPage({
   title,
   subTitle,
   breadCrumbs,
-  category,
 }: CategoryPageProps) {
   return (
     <>
@@ -43,8 +38,8 @@ export default function CategoryPage({
 
         <HeaderNavBar />
 
-        <Container className="border-b border-[#F3D4B5] pb-8">
-          <article className="grid gap-8 pt-[18px] pb-8 md:pt-[24.2px] md:pb-[94px] lg:grid-cols-2">
+        <Container className="border-b border-[#F3D4B5] md:pb-16">
+          <article className="grid gap-8 pt-[18px] md:pt-[24.2px] lg:grid-cols-2">
             <TitleCard
               titleAndSub={{
                 title,
@@ -55,46 +50,9 @@ export default function CategoryPage({
 
             <TitleImage imageUrl={TitleAsideImage} />
           </article>
-
-          <article className="xxs:grid-cols-2 grid gap-6 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
-            {category.map((c, i) => (
-              <CategoryItem key={i} {...c} />
-            ))}
-          </article>
         </Container>
 
-        <hr className="text-[#D5B08B]" />
-
-        <Container className="py-12">
-          <div className="flex justify-between text-lg">
-            <Paragraphing>Showing 20 results</Paragraphing>
-
-            <Paragraphing>
-              Sort: <b>Bestsellers</b>
-            </Paragraphing>
-          </div>
-
-          <section className="grid grid-cols-2 gap-6 pt-12 md:grid-cols-3 lg:grid-cols-4 lg:gap-12">
-            {bestselling.map((item, i) => (
-              <PackageCard key={i} {...item} />
-            ))}
-          </section>
-        </Container>
-
-        <div className="bg-dark-burgundy-500 relative">
-          <LiveTestimony
-            title="HERE'S WHAT OUR DETECTIVES ARE SAYING"
-            className="pt-16 pb-0 md:!pb-0"
-          />
-        </div>
-
-        <Container className="py-12">
-          <section className="grid grid-cols-2 gap-6 pt-12 md:grid-cols-3 lg:grid-cols-4 lg:gap-12">
-            {bestselling.map((item, i) => (
-              <PackageCard key={i} {...item} />
-            ))}
-          </section>
-        </Container>
+        <Outlet />
 
         {/* FAQ section */}
         <FAQ
@@ -128,27 +86,3 @@ export default function CategoryPage({
     </>
   );
 }
-
-type CategoryItemProps = {
-  href: string;
-  imageUrl: string;
-  name: string;
-};
-
-const CategoryItem = ({ href, imageUrl, name }: CategoryItemProps) => (
-  <>
-    <div className="space-y-4">
-      <div className="xxs:w-[167px] h-[167px] w-full overflow-clip rounded-2xl md:h-[187px] md:w-[240px]">
-        <a href={href}>
-          <img
-            src={imageUrl}
-            className="xxs:w-[167px] h-[167px] w-full object-cover md:h-[187px] md:w-[240px]"
-          />
-        </a>
-      </div>
-      <a href={href}>
-        <Heading3>{name}</Heading3>
-      </a>
-    </div>
-  </>
-);

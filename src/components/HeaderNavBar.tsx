@@ -54,7 +54,10 @@ const HeaderNavBar = () => {
         {/* Cart & Hamburger Menu */}
         <div className="flex items-center space-x-6">
           {/* Shop All button - hidden on mobile */}
-          <SecondaryLinkButton href="#" className="hidden py-2 md:block">
+          <SecondaryLinkButton
+            href="/all-products"
+            className="hidden py-2 md:block"
+          >
             Shop All
           </SecondaryLinkButton>
 

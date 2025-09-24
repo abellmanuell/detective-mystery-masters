@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Link } from "react-router";
 
 import { cn } from "../../lib/utils";
 
@@ -30,7 +31,7 @@ const Footer = () => {
             <FooterItem
               title="Shop"
               list={[
-                { name: "All products" },
+                { name: "All products", href: "/all-products" },
                 { name: "Detective cases" },
                 { name: "Case games" },
                 { name: "Escape rooms" },
@@ -41,7 +42,7 @@ const Footer = () => {
 
             <FooterItem
               title="Detective Mystery Masters"
-              list={[{ name: "About Us" }]}
+              list={[{ name: "About Us", href: "/about-us" }]}
             />
 
             <FooterItem
@@ -49,7 +50,7 @@ const Footer = () => {
               list={[
                 { name: "Shipping Information" },
                 { name: "Refund Policy" },
-                { name: "FAQ" },
+                { name: "FAQ", href: "/faq" },
                 { name: "Privacy Policy" },
                 { name: "Print & play" },
                 { name: "Terms of Service" },
@@ -151,9 +152,14 @@ const FooterItem = ({
       <ul>
         {list.map(({ href, name }) => (
           <li key={name} className="flex !h-10 items-center opacity-90">
-            <a href={href || "#"} className="!leading-6 tracking-[0.6px]">
+            <Link
+              to={href || "#"}
+              className="!leading-6 tracking-[0.6px]"
+              viewTransition
+              reloadDocument
+            >
               {name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
