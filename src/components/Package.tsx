@@ -129,11 +129,17 @@ const Package = ({
           {items.map((_, i) => (
             <button
               key={i}
-              onClick={() => swiperRef.current?.slideTo(i)}
-              className={`h-2 w-2 rounded-full transition ${
-                i === activeIndex ? "bg-pumpkin-500 scale-110" : "bg-black/20"
-              }`}
-            />
+              onClick={() => {
+                if (!swiperRef.current) return;
+                swiperRef.current.slideToLoop(i);
+              }}
+              className={`h-2 w-2 cursor-pointer rounded-full transition`}
+            >
+              {" "}
+              <span
+                className={`block h-2 w-2 rounded-full ${i === activeIndex ? "bg-pumpkin-500" : "bg-black/20"}`}
+              />
+            </button>
           ))}
         </div>
 
