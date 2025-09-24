@@ -72,6 +72,7 @@ const Package = ({
           </div>
         ) : (
           <Swiper
+            // autoHeight={true}
             modules={[Pagination, Autoplay]}
             loop={true}
             autoplay={{ delay: 2000 }}
@@ -84,7 +85,7 @@ const Package = ({
                 enabled: false,
               },
               768: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 32,
                 enabled: true,
               },
@@ -104,7 +105,10 @@ const Package = ({
             {items.map((item, i) => (
               <SwiperSlide
                 key={i}
-                className={i == 0 ? "col-span-2" : "col-span-1"}
+                className={cn(
+                  i == 0 ? "col-span-2" : "col-span-1",
+                  "flex !h-auto items-stretch",
+                )}
               >
                 <ProductCard href="#" {...item} index={i} />
               </SwiperSlide>

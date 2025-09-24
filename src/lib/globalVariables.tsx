@@ -129,7 +129,7 @@ export const detectiveCases = [
       tags: ["Popular", "Gift Included"],
     },
     productDetails: {
-      name: "10-Game Detective Mega Bundle",
+      name: "10-Game Detective Mega Bundle ",
       review: "1,500",
       currentPrice: 325.0,
       marketPrice: 650.0,
