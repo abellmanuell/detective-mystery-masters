@@ -1,3 +1,7 @@
+import { useMediaQuery } from "react-responsive";
+
+import { cn } from "../../../lib/utils";
+
 import { AnnouncementBar } from "../../../components/AnnouncementBar";
 import { AnnouncementBarItem } from "../../../components/AnnouncementBarItem";
 import Container from "../../../components/Container";
@@ -11,13 +15,17 @@ import AboutUsImage from "../../../assets/images/testimonials/live-action-3.webp
 import { Heading2 } from "../../../components/headings/Heading2";
 import { Paragraphing } from "../../../components/Paragraphing";
 
-import WhiteLogo from "../../../assets/images/logo-white.svg";
-import { cn } from "../../../lib/utils";
 import { Services } from "../../views/Services";
 import { ShopByCategory } from "../../views/ShopByCategory";
 import { Footer } from "../../views/Footer";
 
+import WhiteLogo from "../../../assets/images/logo-white.svg";
+import ShortArrowIcon from "../../../assets/images/icons/white-hand-drawn-arrow-short.svg";
+import LongArrowIcon from "../../../assets/images/icons/white-hand-drawn-arrow.svg";
+
 const AboutUsRoute = () => {
+  const isMobile = useMediaQuery({ maxWidth: 1024 });
+
   return (
     <Wrapper>
       {/* Only use <AnnouncementBarItem> inside <AnnouncementBar> for consistency */}
@@ -52,10 +60,24 @@ const AboutUsRoute = () => {
         </article>
 
         <section className="bg-dark-burgundy-500 flex flex-col place-items-center gap-16 rounded-2xl px-6 py-12 text-white">
-          <Heading2 className="text-center text-5xl lg:mx-auto lg:w-[900px]">
-            Welcome to Detective Mystery Masters - where we combine our love for
-            mystery board games and crime-solving adventures.
-          </Heading2>
+          <div className="relative">
+            <Heading2 className="text-center text-5xl lg:mx-auto lg:w-[900px]">
+              Welcome to Detective Mystery Masters - where we combine our love
+              for mystery board games and crime-solving adventures.
+            </Heading2>
+
+            {!isMobile ? (
+              <div className="absolute -bottom-30 flex w-full justify-between">
+                <img src={LongArrowIcon} className="-scale-x-100 -rotate-45" />
+                <img src={LongArrowIcon} className="rotate-45" />
+              </div>
+            ) : (
+              <div className="absolute -bottom-15 flex w-full justify-between">
+                <img src={ShortArrowIcon} className="-scale-x-100" />
+                <img src={ShortArrowIcon} />
+              </div>
+            )}
+          </div>
 
           <div className="lg:mx-auto lg:w-[600px]">
             <Paragraphing className="text-center text-lg !leading-[27px]">
