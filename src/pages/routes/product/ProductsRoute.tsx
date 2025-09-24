@@ -12,19 +12,21 @@ type CategoryItemProps = {
 };
 
 interface ProductsRouteProps {
-  category: Array<CategoryItemProps>;
+  category?: Array<CategoryItemProps>;
 }
 
 const ProductsRoute = ({ category }: ProductsRouteProps) => {
   return (
     <>
-      <Container className="md:py-[46px]">
-        <article className="xxs:grid-cols-2 grid gap-6 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
-          {category.map((c, i) => (
-            <CategoryItem key={i} {...c} />
-          ))}
-        </article>
-      </Container>
+      {category && (
+        <Container className="md:py-[46px]">
+          <article className="xxs:grid-cols-2 grid gap-6 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
+            {category?.map((c, i) => (
+              <CategoryItem key={i} {...c} />
+            ))}
+          </article>
+        </Container>
+      )}
 
       <hr className="text-[#D5B08B]" />
 

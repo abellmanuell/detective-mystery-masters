@@ -28,7 +28,6 @@ const router = createBrowserRouter([
     path: "/all-products",
     element: (
       <CategoryRoute
-        {...shopAllCategory}
         title={shopAllCategory.title}
         subTitle={shopAllCategory.subTitle}
         breadCrumbs={shopAllCategory.breadCrumbs}
@@ -39,9 +38,85 @@ const router = createBrowserRouter([
         index: true,
         element: <ProductsRoute {...shopAllCategory} />,
       },
+    ],
+  },
+  {
+    path: "/detective-cases",
+    element: (
+      <CategoryRoute
+        title="Detective Cases"
+        subTitle={shopAllCategory.subTitle}
+        breadCrumbs={shopAllCategory.breadCrumbs}
+      />
+    ),
+    children: [
       {
-        // path: "productId",
-        element: <ProductRoute />,
+        index: true,
+        element: <ProductsRoute />,
+      },
+    ],
+  },
+  {
+    path: "/escape-rooms",
+    element: (
+      <CategoryRoute
+        title="Escape Rooms"
+        subTitle={shopAllCategory.subTitle}
+        breadCrumbs={shopAllCategory.breadCrumbs}
+      />
+    ),
+    children: [
+      {
+        index: true,
+        element: <ProductsRoute />,
+      },
+    ],
+  },
+  {
+    path: "/card-games",
+    element: (
+      <CategoryRoute
+        title="Card Games"
+        subTitle={shopAllCategory.subTitle}
+        breadCrumbs={shopAllCategory.breadCrumbs}
+      />
+    ),
+    children: [
+      {
+        index: true,
+        element: <ProductsRoute />,
+      },
+    ],
+  },
+  {
+    path: "/case-games",
+    element: (
+      <CategoryRoute
+        title="Case Games"
+        subTitle={shopAllCategory.subTitle}
+        breadCrumbs={shopAllCategory.breadCrumbs}
+      />
+    ),
+    children: [
+      {
+        index: true,
+        element: <ProductsRoute />,
+      },
+    ],
+  },
+  {
+    path: "/print-and-play",
+    element: (
+      <CategoryRoute
+        title="Print & Play"
+        subTitle={shopAllCategory.subTitle}
+        breadCrumbs={shopAllCategory.breadCrumbs}
+      />
+    ),
+    children: [
+      {
+        index: true,
+        element: <ProductsRoute />,
       },
     ],
   },

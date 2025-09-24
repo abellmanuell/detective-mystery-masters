@@ -32,11 +32,11 @@ const Footer = () => {
               title="Shop"
               list={[
                 { name: "All products", href: "/all-products" },
-                { name: "Detective cases" },
-                { name: "Case games" },
-                { name: "Escape rooms" },
-                { name: "Print & play" },
-                { name: "Card games" },
+                { name: "Detective cases", href: "/detective-cases" },
+                { name: "Case games", href: "/case-games" },
+                { name: "Escape rooms", href: "/escape-rooms" },
+                { name: "Print & play", href: "/print-and-play" },
+                { name: "Card games", href: "/card-games" },
               ]}
             />
 
