@@ -17,42 +17,30 @@ const ShopByCategory = ({ className }: { className?: string }) => {
         <Container className={cn("py-20 md:px-10")}>
           <Heading2 className="lg:text-center">Shop By Category</Heading2>
 
-          <section className="sm grid gap-8 pt-12 sm:flex lg:pt-14">
-            {/* <div className="flex flex-wrap"> */}
-            <div className="pl-0 sm:w-2/4">
-              <div>
-                <Category
-                  imageUrl={Product1}
-                  button={{ text: "Detective cases", href: "#" }}
-                  className="h-[452px] w-full !py-4 first:pt-0 last:pb-0"
-                />
-              </div>
-              <div className="pt-[32px]">
-                <Category
-                  imageUrl={Product2}
-                  button={{ text: "Escape rooms", href: "#" }}
-                  className="h-[294px] w-full !py-4 first:pt-0 last:pb-0"
-                />
-              </div>
-            </div>
+          <section className="grid gap-8 pt-12 md:grid-cols-2 md:pt-[56px] xl:grid-cols-2 xl:grid-rows-[294px_158px_294px]">
+            <ImageWithButton
+              imageUrl={Product1}
+              button={{ href: "#", text: "Detective cases" }}
+              className="xl:row-span-2"
+            />
 
-            <div className="pr-0 sm:w-2/4">
-              <div>
-                <Category
-                  imageUrl={Product3}
-                  button={{ text: "Card games", href: "#" }}
-                  className="h-[294px] w-full !py-4 first:pt-0 last:pb-0"
-                />
-              </div>
-              <div className="pt-[32px]">
-                <Category
-                  imageUrl={Product4}
-                  button={{ text: "Print & Play", href: "#" }}
-                  className="h-[452px] w-full !py-4 first:pt-0 last:pb-0"
-                />
-              </div>
-            </div>
-            {/* </div> */}
+            <ImageWithButton
+              imageUrl={Product2}
+              button={{ href: "#", text: "Escape rooms" }}
+              imgClassName="xl:object-[80%_-200px]"
+            />
+
+            <ImageWithButton
+              imageUrl={Product3}
+              button={{ href: "#", text: "Card Games" }}
+              className="xl:row-span-2"
+            />
+
+            <ImageWithButton
+              imageUrl={Product4}
+              button={{ href: "#", text: "Print & Play" }}
+              imgClassName="xl:object-[80%_-200px]"
+            />
           </section>
         </Container>
       </div>
@@ -60,46 +48,28 @@ const ShopByCategory = ({ className }: { className?: string }) => {
   );
 };
 
-const Category = ({
+const ImageWithButton = ({
   imageUrl,
   button,
   className,
+  imgClassName,
 }: {
   imageUrl: string;
   button: { text: string; href: string };
   className?: string;
-}) => {
-  if (imageUrl) {
-    const altArray = imageUrl.split("/");
-    const altName = altArray[altArray.length - 1].split(".")[0];
-
-    return (
-      <div
-        className={cn(
-          "relative overflow-clip",
-          "min-h-[358px] rounded-2xl p-4",
-          "flex items-end",
-          className,
-        )}
-      >
-        <img
-          src={imageUrl}
-          alt={altName}
-          className={cn(
-            "absolute top-0 left-0 size-full object-cover",
-            "rounded-2xl",
-          )}
-        />
-
-        <PrimaryLinkButton
-          href={button.href}
-          className="relative inline-flex px-4 py-3 capitalize"
-        >
-          {button.text}
-        </PrimaryLinkButton>
-      </div>
-    );
-  }
-};
+  imgClassName?: string;
+}) => (
+  <div
+    className={cn("relative h-auto xl:overflow-clip xl:rounded-2xl", className)}
+  >
+    <img className={cn("rounded-2xl", imgClassName)} src={imageUrl} />
+    <PrimaryLinkButton
+      href={button.href}
+      className="absolute bottom-2 left-2 inline-flex w-auto px-4 py-3 text-base capitalize"
+    >
+      {button.text}
+    </PrimaryLinkButton>
+  </div>
+);
 
 export { ShopByCategory };

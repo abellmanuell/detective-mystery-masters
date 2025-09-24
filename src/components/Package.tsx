@@ -65,7 +65,7 @@ const Package = ({
         {isMobile ? (
           <div className="grid grid-cols-2 gap-6">
             {items.map((item, i) => (
-              <div className={i == 0 ? "col-span-2" : "col-span-1"}>
+              <div key={i} className={i == 0 ? "col-span-2" : "col-span-1"}>
                 <ProductCard key={i} href="#" {...item} index={i} />
               </div>
             ))}
