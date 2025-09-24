@@ -1,5 +1,5 @@
-import { AiFillStar } from "react-icons/ai";
 import SocialProofAvatar from "./SocialProofAvatar";
+import StarIcon from "../assets/images/icons/icon-star.svg";
 
 type SocialProof = {
   imageUrl: string;
@@ -27,13 +27,13 @@ const SocialProofs = ({ proofs, rate, players }: SocialProofsProps) => {
 
       <section className="text-sm font-medium md:text-base lg:text-lg">
         <div className="flex">
-          <div className="xxxs:flex">
-            <div className="text-pumpkin-500 flex items-center">
-              <AiFillStar size={20} />
-              <AiFillStar size={20} />
-              <AiFillStar size={20} />
-              <AiFillStar size={20} />
-              <AiFillStar size={20} />
+          <div className="xxxs:flex gap-2">
+            <div className="text-pumpkin-500 flex items-center gap-1">
+              <Stars w={20} h={20} />
+              <Stars w={20} h={20} />
+              <Stars w={20} h={20} />
+              <Stars w={20} h={20} />
+              <Stars w={20} h={20} />
             </div>
             <p className="ml-1 font-semibold text-black">
               {rate ?? "4.8 / 5.0"}
@@ -45,5 +45,9 @@ const SocialProofs = ({ proofs, rate, players }: SocialProofsProps) => {
     </div>
   );
 };
+
+export const Stars = ({ w = 16, h = 16 }: { w?: number; h?: number }) => (
+  <img src={StarIcon} alt="Star Icon" className={`h-[${h}px] w-[${w}px]`} />
+);
 
 export { SocialProofs };

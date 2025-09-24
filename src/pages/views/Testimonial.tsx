@@ -3,19 +3,19 @@ import { cn } from "../../lib/utils";
 import { Heading2 } from "../../components/headings/Heading2";
 import Container from "../../components/Container";
 import { Paragraphing } from "../../components/Paragraphing";
-import { AiFillStar } from "react-icons/ai";
 import { Heading3 } from "../../components/headings/Heading3";
 
 import AndreImage from "../../assets/images/testimonials/andre.webp";
 import JoseImage from "../../assets/images/testimonials/jose.webp";
 import GabrielImage from "../../assets/images/testimonials/gabriella.webp";
 import { LiveTestimony } from "../../components/testimonial/LiveTestimony";
+import { Stars } from "../../components/SocialProofs";
 
 const Testimonial = () => {
   return (
     // <Wrapper>
     <div className="bg-dark-burgundy-500 relative z-2">
-      <Container className={cn("py-20 md:px-10 md:!py-[128px]")}>
+      <Container className={cn("py-20 md:px-10 md:pt-[103px] md:pb-[128px]")}>
         <div className="space-y-4 text-center text-white">
           <Paragraphing className="font-light">
             120,000 customer testimonials about the product
@@ -100,7 +100,7 @@ const Testimony = ({
     >
       <div className="text-pumpkin-500 flex items-center gap-1">
         {rateList.map((i) => (
-          <AiFillStar key={i} className="h-[15.11px] w-[16px]" />
+          <Stars key={i} w={16} h={15.11} />
         ))}
       </div>
 
@@ -116,7 +116,7 @@ const Testimony = ({
             className="h-10 w-10 rounded-full object-cover"
           />
         </div>
-        <Heading3 className="text-base !leading-[24px] capitalize">
+        <Heading3 className="text-base !leading-[24px] tracking-[0.32px] capitalize">
           {name}
         </Heading3>
       </div>

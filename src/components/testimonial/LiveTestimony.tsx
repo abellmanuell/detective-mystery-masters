@@ -114,7 +114,7 @@ const LiveTestimony = ({
         <section className="flex justify-center px-4 text-center md:px-[86px]">
           <a
             href="#"
-            className="flex flex-col items-center justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-12"
+            className="flex flex-col items-center justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-6"
           >
             <img src={InstagramIcon} alt="Instagram" width={24} height={24} />
             <Paragraphing className="text-lg leading-[27px] font-semibold text-white">

@@ -1,6 +1,5 @@
 import { cn } from "../../../../lib/utils";
 
-import { AiFillStar } from "react-icons/ai";
 import { FaCircle } from "react-icons/fa";
 
 import { Heading3 } from "../../../../components/headings/Heading3";
@@ -30,6 +29,7 @@ import MasterCardLogo from "../../../../assets/images/payments-gateway-logo/mast
 import PaymentTypesLogo from "../../../../assets/images/payments-gateway-logo/payment-types-logos.svg";
 import PayPalLogo from "../../../../assets/images/payments-gateway-logo/paypal-logo.svg";
 import StripeLogo from "../../../../assets/images/payments-gateway-logo/stripe-logo.svg";
+import { Stars } from "../../../../components/SocialProofs";
 
 const paymentGateWay = [
   { name: "Visa", imageUrl: VisaLogo },
@@ -48,11 +48,11 @@ const ProductDetailCard = () => {
     <section className="bg-tequila-500 rounded-2xl p-4 md:p-6">
       <div className="xxs:flex-row xxs:items-center flex flex-col gap-2">
         <div className="text-pumpkin-500 flex space-x-[3.24px]">
-          <AiFillStar size={20} />
-          <AiFillStar size={20} />
-          <AiFillStar size={20} />
-          <AiFillStar size={20} />
-          <AiFillStar size={20} />
+          <Stars w={20} h={20} />
+          <Stars w={20} h={20} />
+          <Stars w={20} h={20} />
+          <Stars w={20} h={20} />
+          <Stars w={20} h={20} />
         </div>
         <p className="text-left text-lg leading-[24px] font-semibold text-black">
           1024 reviews
@@ -159,11 +159,11 @@ const ProductDetailCard = () => {
           <Heading3 className="text-base">Jene</Heading3>
 
           <div className="text-pumpkin-500 flex space-x-[3.24px] pt-4 pb-8">
-            <AiFillStar size={20} />
-            <AiFillStar size={20} />
-            <AiFillStar size={20} />
-            <AiFillStar size={20} />
-            <AiFillStar size={20} />
+            <Stars w={20} h={20} />
+            <Stars w={20} h={20} />
+            <Stars w={20} h={20} />
+            <Stars w={20} h={20} />
+            <Stars w={20} h={20} />
           </div>
         </div>
 

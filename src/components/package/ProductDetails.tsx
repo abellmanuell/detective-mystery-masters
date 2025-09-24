@@ -1,6 +1,6 @@
 import { cn } from "../../lib/utils";
-import { AiFillStar } from "react-icons/ai";
 import { Heading3 } from "../headings/Heading3";
+import { Stars } from "../SocialProofs";
 
 export type ProductDetailsProps = {
   index?: number;
@@ -22,11 +22,11 @@ const ProductDetails = ({
   <div className="flex grow flex-col p-4">
     <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
       <div className="text-pumpkin-500 flex space-x-[3.24px]">
-        <AiFillStar size={16.21} />
-        <AiFillStar size={16.21} />
-        <AiFillStar size={16.21} />
-        <AiFillStar size={16.21} />
-        <AiFillStar size={16.21} />
+        <Stars w={16.21} h={16.21} />
+        <Stars w={16.21} h={16.21} />
+        <Stars w={16.21} h={16.21} />
+        <Stars w={16.21} h={16.21} />
+        <Stars w={16.21} h={16.21} />
       </div>
       <p className="text-left text-sm font-semibold text-black">
         {review} reviews
