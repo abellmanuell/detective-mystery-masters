@@ -10,10 +10,10 @@ import Container from "./Container";
 import { cn } from "../lib/utils";
 import { Heading2 } from "./headings/Heading2";
 import { SecondaryLinkButton } from "./SecondaryLinkButton";
-import { ProductCard } from "./package/ProductCard";
+import { PackageCard } from "./package/PackageCard";
 import { Autoplay, Pagination } from "swiper/modules";
-import type { ProductImageProps } from "./package/ProductImage";
-import type { ProductDetailsProps } from "./package/ProductDetails";
+import type { PackageImageProps } from "./package/PackageImage";
+import type { PackageDetailsProps } from "./package/PackageDetails";
 import { useMediaQuery } from "react-responsive";
 
 interface PackageProps {
@@ -26,8 +26,8 @@ interface PackageProps {
     bottomText?: string;
   };
   items: {
-    productImage: ProductImageProps;
-    productDetails: ProductDetailsProps;
+    packageImage: PackageImageProps;
+    packageDetails: PackageDetailsProps;
   }[];
 }
 
@@ -66,7 +66,7 @@ const Package = ({
           <div className="grid grid-cols-2 gap-6">
             {items.map((item, i) => (
               <div key={i} className={i == 0 ? "col-span-2" : "col-span-1"}>
-                <ProductCard key={i} href="#" {...item} index={i} />
+                <PackageCard key={i} href="#" {...item} index={i} />
               </div>
             ))}
           </div>
@@ -110,7 +110,7 @@ const Package = ({
                   "flex !h-auto items-stretch",
                 )}
               >
-                <ProductCard href="#" {...item} index={i} />
+                <PackageCard href="#" {...item} index={i} />
               </SwiperSlide>
             ))}
           </Swiper>

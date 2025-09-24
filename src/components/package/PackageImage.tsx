@@ -4,7 +4,7 @@ import { AiFillStar } from "react-icons/ai";
 import { Badge } from "./Badge";
 import { Game10PaperCard } from "./Game10PaperCard";
 
-export type ProductImageProps = {
+export type PackageImageProps = {
   index?: number;
   imageUrl: string;
   tags: Array<string>;
@@ -12,33 +12,18 @@ export type ProductImageProps = {
   bundle: string;
 };
 
-const ProductImage = ({
+const PackageImage = ({
   index,
   imageUrl,
   tags = ["Popular", "Gift Included"],
   isMegaBundle,
   bundle,
-}: ProductImageProps) => {
+}: PackageImageProps) => {
   return (
-    <div
-      className={cn(
-        "h-[316px] overflow-clip",
-        "relative pt-[16.15px] pr-2 pb-2 pl-[11.7px]",
-        "flex flex-col justify-between",
-        index == 0 ? "h-[316px]" : "h-[167px] md:h-[316px]",
-      )}
-    >
-      <img
-        className={cn(
-          "absolute top-0 left-0 size-full object-cover",
-          "h-[167px] w-full rounded-2xl lg:w-full",
-          index == 0 ? "h-[316px]" : "h-[167px] md:h-[316px]",
-        )}
-        src={imageUrl}
-        alt={imageUrl.split("/")[imageUrl.split("/").length - 1]}
-      />
+    <div className={cn("relative", "flex flex-col justify-between")}>
+      <img className={cn("w-full rounded-2xl lg:w-full")} src={imageUrl} />
 
-      <div className="relative flex flex-col space-y-3 uppercase">
+      <div className="absolute top-2 left-2 flex flex-col space-y-3 uppercase">
         {tags.length > 0 &&
           tags.map((tag, i) => (
             <Badge
@@ -50,7 +35,7 @@ const ProductImage = ({
       </div>
 
       {isMegaBundle && bundle && (
-        <Game10PaperCard index={index}>
+        <Game10PaperCard index={index} className="absolute right-2 bottom-2">
           <div
             className={cn(
               "relative flex flex-col justify-center px-1.5 pt-[20px]",
@@ -91,4 +76,4 @@ const ProductImage = ({
   );
 };
 
-export { ProductImage };
+export { PackageImage };

@@ -3,7 +3,7 @@ import { Heading3 } from "../headings/Heading3";
 // import { Stars } from "../SocialProofs";
 import StarIcon from "../../assets/images/icons/icon-star.svg";
 
-export type ProductDetailsProps = {
+export type PackageDetailsProps = {
   index?: number;
   name: string;
   review: string;
@@ -12,14 +12,14 @@ export type ProductDetailsProps = {
   promo: string;
 };
 
-const ProductDetails = ({
+const PackageDetails = ({
   index,
   name,
   review,
   currentPrice,
   marketPrice,
   promo,
-}: ProductDetailsProps) => (
+}: PackageDetailsProps) => (
   <div className="flex grow flex-col p-4">
     <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
       <div className="text-pumpkin-500 flex space-x-[3.24px]">
@@ -85,4 +85,4 @@ const ProductDetails = ({
   </div>
 );
 
-export { ProductDetails };
+export { PackageDetails };

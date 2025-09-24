@@ -122,13 +122,13 @@ export const detectiveCases = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle ",
       review: "1,500",
       currentPrice: 325.0,
@@ -140,13 +140,13 @@ export const detectiveCases = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,
@@ -157,13 +157,13 @@ export const detectiveCases = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,
@@ -174,13 +174,13 @@ export const detectiveCases = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,
@@ -191,13 +191,13 @@ export const detectiveCases = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,
@@ -208,13 +208,13 @@ export const detectiveCases = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,
@@ -225,13 +225,13 @@ export const detectiveCases = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,
@@ -242,13 +242,13 @@ export const detectiveCases = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,
@@ -259,13 +259,13 @@ export const detectiveCases = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,
@@ -276,13 +276,13 @@ export const detectiveCases = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,
@@ -296,13 +296,13 @@ export const bestselling = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,
@@ -313,13 +313,13 @@ export const bestselling = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,
@@ -330,13 +330,13 @@ export const bestselling = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,
@@ -347,13 +347,13 @@ export const bestselling = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,
@@ -364,13 +364,13 @@ export const bestselling = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,
@@ -381,13 +381,13 @@ export const bestselling = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,
@@ -398,13 +398,13 @@ export const bestselling = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,
@@ -415,13 +415,13 @@ export const bestselling = [
   {
     id: 0,
     href: "",
-    productImage: {
+    packageImage: {
       imageUrl: Game10MegaBundle,
       isMegaBundle: true,
       bundle: "10",
       tags: ["Popular", "Gift Included"],
     },
-    productDetails: {
+    packageDetails: {
       name: "10-Game Detective Mega Bundle",
       review: "1,500",
       currentPrice: 325.0,

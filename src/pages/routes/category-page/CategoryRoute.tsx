@@ -13,7 +13,7 @@ import { TitleImage } from "../../../components/TitleImage";
 import TitleAsideImage from "../../../assets/images/hero-aside.webp";
 
 import { Paragraphing } from "../../../components/Paragraphing";
-import { ProductCard } from "../../../components/package/ProductCard";
+import { PackageCard } from "../../../components/package/PackageCard";
 import { LiveTestimony } from "../../../components/testimonial/LiveTestimony";
 import { FAQ } from "../../views/FAQ";
 import { Footer } from "../../views/Footer";
@@ -76,7 +76,7 @@ export default function CategoryPage({
 
           <section className="grid grid-cols-2 gap-6 pt-12 md:grid-cols-3 lg:grid-cols-4 lg:gap-12">
             {bestselling.map((item, i) => (
-              <ProductCard key={i} {...item} />
+              <PackageCard key={i} {...item} />
             ))}
           </section>
         </Container>
@@ -91,7 +91,7 @@ export default function CategoryPage({
         <Container className="py-12">
           <section className="grid grid-cols-2 gap-6 pt-12 md:grid-cols-3 lg:grid-cols-4 lg:gap-12">
             {bestselling.map((item, i) => (
-              <ProductCard key={i} {...item} />
+              <PackageCard key={i} {...item} />
             ))}
           </section>
         </Container>
