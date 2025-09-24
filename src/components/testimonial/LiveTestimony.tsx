@@ -69,6 +69,9 @@ const LiveTestimony = ({
             pauseOnMouseEnter: true,
           }}
           breakpoints={{
+            0: {
+              spaceBetween: 32,
+            },
             340: {
               slidesPerView: "auto",
               centeredSlides: true,
@@ -108,7 +111,7 @@ const LiveTestimony = ({
 
       {/* <Container> */}
       {isSocialCount && (
-        <section className="xxxs:px-[86px] flex justify-center text-center sm:px-0">
+        <section className="flex justify-center px-4 text-center md:px-[86px]">
           <a
             href="#"
             className="flex flex-col items-center justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-12"

@@ -38,7 +38,7 @@ const FAQ = ({ faqs, icon }: FAQProps) => {
         </Paragraphing>
       </div>
 
-      <div className="pt-12">
+      <div>
         <FAQSelf faqs={faqs} icon={icon} />
       </div>
     </Container>
