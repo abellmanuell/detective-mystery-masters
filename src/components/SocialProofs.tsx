@@ -47,7 +47,11 @@ const SocialProofs = ({ proofs, rate, players }: SocialProofsProps) => {
 };
 
 export const Stars = ({ w = 16, h = 16 }: { w?: number; h?: number }) => (
-  <img src={StarIcon} alt="Star Icon" className={`h-[${h}px] w-[${w}px]`} />
+  <img
+    src={StarIcon}
+    alt="Star Icon"
+    className={`max-h-[${h}px] max-w-[${w}px]`}
+  />
 );
 
 export { SocialProofs };
